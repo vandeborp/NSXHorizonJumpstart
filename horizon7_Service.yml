@@ -1,0 +1,261 @@
+#Horizon View Services
+HorizonViewServices : 
+   - name : HorizonView-Agent_TCP
+     protocol : TCP
+     dest_ports : 4172,3389,9427,32111,22443,4001,4002
+     source  : any
+     description : PCoIP,RDP,CDR/MMR,USB redirection,Blast Extreme,JMS
+   - name : HorizonView-Agent_UDP
+     protocol : UDP
+     dest_ports : 22443, 443, 8443
+     source : any 
+     description : Blast Extreme
+   - name : HorizonView-ComposerService
+     protocol : TCP
+     dest_ports : 80,443,18443
+     source : any 
+     description : Secure connection between composer service and connection servers
+   - name : HorizonView-CS_inbound_client
+     protocol : TCP
+     dest_ports : 80,443,8443,4001,4002,4172,55000
+     source : any 
+     description : Client/Desktop connections to internal connection server
+   - name : HorizonView-CS_inbound_client_tunneled
+     protocol : UDP
+     dest_ports : 4172,443,8443
+     source : any 
+     description : If PCoIP secure gateway and Blast are used
+   - name : HorizonView_interCS
+     protocol : TCP
+     dest_ports : 48080,4100,4101,8472,22389,22636,389
+     source : any 
+     description : CS to CS traffic and others like CPA
+   - name : HorizonView_SS_to_CS_tcp
+     protocol : TCP
+     dest_ports : 4001,4002, 8009
+     source : any 
+     description : Security Server to Connection Server traffic
+   - name : HorizonView_SS_to_CS_udp
+     protocol : UDP
+     dest_ports : 500, 4500
+     source : any 
+     description : Security Server to Connection Server traffic
+   - name : HorizonView_SS_tcp
+     protocol : TCP
+     dest_ports : 80,18443,4172,8443,443
+     source : any 
+     description : Security Server traffic
+   - name : HorizonView_SS_udp
+     protocol : UDP
+     dest_ports : 55000,4172,443,8443
+     source : any 
+     description : Security Server traffic
+   - name : HorizonView-ES
+     protocol : TCP
+     dest_ports : 32111
+     source : any 
+     description : Enrollment Server
+   - name : HorizonView-AVMGR
+     protocol : TCP
+     dest_ports : 8443,80,443
+     source : any 
+     description : App Volumes Manager
+   - name : HorizonView-IDM
+     protocol : TCP
+     dest_ports : 443,8443
+     source : any 
+     description : Identity Manager
+   - name : HorizonView-V4H
+     protocol : TCP
+     dest_ports : 443,22,3091-3094
+     source : any 
+     description : vRealize Operations for Horizon
+   - name : HorizonView-UAG-TCP inbound
+     protocol : TCP
+     dest_ports : 443,8443,4172
+     source : any 
+     description : UAG Traffic inbound from client TCP
+   - name : HorizonView-UAG-UDP inbound
+     protocol : UDP
+     dest_ports : 443,8443,4172
+     source : any 
+     description : UAG Traffic inbound from client TCP        
+   - name : vSphere-vCenter-TCP
+     protocol : TCP
+     dest_ports : 443,902
+     source : any
+     description : vSphere - vCenter TCP communication
+   - name : vSphere-vCenter-UDP
+     protocol : UDP
+     dest_ports : 902
+     source : any
+     description : vSphere - vCenter UDP communication 
+   - name : File Repositories Share
+     protocol : TCP
+     dest_ports : 445
+     source : any
+     description : File Repositories Shares
+   - name : Active Directory LDAP
+     protocol : TCP
+     dest_ports : 389,636
+     source : any
+     description : Active Directory LDAP or LDAPS
+   - name : Database MSSQL
+     protocol : TCP
+     dest_ports : 1433
+     source : any
+     description : MSSQL Database communication
+   - name : DNS Lookups-UDP 
+     protocol : UDP
+     dest_ports : 53
+     source : any
+     description : DNS Lookups UDP
+   - name : DNS Updates Lookups-TCP
+     protocol : TCP
+     dest_ports : 53
+     source : any
+     description : DNS Updates Lookups 
+   - name : Time Services NTP
+     protocol : UDP
+     dest_ports : 123
+     source : any
+     description : Time Services NTP     
+#DFW Service Groups
+DFWServiceGroups :
+   - name : Horizon View Composer Services
+     children :
+      - HorizonView-ComposerService
+   - name : Horizon View Connection Services
+     children : 
+      - HorizonView-CS_inbound_client_tunneled
+      - HorizonView-CS_inbound_client
+      - HorizonView_interCS
+      - HorizonView_SS_to_CS_tcp
+      - HorizonView_SS_to_CS_udp
+   - name : Horizon View Desktops
+     children :
+      - HorizonView-Agent_TCP
+      - HorizonView-Agent_UDP
+   - name : Horizon View Security Services
+     children :
+      - HorizonView_SS_tcp
+      - HorizonView_SS_udp
+   - name : Horizon View Enrollment Services
+     children :
+      - HorizonView-ES
+   - name : HorizonView UAG Services
+     children :
+      - HorizonView-UAG-TCP inbound
+      - HorizonView-UAG-UDP inbound
+   - name : vSphere-vCenter Services
+     children :
+        - vSphere-vCenter-TCP
+        - vSphere-vCenter-UDP
+   - name : DNS Services
+     children :
+        - DNS Updates Lookups-TCP
+        - DNS Lookups-UDP
+   - name : Active Directory
+     children :
+        - Active Directory LDAP
+   - name : MSSQL Database
+     children : 
+        - Database MSSQL
+   - name : DHCP Service
+     children :
+        - DHCP-Client
+        - DHCP-Server
+#Security Groups
+SecurityGroups : 
+   - Horizon View Desktops
+   - Horizon View Connection Server
+   - Horizon View Security Server
+   - Horizon View Composer Server
+   - Horizon Enrollment Server
+   - Unified Access Gateways Server 
+   - VMware Identity Manager
+   - App Volumes Manager
+   - vROPS for Horizon 
+   - Airwatch
+   - vSphere vCenter - Hosts
+   - Domain Controllers
+   - DHCP Servers
+   - File Repositories
+   - MSSQL Servers
+   - Domain Name Servers
+   - NTP Servers  
+#Firewall Rules
+FirewallRules : 
+   - name : Inter-Desktop FW Rule
+     source : Horizon View Desktops
+     destination : Horizon View Desktops
+     action : Reject
+   - name : Inter-CS FW Rule
+     source : Horizon View Connection Server
+     destination : Horizon View Connection Server
+     action : Allow  
+   - name : Desktop Client FW Rule
+     destination : Horizon View Desktops
+     action : Allow
+     serviceGroup : Horizon View Desktops
+   - name : Connection Server FW Rule
+     destination : Horizon View Connection Server
+     action : Allow
+     serviceGroup : Horizon View Connection Server
+   - name : Security Server FW Rule
+     destination : Horizon View Security Server
+     action : Allow
+     serviceGroup : Horizon View Security Server
+   - name : Composer Server FW Rule
+     source : Horizon View Connection Server
+     destination : Horizon View Composer Server
+     action : Allow
+     serviceGroup : Horizon View Composer Server	 
+   - name : Enrollment Server FW Rule
+     destination : Horizon Enrollment Server
+     action : Reject
+     serviceGroup : Horizon View Enrollment Server	 
+   - name : UAG FW Rule
+     destination : Unified Access Gateways Server
+     action : Allow
+     serviceGroup : HorizonView UAG Services
+   - name : vSphere-vCenter FW Rule
+     source : "App Volumes Manager,Horizon View Composer Server,Horizon View Connection Server"
+     destination : vSphere vCenter - Hosts
+     action : Allow
+     serviceGroup : vSphere-vCenter Services
+   - name : Domain Controllers LDAP FW Rule
+     source : "App Volumes Manager,VMware Identity Manager,vSphere vCenter - Hosts" 
+     destination : Domain Controllers
+     action : Allow
+     serviceGroup : Active Directory
+   - name : SQL Server Management FW Rule
+     source : "App Volumes Manager,VMware Identity Manager,Horizon View Connection Server,Horizon View Composer Server"
+     destination : MSSQL Servers
+     action : Allow
+     serviceGroup : MSSQL Database
+   - name : Desktop DHCP Server FW Rule
+     source : "Horizon View Desktops,DHCP Servers"
+     destination : "DHCP Servers,Horizon View Desktops"
+     action : Allow
+     serviceGroup : DHCP Service
+#DFW Firewall Sections
+FirewallSections :
+   - name : Horizon 7 View Section
+     firewallRules :    
+       - Desktop FW Rule
+       - Connection Server FW Rule
+       - UAG FW Rule
+       - Security Server FW Rule
+       - Composer Server FW Rule
+       - Enrollment Server FW Rule
+       - Inter-Desktop FW Rule
+       - Inter-CS FW Rule
+       - vSphere-vCenter FW Rule
+   - name : Infrastructure Desktop Section
+     firewallRules :
+       - Domain Controllers LDAP FW Rule
+       - SQL Server Management FW Rule
+       - Desktop DHCP Server FW Rule
+       
+       
