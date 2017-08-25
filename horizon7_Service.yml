@@ -7,7 +7,7 @@ HorizonViewServices :
      description : PCoIP,RDP,CDR/MMR,USB redirection,Blast Extreme,JMS
    - name : HorizonView-Agent_UDP
      protocol : UDP
-     dest_ports : 22443, 443, 8443
+     dest_ports : 22443,443,8443
      source : any 
      description : Blast Extreme
    - name : HorizonView-ComposerService
@@ -32,12 +32,12 @@ HorizonViewServices :
      description : CS to CS traffic and others like CPA
    - name : HorizonView_SS_to_CS_tcp
      protocol : TCP
-     dest_ports : 4001,4002, 8009
+     dest_ports : 4001,4002,8009
      source : any 
      description : Security Server to Connection Server traffic
    - name : HorizonView_SS_to_CS_udp
      protocol : UDP
-     dest_ports : 500, 4500
+     dest_ports : 500,4500
      source : any 
      description : Security Server to Connection Server traffic
    - name : HorizonView_SS_tcp
@@ -67,7 +67,7 @@ HorizonViewServices :
      description : Identity Manager
    - name : HorizonView-V4H
      protocol : TCP
-     dest_ports : 443,22,3091-3094
+     dest_ports : 443,22,3091-3099,3100,3101
      source : any 
      description : vRealize Operations for Horizon
    - name : HorizonView-UAG-TCP inbound
@@ -119,7 +119,32 @@ HorizonViewServices :
      protocol : UDP
      dest_ports : 123
      source : any
-     description : Time Services NTP     
+     description : Time Services NTP
+   - name : Admin Services HTTPS
+     protocol : TCP
+     dest_ports : 443
+     source : any 
+     description : Admin Services HTTPS
+   - name : Admin Services SSH
+     protocol : TCP
+     dest_ports : 22
+     source : any 
+     description : Admin Services SSH
+   - name : Admin Services VAMI
+     protocol : TCP
+     dest_ports : 5480
+     source : any 
+     description : Admin Services VAMI
+   - name : Admin Services 84439443
+     protocol : TCP
+     dest_ports : 8443,9443
+     source : any 
+     description : Admin Services 84439443
+   - name : HorizonView-AVAgent
+     protocol : TCP
+     dest_ports : 443,5895
+     source : any 
+     description : Horizon View Desktop App Volumes Agent to Manager communication      
 #DFW Service Groups
 DFWServiceGroups :
    - name : Horizon View Composer Services
@@ -165,6 +190,30 @@ DFWServiceGroups :
      children :
         - DHCP-Client
         - DHCP-Server
+   - name : Time Services
+     children :
+        - Time Services NTP
+   - name : Admin Services
+     children :
+        - Admin Services HTTPS
+        - Admin Services SSH
+        - Admin Services VAMI
+        - Admin Services 84439443
+   - name : V4H Services
+     children :
+        - HorizonView-V4H
+   - name : File Services UEM
+     children :
+        - File Repositories Share
+   - name : App Volumes Agent Services
+     children :
+        - HorizonView-AVAgent
+   - name : vIDM CS Services
+     children :
+        - Active Directory LDAP
+   - name : vIDM Inbound Services
+     children :
+        - HorizonView-IDM
 #Security Groups
 SecurityGroups : 
    - Horizon View Desktops
@@ -180,17 +229,18 @@ SecurityGroups :
    - vSphere vCenter - Hosts
    - Domain Controllers
    - DHCP Servers
-   - File Repositories
+   - UEM File Repositories
    - MSSQL Servers
    - Domain Name Servers
-   - NTP Servers  
+   - NTP Servers
+   - Admin Stations
 #Firewall Rules
 FirewallRules : 
-   - name : Inter-Desktop FW Rule
+   - name : Inter Desktop FW Rule
      source : Horizon View Desktops
      destination : Horizon View Desktops
      action : Reject
-   - name : Inter-CS FW Rule
+   - name : Inter Connection Server FW Rule
      source : Horizon View Connection Server
      destination : Horizon View Connection Server
      action : Allow  
@@ -201,7 +251,7 @@ FirewallRules :
    - name : Connection Server FW Rule
      destination : Horizon View Connection Server
      action : Allow
-     serviceGroup : Horizon View Connection Server
+     serviceGroup : Horizon View Connection Services
    - name : Security Server FW Rule
      destination : Horizon View Security Server
      action : Allow
@@ -225,12 +275,12 @@ FirewallRules :
      action : Allow
      serviceGroup : vSphere-vCenter Services
    - name : Domain Controllers LDAP FW Rule
-     source : "App Volumes Manager,VMware Identity Manager,vSphere vCenter - Hosts" 
+     source : "App Volumes Manager,VMware Identity Manager,vSphere vCenter - Hosts,vROPS for Horizon" 
      destination : Domain Controllers
      action : Allow
      serviceGroup : Active Directory
    - name : SQL Server Management FW Rule
-     source : "App Volumes Manager,VMware Identity Manager,Horizon View Connection Server,Horizon View Composer Server"
+     source : "App Volumes Manager,VMware Identity Manager,Horizon View Connection Server,Horizon View Composer Server,vROPS for Horizon"
      destination : MSSQL Servers
      action : Allow
      serviceGroup : MSSQL Database
@@ -239,6 +289,44 @@ FirewallRules :
      destination : "DHCP Servers,Horizon View Desktops"
      action : Allow
      serviceGroup : DHCP Service
+   - name : DNS FW Rule
+     source : "Horizon View Desktops,Horizon View Connection Server,Horizon View Security Server,Horizon View Composer Server,Horizon Enrollment Server,Unified Access Gateways Server,App Volumes Manager,VMware Identity Manager,vROPS for Horizon,Airwatch,vSphere vCenter - Hosts"
+     destination : "Domain Name Servers"
+     action : Allow
+     serviceGroup : DNS Services
+   - name : NTP FW Rule
+     source : "Horizon View Desktops,Horizon View Connection Server,Horizon View Security Server,Horizon View Composer Server,Horizon Enrollment Server,Unified Access Gateways Server,App Volumes Manager,VMware Identity Manager,vROPS for Horizon,Airwatch,vSphere vCenter - Hosts"
+     destination : "NTP Servers"
+     action : Allow
+     serviceGroup : Time Services
+   - name : Administrative Console Access FW Rule
+     source : Admin Stations
+     action : Allow
+     serviceGroup : Admin Services
+   - name : V4H FW Rule
+     source : "Horizon View Desktops,Horizon View Connection Server,Unified Access Gateways Server,App Volumes Manager,vROPS for Horizon,vSphere vCenter - Hosts"
+     destination : "Horizon View Desktops,Horizon View Connection Server,vROPS for Horizon"
+     action : Allow
+     serviceGroup : V4H Services 
+   - name : UEM File FW Rule
+     source : "Horizon View Desktops"
+     destination : "UEM File Repositories"
+     action : Allow
+     serviceGroup : File Services UEM
+   - name : App Volumes Agent FW Rule
+     source : "Horizon View Desktops"
+     destination : "App Volumes Manager"
+     action : Allow
+     serviceGroup : App Volumes Agent Services
+   - name : vIDM CS FW Rule
+     source : "VMware Identity Manager"
+     destination : "Horizon View Connection Server"
+     action : Allow
+     serviceGroup : vIDM CS Services
+   - name : vIDM Inbound FW Rule
+     destination : VMware Identity Manager
+     action : Allow
+     serviceGroup : vIDM Inbound Services
 #DFW Firewall Sections
 FirewallSections :
    - name : Horizon 7 View Section
@@ -249,13 +337,21 @@ FirewallSections :
        - Security Server FW Rule
        - Composer Server FW Rule
        - Enrollment Server FW Rule
-       - Inter-Desktop FW Rule
-       - Inter-CS FW Rule
+       - Inter Desktop FW Rule
+       - Inter Connection Server FW Rule
+       - V4H FW Rule
+       - UEM File FW Rule
+       - App Volumes Agent FW Rule
+       - vIDM CS FW Rule
+       - vIDM Inbound FW Rule
        - vSphere-vCenter FW Rule
+       - Administrative Console Access FW Rule
    - name : Infrastructure Desktop Section
      firewallRules :
        - Domain Controllers LDAP FW Rule
        - SQL Server Management FW Rule
        - Desktop DHCP Server FW Rule
+       - DNS FW Rule
+       - NTP FW Rule
        
        
