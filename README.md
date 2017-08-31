@@ -9,6 +9,8 @@ This project will include a scripting mechanisme to implement these rules in NSX
 
 For now the .yml file is maintained to be used by above VMware Fling.
 
+I have created a script that starts the process of importing, but is not nearly ready. Currently only in this branch. Only to be released to master when appopriate
+
 Details will be posted on my blog https://pascalswereld.nl. Blog Post is released as https://pascalswereld.nl/2017/08/24/nsx-for-desktop-jumpstart-microsegmentation-with-horizon-service-installer-fling/.
 
 For questions, suggestions and or remarks please do contact me.
