@@ -20,6 +20,7 @@ depending on functions will add to different modules
 .DEPENDENCIES
     VMware.PowerCLI
 	PowerNSX
+	PSYaml (included in the modules directory)
 
 .INPUT
 	Input file is taken from the settings. Requires user interaction during script
@@ -33,7 +34,9 @@ $ymlFile = "horizon7_Service.yml" # Input yml file
 $logFile = "NSXHorizonJumpstart.log" # Log File location
 # End of Settings
 
-
+# Import Modules
+Import-Module $PSScriptRoot\Modules\PSYaml
+# Test not success Import-Module $PSScriptRoot\Modules\PSYaml\Private\ConvertFrom-YAMLDocument.ps1
 
 # Function Declaration
 function Write-Log 
@@ -78,12 +81,22 @@ if (!(Test-Path $ymlFile)) {
     # Exit script because required input file does not exist
 	Write-Log "$ymlFile does not exist. Exiting script"
 	throw "$ymlFile does not exist"
+}else{
+	Write-Log "$ymlFile found continuing import"
 }
 # End check file 
 
+# Get that yml file
+# Read Content of file
+Write-Log "Read file contents"
+$fileBody = Get-Content $PSScriptRoot\$ymlFile
+ForEach ($line in $fileBody) {
+	Write-Host $line
+}
+
 # Close Connections
 
-
+Write-log "End script run"
 # EOF
 
 
