@@ -89,10 +89,15 @@ if (!(Test-Path $ymlFile)) {
 # Get that yml file
 # Read Content of file
 Write-Log "Read file contents"
-$fileBody = Get-Content $PSScriptRoot\$ymlFile
-ForEach ($line in $fileBody) {
-	Write-Host $line
-}
+
+# Get content and Convert from yaml to variabel
+# To be called Section And context
+$fileBody = Get-Content $PSScriptRoot\$ymlFile -Raw -ErrorAction:SilentlyContinue | ConvertFrom-Yaml -ErrorAction:SilentlyContinue
+
+# Test output
+Write-Host $fileBody.HorizonViewServices.name
+Write-Host $fileBody.HorizonViewServices.protocol
+
 
 # Close Connections
 
