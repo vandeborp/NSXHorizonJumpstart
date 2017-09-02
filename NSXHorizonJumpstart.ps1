@@ -31,12 +31,12 @@ depending on functions will add to different modules
 
 # Settings
 $ymlFile = "horizon7_Service.yml" # Input yml file
+$logon = "Yes" # Do we want log Yes or No
 $logFile = "NSXHorizonJumpstart.log" # Log File location
 # End of Settings
 
 # Import Modules
 Import-Module $PSScriptRoot\Modules\PSYaml
-# Test not success Import-Module $PSScriptRoot\Modules\PSYaml\Private\ConvertFrom-YAMLDocument.ps1
 
 # Function Declaration
 function Write-Log 
@@ -73,35 +73,97 @@ function Write-Log
 #########
 
 ## Init Log with current time
-Write-Log "Starting Log run $DateTime"
+If ($logon -eq "Yes") { Write-Log "Starting Log run $DateTime" }
 
 ## Get yml file location and read the mumbling that is in there
 # Check file location
 if (!(Test-Path $ymlFile)) {
     # Exit script because required input file does not exist
-	Write-Log "$ymlFile does not exist. Exiting script"
+	If ($logon -eq "Yes") { Write-Log "$ymlFile does not exist. Exiting script" }
 	throw "$ymlFile does not exist"
 }else{
-	Write-Log "$ymlFile found continuing import"
+	If ($logon -eq "Yes") { Write-Log "$ymlFile found continuing import" }
 }
 # End check file 
 
 # Get that yml file
 # Read Content of file
-Write-Log "Read file contents"
+If ($logon -eq "Yes") { Write-Log "Reading file contents" }
 
 # Get content and Convert from yaml to variabel
 # To be called Section And context
+# 
+# $fileBody = Get-Content $PSScriptRoot\$ymlFile -Raw -ErrorAction:SilentlyContinue | ConvertFrom-YAMLDocument -ErrorAction:SilentlyContinue
 $fileBody = Get-Content $PSScriptRoot\$ymlFile -Raw -ErrorAction:SilentlyContinue | ConvertFrom-Yaml -ErrorAction:SilentlyContinue
 
-# Test output
+# Do smth with content
+# First test if input we expect is present
+If (!($fileBody.HorizonViewServices.name)){
+	# Requires at least one HorizonViewServices.name to be present
+	# If we don't find exit
+	If ($logon -eq "Yes") { Write-Log "Horizon View Services section name not found but is required. Exit script" }
+	throw "Horizon View Services section name not found but is required"
+} # Can't propose user with default other than the default yml
+
+If (!($fileBody.HorizonViewServices.protocol)){
+	# Requires at least one HorizonViewServices.protocol to be present
+	# If we don't find exit
+	If ($logon -eq "Yes") { Write-Log "Horizon View Services section protocol not found but is required. Exit script" }
+	throw "Horizon View Services section protocol not found but is required"
+} # Can't propose user with default other than the default yml
+
+If (!($fileBody.HorizonViewServices.dest_ports)){
+	# Requires at least one HorizonViewServices.dest_ports to be present
+	# If we don't find exit
+	If ($logon -eq "Yes") { Write-Log "Horizon View Services section dest_ports not found but is required. Exit script" }
+	throw "Horizon View Services section dest_ports not found but is required"
+} # Can't propose user with default other than the default yml
+
+If (!($fileBody.HorizonViewServices.source)){
+	# Requires at least one HorizonViewServices.source to be present
+	# If we don't find exit
+	If ($logon -eq "Yes") { Write-Log "Horizon View Services section source not found but is required. Exit script" }
+	throw "Horizon View Services section source not found but is required"
+} # Shall we propose user with Any? No we don't want that
+
+If (!($fileBody.HorizonViewServices.description)){
+	# Requires at least one HorizonViewServices.description to be present
+	# If we don't find exit
+	If ($logon -eq "Yes") { Write-Log "Horizon View Services section description not found but is required. Exit script" }
+	throw "Horizon View Services section description not found but is required"
+} # Can't propose user with default other than the default yml
+
+If ($logon -eq "Yes") { Write-Log "File yml contains at least one HorizonViewServices section. Continuing." }
+
+
+
+
+# For writers debugging
 Write-Host $fileBody.HorizonViewServices.name
 Write-Host $fileBody.HorizonViewServices.protocol
+Write-Host $fileBody.HorizonViewServices.dest_ports
+Write-Host $fileBody.HorizonViewServices.source
+Write-Host $fileBody.HorizonViewServices.description
 
+
+# Get input from user about
+# NSX Manager
+# User
+# Pass
+# Trust certificate
+
+# Open Connection
+
+# Check input file with current NSX configuration
+# Show changes
+# Get agreement of user of changes/adding
+# Maybe a sure question if we find any with allow
+# If user agrees change
+# If user disagrees write to log and exit
 
 # Close Connections
 
-Write-log "End script run"
+If ($logon -eq "Yes") { Write-log "End script run" }
 # EOF
 
 
