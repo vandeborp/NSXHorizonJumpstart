@@ -9,3 +9,19 @@
 02-09-17 11:45:21 - Reading file contents
 02-09-17 11:45:21 - File yml contains at least one HorizonViewServices section. Continuing.
 02-09-17 11:45:21 - End script run
+02-09-17 11:56:04 - Starting Log run 
+02-09-17 11:56:04 - horizon7_Service.yml found continuing import
+02-09-17 11:56:04 - Reading file contents
+02-09-17 11:56:04 - File yml contains at least one HorizonViewServices section. Continuing.
+02-09-17 11:56:09 - End script run
+02-09-17 11:57:02 - Starting Log run 
+02-09-17 11:57:02 - horizon7_Service.yml found continuing import
+02-09-17 11:57:02 - Reading file contents
+02-09-17 11:57:02 - File yml contains at least one HorizonViewServices section. Continuing.
+02-09-17 11:57:08 - Asked user about NSX manager. Got response: 10.1.11.111
+02-09-17 11:57:08 - End script run
+02-09-17 12:39:06 - Starting Log run 
+02-09-17 12:39:06 - horizon7_Service.yml found continuing import
+02-09-17 12:39:06 - Reading file contents
+02-09-17 12:39:06 - File yml contains at least one HorizonViewServices section. Continuing.
+02-09-17 12:39:08 - [ERROR] Asked user about NSX manager. Got no usable response: 
