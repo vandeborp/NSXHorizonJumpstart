@@ -23,10 +23,12 @@ depending on functions will add to different modules
 	PSYaml (included in the modules directory)
 
 .INPUT
-	Input file is taken from the settings. Requires user interaction during script
+	Input file is taken from the settings. 
+	Requires user interaction during script for NSX connection parameters
 
 .OUTPUT
-	Changed HTML report. Log file.
+	Changed HTML report. 
+	Log file.
 #>
 
 # Settings
@@ -101,43 +103,43 @@ $fileBody = Get-Content $PSScriptRoot\$ymlFile -Raw -ErrorAction:SilentlyContinu
 If (!($fileBody.HorizonViewServices.name)){
 	# Requires at least one HorizonViewServices.name to be present
 	# If we don't find exit
-	If ($logon -eq "Yes") { Write-Log "Horizon View Services section name not found but is required. Exit script" }
+	If ($logon -eq "Yes") { Write-Log "[ERROR] Horizon View Services section name not found but is required. Exit script" }
 	throw "Horizon View Services section name not found but is required"
 } # Can't propose user with default other than the default yml
 
 If (!($fileBody.HorizonViewServices.protocol)){
 	# Requires at least one HorizonViewServices.protocol to be present
 	# If we don't find exit
-	If ($logon -eq "Yes") { Write-Log "Horizon View Services section protocol not found but is required. Exit script" }
+	If ($logon -eq "Yes") { Write-Log "[ERROR] Horizon View Services section protocol not found but is required. Exit script" }
 	throw "Horizon View Services section protocol not found but is required"
 } # Can't propose user with default other than the default yml
 
 If (!($fileBody.HorizonViewServices.dest_ports)){
 	# Requires at least one HorizonViewServices.dest_ports to be present
 	# If we don't find exit
-	If ($logon -eq "Yes") { Write-Log "Horizon View Services section dest_ports not found but is required. Exit script" }
+	If ($logon -eq "Yes") { Write-Log "[ERROR] Horizon View Services section dest_ports not found but is required. Exit script" }
 	throw "Horizon View Services section dest_ports not found but is required"
 } # Can't propose user with default other than the default yml
 
 If (!($fileBody.HorizonViewServices.source)){
 	# Requires at least one HorizonViewServices.source to be present
 	# If we don't find exit
-	If ($logon -eq "Yes") { Write-Log "Horizon View Services section source not found but is required. Exit script" }
+	If ($logon -eq "Yes") { Write-Log "[ERROR] Horizon View Services section source not found but is required. Exit script" }
 	throw "Horizon View Services section source not found but is required"
 } # Shall we propose user with Any? No we don't want that
 
 If (!($fileBody.HorizonViewServices.description)){
 	# Requires at least one HorizonViewServices.description to be present
 	# If we don't find exit
-	If ($logon -eq "Yes") { Write-Log "Horizon View Services section description not found but is required. Exit script" }
+	If ($logon -eq "Yes") { Write-Log "[ERROR] Horizon View Services section description not found but is required. Exit script" }
 	throw "Horizon View Services section description not found but is required"
 } # Can't propose user with default other than the default yml
 
 If ($logon -eq "Yes") { Write-Log "File yml contains at least one HorizonViewServices section. Continuing." }
 
+# We need further testing of other required components
 
-
-
+# Parse the values
 # For writers debugging
 Write-Host $fileBody.HorizonViewServices.name
 Write-Host $fileBody.HorizonViewServices.protocol
@@ -145,11 +147,31 @@ Write-Host $fileBody.HorizonViewServices.dest_ports
 Write-Host $fileBody.HorizonViewServices.source
 Write-Host $fileBody.HorizonViewServices.description
 
-
 # Get input from user about
 # NSX Manager
+$nsxManager = Read-Host ("NSX Manager to connect to (FQDN/IP)")
+If(!($nsxManager)){
+	# no manager throw error and exit
+	If ($logon -eq "Yes") { Write-Log "[ERROR] Asked user about NSX manager. Got no usable response: $nsxManager" }
+	throw "Asked user about NSX manager. Got no usable response: $nsxManager"
+}
+If ($logon -eq "Yes") { Write-Log "Asked user about NSX manager. Got response: $nsxManager" }
 # User
+$nsxUser = Read-Host ("NSX User to connect and with permissions to add")
+If(!($nsxUser)){
+	# no user throw error and exit
+	If ($logon -eq "Yes") { Write-Log "[ERROR] Asked user about NSX user. Got no usable response: $nsxUser" }
+	throw "Asked user about NSX User. Got no usable response: $nsxUser"
+}
+If ($logon -eq "Yes") { Write-Log "Asked user about NSX User. Got response: $nsxUser" }
 # Pass
+# Will not log password
+If(!($nsxPass)){
+	# no Pass throw error and exit
+	If ($logon -eq "Yes") { Write-Log "[ERROR] Asked user about NSX Pass. Got no usable response: <not logged>" }
+	throw "Asked user about NSX Pass. Got no usable response: $nsxPass"
+}
+If ($logon -eq "Yes") { Write-Log "Asked User about NSX Pass. Got response: <input not logged>" }
 # Trust certificate
 
 # Open Connection
