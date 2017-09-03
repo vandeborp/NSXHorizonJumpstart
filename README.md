@@ -9,7 +9,15 @@ This project will include a scripting mechanisme to implement these rules in NSX
 
 For now the .yml file is maintained to be used by above VMware Fling.
 
-I have created a script that starts the process of importing, but is not nearly ready. Currently only in this branch. Only to be released to master when appopriate
+I have created a PowerShell/PowerNSX script that starts the process of importing, but is not nearly ready. 
+Currently only in this branch. To be released to master when appopriate.
+Script currently does:
+  - Check for yml file
+  - read contents of yml file
+  - Get input user for connecting to vCenter
+  - Connect
+  - Loop through Firewall services and checks if they exist
+  - Log actions
 
 Details will be posted on my blog https://pascalswereld.nl. Blog Post is released as https://pascalswereld.nl/2017/08/24/nsx-for-desktop-jumpstart-microsegmentation-with-horizon-service-installer-fling/.
 
