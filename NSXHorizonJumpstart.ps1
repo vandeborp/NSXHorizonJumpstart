@@ -35,6 +35,7 @@ depending on functions will add to different modules
 $ymlFile = "horizon7_Service.yml" # Input yml file
 $logon = "Yes" # Do we want log Yes or No
 $logFile = "NSXHorizonJumpstart.log" # Log File location
+$overwrite = "Yes" # Overwrite existing values, Yes or No
 # End of Settings
 
 # Import Modules
@@ -182,11 +183,11 @@ $NSXConnection = Connect-NsxServer -vCenterServer $nsxManager -username $nsxUser
 
 # Check input file with current NSX configuration
 # Show changes
-# Get agreement of user of changes/adding
 # Maybe a sure question if we find any with allow
 # If user agrees change
 # If user disagrees write to log and exit
 
+$countSvc = 0
 # Lets test if the service exists in NSX.
 ForEach ($item in $fileBody.HorizonViewServices.name){
 	 $itemfromNSX = Get-NsxService -name $item -connection $NSXConnection 
@@ -194,12 +195,28 @@ ForEach ($item in $fileBody.HorizonViewServices.name){
 		# Does not exist
 		If ($logon -eq "Yes") { Write-Log "$item does not exist as service in NSX. Need to add" }
 		# Get the other values that belong to service
+		$itemProt = $fileBody.HorizonViewServices.protocol[$countSvc]
+		$itemDest = $fileBody.HorizonViewServices.dest_ports[$countSvc]
+		$itemSrc = $fileBody.HorizonViewServices.source[$countSvc]
+		$itemDesc = $fileBody.HorizonViewServices.description[$countSvc]
+		If ($logon -eq "Yes") { Write-Log "For $item there is $itemProt, DEST $itemDest, Src $itemSrc with description $itemDesc" }
+		If(!($itemProt)){
+			If ($logon -eq "Yes") { Write-Log "[ERROR] There is no protocol for $item" }
+			throw " There is no protocol for $item"
+		}
+		If ($logon -eq "Yes") { Write-Log "$item Adding here" }
+		New-NsxService -Name $item -Protocol $itemProt -port $itemDest -Description $itemDesc -connection $NSXConnection
 	 }else{
 		# Does exist check for overwrite
 		# Later version will check on diffs in script
 		If ($logon -eq "Yes") { Write-Log "$item does exist" }
-		# Ask user to overwrite
+		# Check for settings to overwrite
+		If ($overwrite -eq "Yes") {
+			# Will add overwrite in a later version
+			# NeedsAdding
+		}
 	 }
+	 $countSvc=$countSvc+1
 }
 
 
