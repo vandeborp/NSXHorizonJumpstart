@@ -75,7 +75,7 @@ function Write-Log
 #########
 
 ## Init Log with current time
-If ($logon -eq "Yes") { Write-Log "Starting Log run $DateTime" }
+If ($logon -eq "Yes") { Write-Log "Starting engines" }
 
 ## Get yml file location and read the mumbling that is in there
 # Check file location
@@ -141,40 +141,44 @@ If ($logon -eq "Yes") { Write-Log "File yml contains at least one HorizonViewSer
 
 # Parse the values
 # For writers debugging
-Write-Host $fileBody.HorizonViewServices.name
-Write-Host $fileBody.HorizonViewServices.protocol
-Write-Host $fileBody.HorizonViewServices.dest_ports
-Write-Host $fileBody.HorizonViewServices.source
-Write-Host $fileBody.HorizonViewServices.description
+#Write-Host $fileBody.HorizonViewServices.name
+#Write-Host $fileBody.HorizonViewServices.protocol
+#Write-Host $fileBody.HorizonViewServices.dest_ports
+#Write-Host $fileBody.HorizonViewServices.source
+#Write-Host $fileBody.HorizonViewServices.description
 
 # Get input from user about
 # NSX Manager
-$nsxManager = Read-Host ("NSX Manager to connect to (FQDN/IP)")
+$nsxManager = Read-Host ("vCenter connected to NSX (FQDN/IP)")
 If(!($nsxManager)){
 	# no manager throw error and exit
-	If ($logon -eq "Yes") { Write-Log "[ERROR] Asked user about NSX manager. Got no usable response: $nsxManager" }
-	throw "Asked user about NSX manager. Got no usable response: $nsxManager"
+	If ($logon -eq "Yes") { Write-Log "[ERROR] Asked user about vCenter/NSX manager. Got no usable response: $nsxManager" }
+	throw "Asked user about vCenter/NSX manager. Got no usable response: $nsxManager"
 }
 If ($logon -eq "Yes") { Write-Log "Asked user about NSX manager. Got response: $nsxManager" }
 # User
-$nsxUser = Read-Host ("NSX User to connect and with permissions to add")
+$nsxUser = Read-Host ("SSO NSX User to connect and with permissions to add")
 If(!($nsxUser)){
 	# no user throw error and exit
-	If ($logon -eq "Yes") { Write-Log "[ERROR] Asked user about NSX user. Got no usable response: $nsxUser" }
-	throw "Asked user about NSX User. Got no usable response: $nsxUser"
+	If ($logon -eq "Yes") { Write-Log "[ERROR] Asked user about SSO NSX user. Got no usable response: $nsxUser" }
+	throw "Asked user about SSO NSX User. Got no usable response: $nsxUser"
 }
-If ($logon -eq "Yes") { Write-Log "Asked user about NSX User. Got response: $nsxUser" }
+If ($logon -eq "Yes") { Write-Log "Asked user about SSO NSX User. Got response: $nsxUser" }
 # Pass
 # Will not log password
+$nsxPass = Read-Host ("SSO user Password to connect")
 If(!($nsxPass)){
 	# no Pass throw error and exit
-	If ($logon -eq "Yes") { Write-Log "[ERROR] Asked user about NSX Pass. Got no usable response: <not logged>" }
-	throw "Asked user about NSX Pass. Got no usable response: $nsxPass"
+	If ($logon -eq "Yes") { Write-Log "[ERROR] Asked user about password. Got no usable response: <not logged>" }
+	throw "Asked user about password. Got no usable response: $nsxPass"
 }
 If ($logon -eq "Yes") { Write-Log "Asked User about NSX Pass. Got response: <input not logged>" }
-# Trust certificate
+# Trust certificate?
 
 # Open Connection
+# Use as -connection $NSXConnection is the remainder of commands
+If ($logon -eq "Yes") { Write-Log "Opening connection to NSX Manager" }
+$NSXConnection = Connect-NsxServer -vCenterServer $nsxManager -username $nsxUser -Password $nsxPass -DefaultConnection:$false
 
 # Check input file with current NSX configuration
 # Show changes
@@ -182,6 +186,22 @@ If ($logon -eq "Yes") { Write-Log "Asked User about NSX Pass. Got response: <inp
 # Maybe a sure question if we find any with allow
 # If user agrees change
 # If user disagrees write to log and exit
+
+# Lets test if the service exists in NSX.
+ForEach ($item in $fileBody.HorizonViewServices.name){
+	 $itemfromNSX = Get-NsxService -name $item -connection $NSXConnection 
+	 If (!$itemfromNSX) { 
+		# Does not exist
+		If ($logon -eq "Yes") { Write-Log "$item does not exist as service in NSX. Need to add" }
+		# Get the other values that belong to service
+	 }else{
+		# Does exist check for overwrite
+		# Later version will check on diffs in script
+		If ($logon -eq "Yes") { Write-Log "$item does exist" }
+		# Ask user to overwrite
+	 }
+}
+
 
 # Close Connections
 
