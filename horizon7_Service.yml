@@ -144,7 +144,12 @@ HorizonViewServices :
      protocol : TCP
      dest_ports : 443,5895
      source : any 
-     description : Horizon View Desktop App Volumes Agent to Manager communication      
+     description : Horizon View Desktop App Volumes Agent to Manager communication
+   - name : ThisIsTest
+     protocol : TCP
+     dest_ports : 666
+     source : any
+     description: Please do not use this is a test
 #DFW Service Groups
 DFWServiceGroups :
    - name : Horizon View Composer Services
@@ -329,24 +334,26 @@ FirewallRules :
      serviceGroup : vIDM Inbound Services
 #DFW Firewall Sections
 FirewallSections :
-   - name : Horizon 7 View Section
-     firewallRules :    
+   - name : Horizon 7 Desktop Block Section
+     firewallRules :
        - Desktop FW Rule
+       - App Volumes Agent FW Rule
+       - UEM File FW Rule
+       - Inter Desktop FW Rule
+   - name : Horizon 7 Management Block Section
+     firewallRules :    
        - Connection Server FW Rule
        - UAG FW Rule
        - Security Server FW Rule
        - Composer Server FW Rule
        - Enrollment Server FW Rule
-       - Inter Desktop FW Rule
        - Inter Connection Server FW Rule
        - V4H FW Rule
-       - UEM File FW Rule
-       - App Volumes Agent FW Rule
        - vIDM CS FW Rule
        - vIDM Inbound FW Rule
        - vSphere-vCenter FW Rule
        - Administrative Console Access FW Rule
-   - name : Infrastructure Desktop Section
+   - name : Infrastructure Services Section
      firewallRules :
        - Domain Controllers LDAP FW Rule
        - SQL Server Management FW Rule
