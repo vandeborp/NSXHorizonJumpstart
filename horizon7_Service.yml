@@ -145,11 +145,6 @@ HorizonViewServices :
      dest_ports : 443,5895
      source : any 
      description : Horizon View Desktop App Volumes Agent to Manager communication
-   - name : ThisIsTest
-     protocol : TCP
-     dest_ports : 666
-     source : any
-     description: Please do not use this is a test
 #DFW Service Groups
 DFWServiceGroups :
    - name : Horizon View Composer Services
@@ -289,11 +284,16 @@ FirewallRules :
      destination : MSSQL Servers
      action : Allow
      serviceGroup : MSSQL Database
-   - name : Desktop DHCP Server FW Rule
-     source : "Horizon View Desktops,DHCP Servers"
-     destination : "DHCP Servers,Horizon View Desktops"
+   - name : Desktop DHCP Server IN FW Rule
+     source : "Horizon View Desktops"
+     destination : "DHCP Servers"
      action : Allow
      serviceGroup : DHCP Service
+   - name : DHCP Server Desktop FW Rule
+     source : "DHCP Servers"
+     destination : "Horizon View Desktops"
+     action : Allow
+     serviceGroup : DHCP Service 
    - name : DNS FW Rule
      source : "Horizon View Desktops,Horizon View Connection Server,Horizon View Security Server,Horizon View Composer Server,Horizon Enrollment Server,Unified Access Gateways Server,App Volumes Manager,VMware Identity Manager,vROPS for Horizon,Airwatch,vSphere vCenter - Hosts"
      destination : "Domain Name Servers"
@@ -340,6 +340,7 @@ FirewallSections :
        - App Volumes Agent FW Rule
        - UEM File FW Rule
        - Inter Desktop FW Rule
+       - DHCP Server Desktop FW Rule
    - name : Horizon 7 Management Block Section
      firewallRules :    
        - Connection Server FW Rule
@@ -357,7 +358,7 @@ FirewallSections :
      firewallRules :
        - Domain Controllers LDAP FW Rule
        - SQL Server Management FW Rule
-       - Desktop DHCP Server FW Rule
+       - Desktop DHCP Server IN FW Rule
        - DNS FW Rule
        - NTP FW Rule
        
