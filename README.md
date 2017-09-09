@@ -23,6 +23,8 @@ Script currently does:
   - Add Servicesgroups in NSX when not existing (New-NsxServiceGroup)
   - within the servicegroups adds one or more children. (Get-NsxService for id and Get-NsxServiceGroup | Add-NsxServiceGroupMember)
   - Empty servicegroups with no children in the yml configuration will throw error
+  - Loop through SecurityGroups and check if they exist (Get-NsxSecurityGroup)
+  - Add SecurityGroup in NSX when not existing (New-NsxSecurityGroup)
 
 Details will be posted on my blog https://pascalswereld.nl. 
 Introduction blog post is released as https://pascalswereld.nl/2017/08/24/nsx-for-desktop-jumpstart-microsegmentation-with-horizon-service-installer-fling/.
