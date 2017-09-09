@@ -36,6 +36,8 @@ $ymlFile = "horizon7_Service.yml" # Input yml file
 $logon = "Yes" # Do we want log Yes or No
 $logFile = "NSXHorizonJumpstart.log" # Log File location
 $overwrite = "Yes" # Overwrite existing values, Yes or No
+$defaultDeny = "Yes" # Set default to Deny ## To be used later
+$ReportOpt = "Yes" # Set the report option to Ye or No ## To be used later
 # End of Settings
 
 # Import Modules
@@ -147,6 +149,17 @@ If (!($fileBody.DFWServiceGroups.name)){
 } # Can't propose user with default other than the default yml
 
 If ($logon -eq "Yes") { Write-Log "File yml contains at least one DFWServicesgroups section. Continuing to process these." }
+
+# Next up Security Groups
+# Check next section
+If (!($fileBody.SecurityGroups)){
+	# Requires at least the securityGroups section to be present
+	# If we don't find exit
+	If ($logon -eq "Yes") { Write-Log "[ERROR] SecurityGroups section name not found but is required. Exit script" }
+	throw "SecurityGroups section not found but is required"
+} # Can't propose user with default other than the default yml
+
+If ($logon -eq "Yes") { Write-Log "File yml contains at least one Security Groups section. Continuing to process these." }
 
 # We need further testing of other required components
 
@@ -274,9 +287,28 @@ ForEach ($itemSvcGr in $fileBody.DFWServiceGroups){
 	 }
 }
 
-
-
-
+# DFW SecurityGroup processing
+# Lets test if the security group exists in NSX.
+# Nothing fancy yet, just the name and add empty one.
+ForEach ($itemSecGr in $fileBody.SecurityGroups){
+	 $itemSecGrfromNSX = Get-NsxSecurityGroup -name $itemSecGr -connection $NSXConnection 
+	 If (!$itemSecGrfromNSX) { 
+		# Does not exist
+		If ($logon -eq "Yes") { Write-Log "$itemSecGr does not exist as DFW Security Group in NSX. Need to add" }
+		# For now just adding the group
+		New-NsxSecurityGroup -Name $itemSecGr -connection $NSXConnection
+		# Something will be added 
+	 }else{
+		# Does exist check for overwrite
+		# Later version will check on diffs in script
+		If ($logon -eq "Yes") { Write-Log "$itemSecGr does exist as DFW Security group in NSX" }
+		# Check for settings to overwrite
+		If ($overwrite -eq "Yes") {
+			# Will add overwrite in a later version
+			# NeedsAdding
+		}
+	 }
+}
 
 
 # Close Connections
