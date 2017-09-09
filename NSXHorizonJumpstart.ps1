@@ -136,17 +136,21 @@ If (!($fileBody.HorizonViewServices.description)){
 	throw "Horizon View Services section description not found but is required"
 } # Can't propose user with default other than the default yml
 
-If ($logon -eq "Yes") { Write-Log "File yml contains at least one HorizonViewServices section. Continuing." }
+If ($logon -eq "Yes") { Write-Log "File yml contains at least one HorizonViewServices section. Continuing to process these." }
+
+# Check next section
+If (!($fileBody.DFWServiceGroups.name)){
+	# Requires at least one DFWServiceGroups.name to be present
+	# If we don't find exit
+	If ($logon -eq "Yes") { Write-Log "[ERROR] DFWServiceGroups section name not found but is required. Exit script" }
+	throw "DFWServiceGroups section name not found but is required"
+} # Can't propose user with default other than the default yml
+
+If ($logon -eq "Yes") { Write-Log "File yml contains at least one DFWServicesgroups section. Continuing to process these." }
 
 # We need further testing of other required components
 
 # Parse the values
-# For writers debugging
-#Write-Host $fileBody.HorizonViewServices.name
-#Write-Host $fileBody.HorizonViewServices.protocol
-#Write-Host $fileBody.HorizonViewServices.dest_ports
-#Write-Host $fileBody.HorizonViewServices.source
-#Write-Host $fileBody.HorizonViewServices.description
 
 # Get input from user about
 # NSX Manager
@@ -187,6 +191,7 @@ $NSXConnection = Connect-NsxServer -vCenterServer $nsxManager -username $nsxUser
 # If user agrees change
 # If user disagrees write to log and exit
 
+# Horizon View Services Processing
 $countSvc = 0
 # Lets test if the service exists in NSX.
 ForEach ($item in $fileBody.HorizonViewServices.name){
@@ -205,11 +210,11 @@ ForEach ($item in $fileBody.HorizonViewServices.name){
 			throw " There is no protocol for $item"
 		}
 		If ($logon -eq "Yes") { Write-Log "$item Adding here" }
-		New-NsxService -Name $item -Protocol $itemProt -port $itemDest -Description $itemDesc -connection $NSXConnection
+			New-NsxService -Name $item -Protocol $itemProt -port $itemDest -Description $itemDesc -connection $NSXConnection
 	 }else{
 		# Does exist check for overwrite
 		# Later version will check on diffs in script
-		If ($logon -eq "Yes") { Write-Log "$item does exist" }
+		If ($logon -eq "Yes") { Write-Log "$item does exist as service in NSX" }
 		# Check for settings to overwrite
 		If ($overwrite -eq "Yes") {
 			# Will add overwrite in a later version
@@ -218,6 +223,60 @@ ForEach ($item in $fileBody.HorizonViewServices.name){
 	 }
 	 $countSvc=$countSvc+1
 }
+
+# DFWServiceGroup processing
+# Lets test if the service group exists in NSX.
+ForEach ($itemSvcGr in $fileBody.DFWServiceGroups){
+	 # Make $itemSvcGr.name human readable for logging
+	 $itemSvcGrName = $itemSvcGr.name
+	 $itemSvcGrfromNSX = Get-NsxServiceGroup -name $itemSvcGr.name -connection $NSXConnection 
+	 If (!$itemSvcGrfromNSX) { 
+		# Does not exist
+
+		If ($logon -eq "Yes") { Write-Log "$itemSvcGrName does not exist as DFW Service Group in NSX. Need to add" }
+		# Get the other values that belong to service
+		$itemSvcGrChild = $itemSvcGr.children
+		$itemSvcGrChildCnt = $itemSvcGr.children.Length
+		# Posible run through
+		# And check if services exist and no typos are here
+		If(!($itemSvcGrChild)){
+			If ($logon -eq "Yes") { Write-Log "[ERROR] There are no children for $itemSvcGr (=$itemSvcGrChild)" }
+			throw " There is no children for $itemSvcGr (=$itemSvcGrChild)"
+		}
+		If ($logon -eq "Yes") { Write-Log "For $itemSvcGrName there are $itemSvcGrChildCnt children $itemSvcGrChild" }
+		If ($logon -eq "Yes") { Write-Log "$itemSvcGrName Adding DFW Service Group here" }
+			New-NsxServiceGroup -name $itemSvcGrName -connection $NSXConnection
+		If ($logon -eq "Yes") { Write-Log "Adding children here" }
+		# If children are gt 1 then loop else add 1
+		If ($ItemSvcGrChildCnt -gt 1){
+			# Loop
+			ForEach ($SvcGrChild in $itemSvcGrChild) {
+				If ($logon -eq "Yes") { Write-Log "$SvcGrChild added here" }
+				# Get the service id
+				$SvcGrChildId = Get-NsxService -name $SvcGrChild -connection $NSXConnection
+				Get-NsxServiceGroup -name $itemSvcGrName -connection $NSXConnection | Add-NsxServiceGroupMember $SvcGrChildId -connection $NSXConnection
+			}
+		}else{
+			#Just one
+			$SvcGrChildId = Get-NsxService -name $SvcGrChild -connection $NSXConnection
+			If ($logon -eq "Yes") { Write-Log "$itemSvcGrChild added here" }
+			Get-NsxServiceGroup -name $itemSvcGrName -connection $NSXConnection | Add-NsxServiceGroupMember $SvcGrChildId -connection $NSXConnection
+		}	
+	 }else{
+		# Does exist check for overwrite
+		# Later version will check on diffs in script
+		If ($logon -eq "Yes") { Write-Log "$itemSvcGrName does exist as DFW Service group in NSX" }
+		# Check for settings to overwrite
+		If ($overwrite -eq "Yes") {
+			# Will add overwrite in a later version
+			# NeedsAdding
+		}
+	 }
+}
+
+
+
+
 
 
 # Close Connections

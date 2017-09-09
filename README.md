@@ -18,6 +18,8 @@ Script currently does:
   - Connect
   - Loop through Firewall services and checks if they exist
   - Add services in NSX when not existing
+  - Add Servicesgroups in NSX when not existing
+  - within the servicegroups adds one or more children. Empty servicegroups yml configuration will throw error
   - Log actions
 
 Details will be posted on my blog https://pascalswereld.nl. 
