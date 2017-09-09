@@ -16,12 +16,15 @@ Script currently does:
   - read contents of yml file
   - Get input user for connecting to vCenter
   - Connect
-  - Loop through Firewall services and checks if they exist
-  - Add services in NSX when not existing
-  - Loop through ServiceGroups and checks if they exist
-  - Add Servicesgroups in NSX when not existing
-  - within the servicegroups adds one or more children. Empty servicegroups yml configuration will throw error
-  - Log actions
+  - Loop through Firewall services and checks if they exist (Get-NsxService)
+  - Log actions (can be turned of in settings part)
+  - Add services to NSX if they do not exist (New-NsxService)
+  - Loop through ServiceGroups and check if they exist (Get-NSxServiceGroup)
+  - Add Servicesgroups in NSX when not existing (New-NsxServiceGroup)
+  - within the servicegroups adds one or more children. (Get-NsxService for id and Get-NsxServiceGroup | Add-NsxServiceGroupMember)
+  - Empty servicegroups with no children in the yml configuration will throw error
+  - Loop through SecurityGroups and check if they exist (Get-NsxSecurityGroup)
+  - Add SecurityGroup in NSX when not existing (New-NsxSecurityGroup)
 
 Details will be posted on my blog https://pascalswereld.nl. 
 Introduction blog post is released as https://pascalswereld.nl/2017/08/24/nsx-for-desktop-jumpstart-microsegmentation-with-horizon-service-installer-fling/.

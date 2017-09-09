@@ -1,27 +1,215 @@
-02-09-17 11:40:18 - Starting Log run 
-02-09-17 11:40:18 - horizon7_Service.yml found continuing import
-02-09-17 11:40:18 - Reading file contents
-02-09-17 11:40:19 - File yml contains at least one HorizonViewServices section. Continuing.
-02-09-17 11:40:19 - End script run
-02-09-17 11:42:56 - Starting Log run 
-02-09-17 11:45:21 - Starting Log run 
-02-09-17 11:45:21 - horizon7_Service.yml found continuing import
-02-09-17 11:45:21 - Reading file contents
-02-09-17 11:45:21 - File yml contains at least one HorizonViewServices section. Continuing.
-02-09-17 11:45:21 - End script run
-02-09-17 11:56:04 - Starting Log run 
-02-09-17 11:56:04 - horizon7_Service.yml found continuing import
-02-09-17 11:56:04 - Reading file contents
-02-09-17 11:56:04 - File yml contains at least one HorizonViewServices section. Continuing.
-02-09-17 11:56:09 - End script run
-02-09-17 11:57:02 - Starting Log run 
-02-09-17 11:57:02 - horizon7_Service.yml found continuing import
-02-09-17 11:57:02 - Reading file contents
-02-09-17 11:57:02 - File yml contains at least one HorizonViewServices section. Continuing.
-02-09-17 11:57:08 - Asked user about NSX manager. Got response: 10.1.11.111
-02-09-17 11:57:08 - End script run
-02-09-17 12:39:06 - Starting Log run 
-02-09-17 12:39:06 - horizon7_Service.yml found continuing import
-02-09-17 12:39:06 - Reading file contents
-02-09-17 12:39:06 - File yml contains at least one HorizonViewServices section. Continuing.
-02-09-17 12:39:08 - [ERROR] Asked user about NSX manager. Got no usable response: 
+09-09-17 16:27:19 - Starting engines
+09-09-17 16:27:19 - horizon7_Service.yml found continuing import
+09-09-17 16:27:19 - Reading file contents
+09-09-17 16:27:20 - File yml contains at least one HorizonViewServices section. Continuing to process these.
+09-09-17 16:27:20 - File yml contains at least one DFWServicesgroups section. Continuing to process these.
+09-09-17 16:27:20 - File yml contains at least one Security Groups section. Continuing to process these.
+09-09-17 16:27:26 - Asked user about NSX manager. Got response: 10.1.17.52
+09-09-17 16:27:33 - Asked user about SSO NSX User. Got response: infra\infrapasbor
+09-09-17 16:27:38 - Asked User about NSX Pass. Got response: <input not logged>
+09-09-17 16:27:38 - Opening connection to NSX Manager
+09-09-17 16:27:54 - HorizonView-Agent_TCP does exist as service in NSX
+09-09-17 16:27:57 - HorizonView-Agent_UDP does exist as service in NSX
+09-09-17 16:27:59 - HorizonView-ComposerService does exist as service in NSX
+09-09-17 16:28:01 - HorizonView-CS_inbound_client does exist as service in NSX
+09-09-17 16:28:04 - HorizonView-CS_inbound_client_tunneled does exist as service in NSX
+09-09-17 16:28:06 - HorizonView_interCS does exist as service in NSX
+09-09-17 16:28:08 - HorizonView_SS_to_CS_tcp does exist as service in NSX
+09-09-17 16:28:10 - HorizonView_SS_to_CS_udp does exist as service in NSX
+09-09-17 16:28:13 - HorizonView_SS_tcp does exist as service in NSX
+09-09-17 16:28:16 - HorizonView_SS_udp does exist as service in NSX
+09-09-17 16:28:18 - HorizonView-ES does exist as service in NSX
+09-09-17 16:28:20 - HorizonView-AVMGR does exist as service in NSX
+09-09-17 16:28:22 - HorizonView-IDM does exist as service in NSX
+09-09-17 16:28:25 - HorizonView-V4H does exist as service in NSX
+09-09-17 16:28:27 - HorizonView-UAG-TCP inbound does exist as service in NSX
+09-09-17 16:28:30 - HorizonView-UAG-UDP inbound does exist as service in NSX
+09-09-17 16:28:32 - vSphere-vCenter-TCP does exist as service in NSX
+09-09-17 16:28:34 - vSphere-vCenter-UDP does exist as service in NSX
+09-09-17 16:28:36 - File Repositories Share does exist as service in NSX
+09-09-17 16:28:39 - Active Directory LDAP does exist as service in NSX
+09-09-17 16:28:41 - Database MSSQL does exist as service in NSX
+09-09-17 16:28:44 - DNS Lookups-UDP does exist as service in NSX
+09-09-17 16:28:46 - DNS Updates Lookups-TCP does exist as service in NSX
+09-09-17 16:28:48 - Time Services NTP does exist as service in NSX
+09-09-17 16:28:51 - Admin Services HTTPS does exist as service in NSX
+09-09-17 16:28:53 - Admin Services SSH does exist as service in NSX
+09-09-17 16:28:55 - Admin Services VAMI does exist as service in NSX
+09-09-17 16:28:58 - Admin Services 84439443 does exist as service in NSX
+09-09-17 16:29:00 - HorizonView-AVAgent does exist as service in NSX
+09-09-17 16:29:02 - Horizon View Composer Services does exist as DFW Service group in NSX
+09-09-17 16:29:04 - Horizon View Connection Services does exist as DFW Service group in NSX
+09-09-17 16:29:06 - Horizon View Desktops does exist as DFW Service group in NSX
+09-09-17 16:29:08 - Horizon View Security Services does exist as DFW Service group in NSX
+09-09-17 16:29:10 - Horizon View Enrollment Services does exist as DFW Service group in NSX
+09-09-17 16:29:13 - HorizonView UAG Services does exist as DFW Service group in NSX
+09-09-17 16:29:15 - vSphere-vCenter Services does exist as DFW Service group in NSX
+09-09-17 16:29:17 - DNS Services does exist as DFW Service group in NSX
+09-09-17 16:29:19 - Active Directory does exist as DFW Service group in NSX
+09-09-17 16:29:21 - MSSQL Database does exist as DFW Service group in NSX
+09-09-17 16:29:23 - DHCP Service does exist as DFW Service group in NSX
+09-09-17 16:29:25 - Time Services does exist as DFW Service group in NSX
+09-09-17 16:29:27 - Admin Services does exist as DFW Service group in NSX
+09-09-17 16:29:29 - V4H Services does exist as DFW Service group in NSX
+09-09-17 16:29:31 - File Services UEM does exist as DFW Service group in NSX
+09-09-17 16:29:33 - App Volumes Agent Services does exist as DFW Service group in NSX
+09-09-17 16:29:35 - vIDM CS Services does exist as DFW Service group in NSX
+09-09-17 16:29:38 - vIDM Inbound Services does exist as DFW Service group in NSX
+09-09-17 16:29:38 - End script run
+09-09-17 16:37:26 - Starting engines
+09-09-17 16:37:26 - horizon7_Service.yml found continuing import
+09-09-17 16:37:26 - Reading file contents
+09-09-17 16:37:26 - File yml contains at least one HorizonViewServices section. Continuing to process these.
+09-09-17 16:37:26 - File yml contains at least one DFWServicesgroups section. Continuing to process these.
+09-09-17 16:37:26 - File yml contains at least one Security Groups section. Continuing to process these.
+09-09-17 16:37:30 - Asked user about NSX manager. Got response: 10.1.17.52
+09-09-17 16:37:33 - Asked user about SSO NSX User. Got response: infra\infrapasbor
+09-09-17 16:37:37 - Asked User about NSX Pass. Got response: <input not logged>
+09-09-17 16:37:37 - Opening connection to NSX Manager
+09-09-17 16:37:41 - HorizonView-Agent_TCP does exist as service in NSX
+09-09-17 16:37:43 - HorizonView-Agent_UDP does exist as service in NSX
+09-09-17 16:37:45 - HorizonView-ComposerService does exist as service in NSX
+09-09-17 16:37:48 - HorizonView-CS_inbound_client does exist as service in NSX
+09-09-17 16:37:50 - HorizonView-CS_inbound_client_tunneled does exist as service in NSX
+09-09-17 16:37:52 - HorizonView_interCS does exist as service in NSX
+09-09-17 16:37:54 - HorizonView_SS_to_CS_tcp does exist as service in NSX
+09-09-17 16:37:57 - HorizonView_SS_to_CS_udp does exist as service in NSX
+09-09-17 16:37:59 - HorizonView_SS_tcp does exist as service in NSX
+09-09-17 16:38:02 - HorizonView_SS_udp does exist as service in NSX
+09-09-17 16:38:04 - HorizonView-ES does exist as service in NSX
+09-09-17 16:38:07 - HorizonView-AVMGR does exist as service in NSX
+09-09-17 16:38:09 - HorizonView-IDM does exist as service in NSX
+09-09-17 16:38:11 - HorizonView-V4H does exist as service in NSX
+09-09-17 16:38:14 - HorizonView-UAG-TCP inbound does exist as service in NSX
+09-09-17 16:38:16 - HorizonView-UAG-UDP inbound does exist as service in NSX
+09-09-17 16:38:19 - vSphere-vCenter-TCP does exist as service in NSX
+09-09-17 16:38:21 - vSphere-vCenter-UDP does exist as service in NSX
+09-09-17 16:38:23 - File Repositories Share does exist as service in NSX
+09-09-17 16:38:25 - Active Directory LDAP does exist as service in NSX
+09-09-17 16:38:28 - Database MSSQL does exist as service in NSX
+09-09-17 16:38:30 - DNS Lookups-UDP does exist as service in NSX
+09-09-17 16:38:32 - DNS Updates Lookups-TCP does exist as service in NSX
+09-09-17 16:38:34 - Time Services NTP does exist as service in NSX
+09-09-17 16:38:37 - Admin Services HTTPS does exist as service in NSX
+09-09-17 16:38:39 - Admin Services SSH does exist as service in NSX
+09-09-17 16:38:42 - Admin Services VAMI does exist as service in NSX
+09-09-17 16:38:44 - Admin Services 84439443 does exist as service in NSX
+09-09-17 16:38:47 - HorizonView-AVAgent does exist as service in NSX
+09-09-17 16:38:48 - Horizon View Composer Services does not exist as DFW Service Group in NSX. Need to add
+09-09-17 16:38:48 - For Horizon View Composer Services there are 27 children HorizonView-ComposerService
+09-09-17 16:38:48 - Horizon View Composer Services Adding DFW Service Group here
+09-09-17 16:38:50 - Adding children here
+09-09-17 16:38:50 - HorizonView-ComposerService added here
+09-09-17 16:38:56 - Horizon View Connection Services does exist as DFW Service group in NSX
+09-09-17 16:38:59 - Horizon View Desktops does exist as DFW Service group in NSX
+09-09-17 16:39:01 - Horizon View Security Services does exist as DFW Service group in NSX
+09-09-17 16:39:03 - Horizon View Enrollment Services does exist as DFW Service group in NSX
+09-09-17 16:39:05 - HorizonView UAG Services does exist as DFW Service group in NSX
+09-09-17 16:39:07 - vSphere-vCenter Services does exist as DFW Service group in NSX
+09-09-17 16:39:09 - DNS Services does exist as DFW Service group in NSX
+09-09-17 16:39:11 - Active Directory does exist as DFW Service group in NSX
+09-09-17 16:39:13 - MSSQL Database does exist as DFW Service group in NSX
+09-09-17 16:39:14 - DHCP Service does exist as DFW Service group in NSX
+09-09-17 16:39:16 - Time Services does exist as DFW Service group in NSX
+09-09-17 16:39:18 - Admin Services does exist as DFW Service group in NSX
+09-09-17 16:39:20 - V4H Services does exist as DFW Service group in NSX
+09-09-17 16:39:22 - File Services UEM does exist as DFW Service group in NSX
+09-09-17 16:39:24 - App Volumes Agent Services does exist as DFW Service group in NSX
+09-09-17 16:39:26 - vIDM CS Services does exist as DFW Service group in NSX
+09-09-17 16:39:28 - vIDM Inbound Services does exist as DFW Service group in NSX
+09-09-17 16:39:29 - Horizon View Desktops does exist as DFW Security group in NSX
+09-09-17 16:39:30 - Horizon View Connection Server does exist as DFW Security group in NSX
+09-09-17 16:39:31 - Horizon View Security Server does exist as DFW Security group in NSX
+09-09-17 16:39:32 - Horizon View Composer Server does exist as DFW Security group in NSX
+09-09-17 16:39:33 - Horizon Enrollment Server does exist as DFW Security group in NSX
+09-09-17 16:39:34 - Unified Access Gateways Server does exist as DFW Security group in NSX
+09-09-17 16:39:35 - VMware Identity Manager does exist as DFW Security group in NSX
+09-09-17 16:39:36 - App Volumes Manager does exist as DFW Security group in NSX
+09-09-17 16:39:36 - vROPS for Horizon does exist as DFW Security group in NSX
+09-09-17 16:39:37 - Airwatch does exist as DFW Security group in NSX
+09-09-17 16:39:38 - vSphere vCenter - Hosts does exist as DFW Security group in NSX
+09-09-17 16:39:39 - Domain Controllers does exist as DFW Security group in NSX
+09-09-17 16:39:40 - DHCP Servers does exist as DFW Security group in NSX
+09-09-17 16:39:41 - UEM File Repositories does exist as DFW Security group in NSX
+09-09-17 16:39:42 - MSSQL Servers does exist as DFW Security group in NSX
+09-09-17 16:39:43 - Domain Name Servers does exist as DFW Security group in NSX
+09-09-17 16:39:44 - NTP Servers does exist as DFW Security group in NSX
+09-09-17 16:39:45 - Admin Stations does exist as DFW Security group in NSX
+09-09-17 16:39:45 - End script run
+09-09-17 16:43:03 - Starting engines
+09-09-17 16:43:03 - horizon7_Service.yml found continuing import
+09-09-17 16:43:03 - Reading file contents
+09-09-17 16:43:03 - File yml contains at least one HorizonViewServices section. Continuing to process these.
+09-09-17 16:43:03 - File yml contains at least one DFWServicesgroups section. Continuing to process these.
+09-09-17 16:43:03 - File yml contains at least one Security Groups section. Continuing to process these.
+09-09-17 16:43:08 - Asked user about NSX manager. Got response: 10.1.17.52
+09-09-17 16:43:14 - Asked user about SSO NSX User. Got response: infra\infrapasbor
+09-09-17 16:43:18 - Asked User about NSX Pass. Got response: <input not logged>
+09-09-17 16:43:18 - Opening connection to NSX Manager
+09-09-17 16:43:21 - HorizonView-Agent_TCP does exist as service in NSX
+09-09-17 16:43:23 - HorizonView-Agent_UDP does exist as service in NSX
+09-09-17 16:43:26 - HorizonView-ComposerService does exist as service in NSX
+09-09-17 16:43:29 - HorizonView-CS_inbound_client does exist as service in NSX
+09-09-17 16:43:32 - HorizonView-CS_inbound_client_tunneled does exist as service in NSX
+09-09-17 16:43:35 - HorizonView_interCS does exist as service in NSX
+09-09-17 16:43:37 - HorizonView_SS_to_CS_tcp does exist as service in NSX
+09-09-17 16:43:39 - HorizonView_SS_to_CS_udp does exist as service in NSX
+09-09-17 16:43:42 - HorizonView_SS_tcp does exist as service in NSX
+09-09-17 16:43:44 - HorizonView_SS_udp does exist as service in NSX
+09-09-17 16:43:46 - HorizonView-ES does exist as service in NSX
+09-09-17 16:43:49 - HorizonView-AVMGR does exist as service in NSX
+09-09-17 16:43:51 - HorizonView-IDM does exist as service in NSX
+09-09-17 16:43:53 - HorizonView-V4H does exist as service in NSX
+09-09-17 16:43:55 - HorizonView-UAG-TCP inbound does exist as service in NSX
+09-09-17 16:43:57 - HorizonView-UAG-UDP inbound does exist as service in NSX
+09-09-17 16:44:00 - vSphere-vCenter-TCP does exist as service in NSX
+09-09-17 16:44:02 - vSphere-vCenter-UDP does exist as service in NSX
+09-09-17 16:44:05 - File Repositories Share does exist as service in NSX
+09-09-17 16:44:07 - Active Directory LDAP does exist as service in NSX
+09-09-17 16:44:09 - Database MSSQL does exist as service in NSX
+09-09-17 16:44:12 - DNS Lookups-UDP does exist as service in NSX
+09-09-17 16:44:14 - DNS Updates Lookups-TCP does exist as service in NSX
+09-09-17 16:44:17 - Time Services NTP does exist as service in NSX
+09-09-17 16:44:20 - Admin Services HTTPS does exist as service in NSX
+09-09-17 16:44:23 - Admin Services SSH does exist as service in NSX
+09-09-17 16:44:25 - Admin Services VAMI does exist as service in NSX
+09-09-17 16:44:28 - Admin Services 84439443 does exist as service in NSX
+09-09-17 16:44:30 - HorizonView-AVAgent does exist as service in NSX
+09-09-17 16:44:32 - Horizon View Composer Services does exist as DFW Service group in NSX
+09-09-17 16:44:34 - Horizon View Connection Services does exist as DFW Service group in NSX
+09-09-17 16:44:36 - Horizon View Desktops does exist as DFW Service group in NSX
+09-09-17 16:44:38 - Horizon View Security Services does exist as DFW Service group in NSX
+09-09-17 16:44:39 - Horizon View Enrollment Services does exist as DFW Service group in NSX
+09-09-17 16:44:41 - HorizonView UAG Services does exist as DFW Service group in NSX
+09-09-17 16:44:43 - vSphere-vCenter Services does exist as DFW Service group in NSX
+09-09-17 16:44:45 - DNS Services does exist as DFW Service group in NSX
+09-09-17 16:44:47 - Active Directory does exist as DFW Service group in NSX
+09-09-17 16:44:49 - MSSQL Database does exist as DFW Service group in NSX
+09-09-17 16:44:51 - DHCP Service does exist as DFW Service group in NSX
+09-09-17 16:44:53 - Time Services does exist as DFW Service group in NSX
+09-09-17 16:44:56 - Admin Services does exist as DFW Service group in NSX
+09-09-17 16:44:57 - V4H Services does exist as DFW Service group in NSX
+09-09-17 16:44:59 - File Services UEM does exist as DFW Service group in NSX
+09-09-17 16:45:01 - App Volumes Agent Services does exist as DFW Service group in NSX
+09-09-17 16:45:03 - vIDM CS Services does exist as DFW Service group in NSX
+09-09-17 16:45:05 - vIDM Inbound Services does exist as DFW Service group in NSX
+09-09-17 16:45:06 - Horizon View Desktops does exist as DFW Security group in NSX
+09-09-17 16:45:07 - Horizon View Connection Server does exist as DFW Security group in NSX
+09-09-17 16:45:08 - Horizon View Security Server does exist as DFW Security group in NSX
+09-09-17 16:45:09 - Horizon View Composer Server does exist as DFW Security group in NSX
+09-09-17 16:45:10 - Horizon Enrollment Server does exist as DFW Security group in NSX
+09-09-17 16:45:11 - Unified Access Gateways Server does exist as DFW Security group in NSX
+09-09-17 16:45:11 - VMware Identity Manager does exist as DFW Security group in NSX
+09-09-17 16:45:12 - App Volumes Manager does exist as DFW Security group in NSX
+09-09-17 16:45:13 - vROPS for Horizon does exist as DFW Security group in NSX
+09-09-17 16:45:14 - Airwatch does exist as DFW Security group in NSX
+09-09-17 16:45:15 - vSphere vCenter - Hosts does exist as DFW Security group in NSX
+09-09-17 16:45:16 - Domain Controllers does exist as DFW Security group in NSX
+09-09-17 16:45:17 - DHCP Servers does exist as DFW Security group in NSX
+09-09-17 16:45:18 - UEM File Repositories does exist as DFW Security group in NSX
+09-09-17 16:45:19 - MSSQL Servers does exist as DFW Security group in NSX
+09-09-17 16:45:20 - Domain Name Servers does exist as DFW Security group in NSX
+09-09-17 16:45:21 - NTP Servers does exist as DFW Security group in NSX
+09-09-17 16:45:22 - Admin Stations does exist as DFW Security group in NSX
+09-09-17 16:45:23 - Testing one two three Security Group does not exist as DFW Security Group in NSX. Need to add
+09-09-17 16:45:24 - End script run
