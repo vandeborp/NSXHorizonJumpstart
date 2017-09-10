@@ -25,6 +25,9 @@ Script currently does:
   - Empty servicegroups with no children in the yml configuration will throw error
   - Loop through SecurityGroups and check if they exist (Get-NsxSecurityGroup)
   - Add SecurityGroup in NSX when not existing (New-NsxSecurityGroup)
+  - Empty FirewallSection in the yml configuration will throw error
+  - Loop through FirewallSections and check if they exist and have rules (Get-NsxFirewallSection)
+  - Add FirewallSection in NSX when not existing (New-NsxFirewallSection)
 
 Details will be posted on my blog https://pascalswereld.nl. 
 Introduction blog post is released as https://pascalswereld.nl/2017/08/24/nsx-for-desktop-jumpstart-microsegmentation-with-horizon-service-installer-fling/.
