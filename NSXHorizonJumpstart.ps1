@@ -14,6 +14,9 @@ depending on functions will add to different modules
 .NOTES
 	File Name:NSXHorizonJumpstart.ps1
 	
+.OPTIONS
+	None yet
+	
 .LINK
 	Github https://github.com/Paikke/NSXHorizonJumpstart
 	
@@ -36,7 +39,7 @@ $ymlFile = "horizon7_Service.yml" # Input yml file
 $logon = "Yes" # Do we want log Yes or No
 $logFile = "NSXHorizonJumpstart.log" # Log File location
 $overwrite = "Yes" # Overwrite existing values, Yes or No
-$defaultDeny = "Yes" # Set default to Deny ## To be used later
+$defaultDeny = "Yes" # Set default Firewall Rule to Deny ## To be used later
 $ReportOpt = "Yes" # Set the report option to Ye or No ## To be used later
 # End of Settings
 
@@ -160,6 +163,24 @@ If (!($fileBody.SecurityGroups)){
 } # Can't propose user with default other than the default yml
 
 If ($logon -eq "Yes") { Write-Log "File yml contains at least one Security Groups section. Continuing to process these." }
+
+# Next up Firewall Rules And Section
+# Check next section
+If (!($fileBody.FirewallRules)){
+	# Requires at least the FirewallRules section to be present
+	# If we don't find exit
+	If ($logon -eq "Yes") { Write-Log "[ERROR] FirewallRules section name not found but is required. Exit script" }
+	throw "FirewallRules section not found but is required"
+} # Can't propose user with default other than the default yml
+If (!($fileBody.FirewallSections)){
+	# Requires at least the FirewallSections section to be present
+	# If we don't find exit
+	If ($logon -eq "Yes") { Write-Log "[ERROR] FirewallSections section name not found but is required. Exit script" }
+	throw "FirewallSections section not found but is required"
+} # Can't propose user with default other than the default yml
+
+
+If ($logon -eq "Yes") { Write-Log "File yml contains at least Firewal section and rules. Continuing to process these." }
 
 # We need further testing of other required components
 
@@ -310,6 +331,44 @@ ForEach ($itemSecGr in $fileBody.SecurityGroups){
 	 }
 }
 
+# DFW Firewall Rules and Sections work together we need one for the other
+# First check and add the sections
+# Then check an add rules
+# Add rules to sections
+# Then add to NSX when not existing
+# Sections
+ForEach ($itemFWSec in $fileBody.FirewallSections){
+	 # Make human readable
+	 $itemFWSecName = $itemFWSec.name
+	 $itemFWSecfromNSX = Get-NSXFirewallSection -name $itemFWSec.name -connection $NSXConnection 
+	 If (!$itemFWSecfromNSX) { 
+		# Does not exist
+		If ($logon -eq "Yes") { Write-Log "$itemFWSecName does not exist as DFW Firewall Section in NSX. Need to add" }
+		# Get the other values for the section
+		# Get the other values that belong to service
+		$itemFWSecRules = $itemFWSec.firewallRules
+		$itemFWSecRulesCnt = $itemFWSec.firewallRules.Length
+		# And check if the rules exist and no typos are here
+		If(!($itemFWSecRules)){
+			If ($logon -eq "Yes") { Write-Log "[ERROR] There are no rules for $itemFWSec (=$itemFWSecRules)" }
+			throw "There are no rules for $itemFWSec (=$itemFWSecRules)"
+		}
+		If ($logon -eq "Yes") { Write-Log "For $itemFWSecName there are $itemFWSecRulesCnt children $itemFWSecRules" }
+		# For now just adding the section
+		New-NsxFirewallSection -name $itemFWSecName -connection $NSXConnection
+		
+		# Something will be added in the firewallRules section
+	 }else{
+		# Does exist check for overwrite
+		# Later version will check on diffs in script
+		If ($logon -eq "Yes") { Write-Log "$itemFWSecName does exist as DFW Firewall Section in NSX" }
+		# Check for settings to overwrite
+		If ($overwrite -eq "Yes") {
+			# Will add overwrite in a later version
+			# NeedsAdding
+		}
+	 }
+}
 
 # Close Connections
 
