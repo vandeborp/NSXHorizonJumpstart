@@ -214,6 +214,10 @@ DFWServiceGroups :
    - name : vIDM Inbound Services
      children :
         - HorizonView-IDM
+   - name : AirWatch Services
+     children :
+        - Admin Services HTTPS
+        - Database MSSQL
 #Security Groups
 SecurityGroups : 
    - Horizon View Desktops
@@ -221,11 +225,14 @@ SecurityGroups :
    - Horizon View Security Server
    - Horizon View Composer Server
    - Horizon Enrollment Server
+   - Horizon Clients Zones
+   - Horizon External Clients Zones
    - Unified Access Gateways Server 
    - VMware Identity Manager
    - App Volumes Manager
    - vROPS for Horizon 
-   - Airwatch
+   - Airwatch Console Server
+   - Airwatch Device Server
    - vSphere vCenter - Hosts
    - Domain Controllers
    - DHCP Servers
@@ -245,14 +252,17 @@ FirewallRules :
      destination : Horizon View Connection Server
      action : Allow  
    - name : Desktop Client FW Rule
+     source : "Horizon Clients Zones, Horizon View Security Server,Horizon View Connection Server,Horizon View Composer Server,App Volumes Manager,Unified Access Gateways Servers"
      destination : Horizon View Desktops
      action : Allow
      serviceGroup : Horizon View Desktops
    - name : Connection Server FW Rule
+     source : Horizon Clients Zones
      destination : Horizon View Connection Server
      action : Allow
      serviceGroup : Horizon View Connection Services
    - name : Security Server FW Rule
+     source : Horizon External Clients Zones
      destination : Horizon View Security Server
      action : Allow
      serviceGroup : Horizon View Security Server
@@ -260,12 +270,9 @@ FirewallRules :
      source : Horizon View Connection Server
      destination : Horizon View Composer Server
      action : Allow
-     serviceGroup : Horizon View Composer Server	 
-   - name : Enrollment Server FW Rule
-     destination : Horizon Enrollment Server
-     action : Reject
-     serviceGroup : Horizon View Enrollment Server	 
+     serviceGroup : Horizon View Composer Server	  
    - name : UAG FW Rule
+     source : Horizon External Clients Zones
      destination : Unified Access Gateways Server
      action : Allow
      serviceGroup : HorizonView UAG Services
@@ -306,6 +313,7 @@ FirewallRules :
      serviceGroup : Time Services
    - name : Administrative Console Access FW Rule
      source : Admin Stations
+     destination : "Horizon View Desktops,Horizon View Connection Server,Horizon View Security Server,Horizon View Composer Server,Horizon Enrollment Server,Unified Access Gateways Server,App Volumes Manager,VMware Identity Manager,vROPS for Horizon,Airwatch,vSphere vCenter - Hosts"
      action : Allow
      serviceGroup : Admin Services
    - name : V4H FW Rule
@@ -329,31 +337,46 @@ FirewallRules :
      action : Allow
      serviceGroup : vIDM CS Services
    - name : vIDM Inbound FW Rule
+     source : "Horizon View Clients Zones,Horizon External Clients Zones"
      destination : VMware Identity Manager
      action : Allow
      serviceGroup : vIDM Inbound Services
+   - name : AirWatch Console MSSQL FW Rule
+     source : "AirWatch Console Server"
+     destination : "MSSQL Servers"
+     action : Allow
+     serviceGroup : AirWatch Services
+   - name : AirWatch Inter FW Rule
+     source : "AirWatch Device Server"
+     destination : "AirWatch Console Server"
+     action : Allow
+     serviceGroup : AirWatch Services
 #DFW Firewall Sections
 FirewallSections :
-   - name : Horizon 7 Desktop Block Section
+   - name : Horizon Desktop Block Section
      firewallRules :
        - Desktop FW Rule
        - App Volumes Agent FW Rule
        - UEM File FW Rule
        - Inter Desktop FW Rule
        - DHCP Server Desktop FW Rule
-   - name : Horizon 7 Management Block Section
+   - name : Horizon View Management Block Section
      firewallRules :    
        - Connection Server FW Rule
+       - Composer Server FW Rule
+       - Inter Connection Server FW Rule
+       - vSphere-vCenter FW Rule
+   - name : Horizon View External Connections Section
+     firewallRules :
        - UAG FW Rule
        - Security Server FW Rule
-       - Composer Server FW Rule
-       - Enrollment Server FW Rule
-       - Inter Connection Server FW Rule
+   - name : Horizon Operation Management Section
+     firewallRules :
        - V4H FW Rule
+   - name : Horizon Identity Manager Section
+     firewallRules :
        - vIDM CS FW Rule
        - vIDM Inbound FW Rule
-       - vSphere-vCenter FW Rule
-       - Administrative Console Access FW Rule
    - name : Infrastructure Services Section
      firewallRules :
        - Domain Controllers LDAP FW Rule
@@ -361,5 +384,10 @@ FirewallSections :
        - Desktop DHCP Server IN FW Rule
        - DNS FW Rule
        - NTP FW Rule
-       
+       - Administrative Console Access FW Rule
+   - name : AirWatch Section
+     firewallRules :
+       - AirWatch Console MSSQL FW Rule
+       - AirWatch Inter FW Rule
+  
        
