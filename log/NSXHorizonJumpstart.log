@@ -1,215 +1,1179 @@
-09-09-17 16:27:19 - Starting engines
-09-09-17 16:27:19 - horizon7_Service.yml found continuing import
-09-09-17 16:27:19 - Reading file contents
-09-09-17 16:27:20 - File yml contains at least one HorizonViewServices section. Continuing to process these.
-09-09-17 16:27:20 - File yml contains at least one DFWServicesgroups section. Continuing to process these.
-09-09-17 16:27:20 - File yml contains at least one Security Groups section. Continuing to process these.
-09-09-17 16:27:26 - Asked user about NSX manager. Got response: 10.1.17.52
-09-09-17 16:27:33 - Asked user about SSO NSX User. Got response: infra\infrapasbor
-09-09-17 16:27:38 - Asked User about NSX Pass. Got response: <input not logged>
-09-09-17 16:27:38 - Opening connection to NSX Manager
-09-09-17 16:27:54 - HorizonView-Agent_TCP does exist as service in NSX
-09-09-17 16:27:57 - HorizonView-Agent_UDP does exist as service in NSX
-09-09-17 16:27:59 - HorizonView-ComposerService does exist as service in NSX
-09-09-17 16:28:01 - HorizonView-CS_inbound_client does exist as service in NSX
-09-09-17 16:28:04 - HorizonView-CS_inbound_client_tunneled does exist as service in NSX
-09-09-17 16:28:06 - HorizonView_interCS does exist as service in NSX
-09-09-17 16:28:08 - HorizonView_SS_to_CS_tcp does exist as service in NSX
-09-09-17 16:28:10 - HorizonView_SS_to_CS_udp does exist as service in NSX
-09-09-17 16:28:13 - HorizonView_SS_tcp does exist as service in NSX
-09-09-17 16:28:16 - HorizonView_SS_udp does exist as service in NSX
-09-09-17 16:28:18 - HorizonView-ES does exist as service in NSX
-09-09-17 16:28:20 - HorizonView-AVMGR does exist as service in NSX
-09-09-17 16:28:22 - HorizonView-IDM does exist as service in NSX
-09-09-17 16:28:25 - HorizonView-V4H does exist as service in NSX
-09-09-17 16:28:27 - HorizonView-UAG-TCP inbound does exist as service in NSX
-09-09-17 16:28:30 - HorizonView-UAG-UDP inbound does exist as service in NSX
-09-09-17 16:28:32 - vSphere-vCenter-TCP does exist as service in NSX
-09-09-17 16:28:34 - vSphere-vCenter-UDP does exist as service in NSX
-09-09-17 16:28:36 - File Repositories Share does exist as service in NSX
-09-09-17 16:28:39 - Active Directory LDAP does exist as service in NSX
-09-09-17 16:28:41 - Database MSSQL does exist as service in NSX
-09-09-17 16:28:44 - DNS Lookups-UDP does exist as service in NSX
-09-09-17 16:28:46 - DNS Updates Lookups-TCP does exist as service in NSX
-09-09-17 16:28:48 - Time Services NTP does exist as service in NSX
-09-09-17 16:28:51 - Admin Services HTTPS does exist as service in NSX
-09-09-17 16:28:53 - Admin Services SSH does exist as service in NSX
-09-09-17 16:28:55 - Admin Services VAMI does exist as service in NSX
-09-09-17 16:28:58 - Admin Services 84439443 does exist as service in NSX
-09-09-17 16:29:00 - HorizonView-AVAgent does exist as service in NSX
-09-09-17 16:29:02 - Horizon View Composer Services does exist as DFW Service group in NSX
-09-09-17 16:29:04 - Horizon View Connection Services does exist as DFW Service group in NSX
-09-09-17 16:29:06 - Horizon View Desktops does exist as DFW Service group in NSX
-09-09-17 16:29:08 - Horizon View Security Services does exist as DFW Service group in NSX
-09-09-17 16:29:10 - Horizon View Enrollment Services does exist as DFW Service group in NSX
-09-09-17 16:29:13 - HorizonView UAG Services does exist as DFW Service group in NSX
-09-09-17 16:29:15 - vSphere-vCenter Services does exist as DFW Service group in NSX
-09-09-17 16:29:17 - DNS Services does exist as DFW Service group in NSX
-09-09-17 16:29:19 - Active Directory does exist as DFW Service group in NSX
-09-09-17 16:29:21 - MSSQL Database does exist as DFW Service group in NSX
-09-09-17 16:29:23 - DHCP Service does exist as DFW Service group in NSX
-09-09-17 16:29:25 - Time Services does exist as DFW Service group in NSX
-09-09-17 16:29:27 - Admin Services does exist as DFW Service group in NSX
-09-09-17 16:29:29 - V4H Services does exist as DFW Service group in NSX
-09-09-17 16:29:31 - File Services UEM does exist as DFW Service group in NSX
-09-09-17 16:29:33 - App Volumes Agent Services does exist as DFW Service group in NSX
-09-09-17 16:29:35 - vIDM CS Services does exist as DFW Service group in NSX
-09-09-17 16:29:38 - vIDM Inbound Services does exist as DFW Service group in NSX
-09-09-17 16:29:38 - End script run
-09-09-17 16:37:26 - Starting engines
-09-09-17 16:37:26 - horizon7_Service.yml found continuing import
-09-09-17 16:37:26 - Reading file contents
-09-09-17 16:37:26 - File yml contains at least one HorizonViewServices section. Continuing to process these.
-09-09-17 16:37:26 - File yml contains at least one DFWServicesgroups section. Continuing to process these.
-09-09-17 16:37:26 - File yml contains at least one Security Groups section. Continuing to process these.
-09-09-17 16:37:30 - Asked user about NSX manager. Got response: 10.1.17.52
-09-09-17 16:37:33 - Asked user about SSO NSX User. Got response: infra\infrapasbor
-09-09-17 16:37:37 - Asked User about NSX Pass. Got response: <input not logged>
-09-09-17 16:37:37 - Opening connection to NSX Manager
-09-09-17 16:37:41 - HorizonView-Agent_TCP does exist as service in NSX
-09-09-17 16:37:43 - HorizonView-Agent_UDP does exist as service in NSX
-09-09-17 16:37:45 - HorizonView-ComposerService does exist as service in NSX
-09-09-17 16:37:48 - HorizonView-CS_inbound_client does exist as service in NSX
-09-09-17 16:37:50 - HorizonView-CS_inbound_client_tunneled does exist as service in NSX
-09-09-17 16:37:52 - HorizonView_interCS does exist as service in NSX
-09-09-17 16:37:54 - HorizonView_SS_to_CS_tcp does exist as service in NSX
-09-09-17 16:37:57 - HorizonView_SS_to_CS_udp does exist as service in NSX
-09-09-17 16:37:59 - HorizonView_SS_tcp does exist as service in NSX
-09-09-17 16:38:02 - HorizonView_SS_udp does exist as service in NSX
-09-09-17 16:38:04 - HorizonView-ES does exist as service in NSX
-09-09-17 16:38:07 - HorizonView-AVMGR does exist as service in NSX
-09-09-17 16:38:09 - HorizonView-IDM does exist as service in NSX
-09-09-17 16:38:11 - HorizonView-V4H does exist as service in NSX
-09-09-17 16:38:14 - HorizonView-UAG-TCP inbound does exist as service in NSX
-09-09-17 16:38:16 - HorizonView-UAG-UDP inbound does exist as service in NSX
-09-09-17 16:38:19 - vSphere-vCenter-TCP does exist as service in NSX
-09-09-17 16:38:21 - vSphere-vCenter-UDP does exist as service in NSX
-09-09-17 16:38:23 - File Repositories Share does exist as service in NSX
-09-09-17 16:38:25 - Active Directory LDAP does exist as service in NSX
-09-09-17 16:38:28 - Database MSSQL does exist as service in NSX
-09-09-17 16:38:30 - DNS Lookups-UDP does exist as service in NSX
-09-09-17 16:38:32 - DNS Updates Lookups-TCP does exist as service in NSX
-09-09-17 16:38:34 - Time Services NTP does exist as service in NSX
-09-09-17 16:38:37 - Admin Services HTTPS does exist as service in NSX
-09-09-17 16:38:39 - Admin Services SSH does exist as service in NSX
-09-09-17 16:38:42 - Admin Services VAMI does exist as service in NSX
-09-09-17 16:38:44 - Admin Services 84439443 does exist as service in NSX
-09-09-17 16:38:47 - HorizonView-AVAgent does exist as service in NSX
-09-09-17 16:38:48 - Horizon View Composer Services does not exist as DFW Service Group in NSX. Need to add
-09-09-17 16:38:48 - For Horizon View Composer Services there are 27 children HorizonView-ComposerService
-09-09-17 16:38:48 - Horizon View Composer Services Adding DFW Service Group here
-09-09-17 16:38:50 - Adding children here
-09-09-17 16:38:50 - HorizonView-ComposerService added here
-09-09-17 16:38:56 - Horizon View Connection Services does exist as DFW Service group in NSX
-09-09-17 16:38:59 - Horizon View Desktops does exist as DFW Service group in NSX
-09-09-17 16:39:01 - Horizon View Security Services does exist as DFW Service group in NSX
-09-09-17 16:39:03 - Horizon View Enrollment Services does exist as DFW Service group in NSX
-09-09-17 16:39:05 - HorizonView UAG Services does exist as DFW Service group in NSX
-09-09-17 16:39:07 - vSphere-vCenter Services does exist as DFW Service group in NSX
-09-09-17 16:39:09 - DNS Services does exist as DFW Service group in NSX
-09-09-17 16:39:11 - Active Directory does exist as DFW Service group in NSX
-09-09-17 16:39:13 - MSSQL Database does exist as DFW Service group in NSX
-09-09-17 16:39:14 - DHCP Service does exist as DFW Service group in NSX
-09-09-17 16:39:16 - Time Services does exist as DFW Service group in NSX
-09-09-17 16:39:18 - Admin Services does exist as DFW Service group in NSX
-09-09-17 16:39:20 - V4H Services does exist as DFW Service group in NSX
-09-09-17 16:39:22 - File Services UEM does exist as DFW Service group in NSX
-09-09-17 16:39:24 - App Volumes Agent Services does exist as DFW Service group in NSX
-09-09-17 16:39:26 - vIDM CS Services does exist as DFW Service group in NSX
-09-09-17 16:39:28 - vIDM Inbound Services does exist as DFW Service group in NSX
-09-09-17 16:39:29 - Horizon View Desktops does exist as DFW Security group in NSX
-09-09-17 16:39:30 - Horizon View Connection Server does exist as DFW Security group in NSX
-09-09-17 16:39:31 - Horizon View Security Server does exist as DFW Security group in NSX
-09-09-17 16:39:32 - Horizon View Composer Server does exist as DFW Security group in NSX
-09-09-17 16:39:33 - Horizon Enrollment Server does exist as DFW Security group in NSX
-09-09-17 16:39:34 - Unified Access Gateways Server does exist as DFW Security group in NSX
-09-09-17 16:39:35 - VMware Identity Manager does exist as DFW Security group in NSX
-09-09-17 16:39:36 - App Volumes Manager does exist as DFW Security group in NSX
-09-09-17 16:39:36 - vROPS for Horizon does exist as DFW Security group in NSX
-09-09-17 16:39:37 - Airwatch does exist as DFW Security group in NSX
-09-09-17 16:39:38 - vSphere vCenter - Hosts does exist as DFW Security group in NSX
-09-09-17 16:39:39 - Domain Controllers does exist as DFW Security group in NSX
-09-09-17 16:39:40 - DHCP Servers does exist as DFW Security group in NSX
-09-09-17 16:39:41 - UEM File Repositories does exist as DFW Security group in NSX
-09-09-17 16:39:42 - MSSQL Servers does exist as DFW Security group in NSX
-09-09-17 16:39:43 - Domain Name Servers does exist as DFW Security group in NSX
-09-09-17 16:39:44 - NTP Servers does exist as DFW Security group in NSX
-09-09-17 16:39:45 - Admin Stations does exist as DFW Security group in NSX
-09-09-17 16:39:45 - End script run
-09-09-17 16:43:03 - Starting engines
-09-09-17 16:43:03 - horizon7_Service.yml found continuing import
-09-09-17 16:43:03 - Reading file contents
-09-09-17 16:43:03 - File yml contains at least one HorizonViewServices section. Continuing to process these.
-09-09-17 16:43:03 - File yml contains at least one DFWServicesgroups section. Continuing to process these.
-09-09-17 16:43:03 - File yml contains at least one Security Groups section. Continuing to process these.
-09-09-17 16:43:08 - Asked user about NSX manager. Got response: 10.1.17.52
-09-09-17 16:43:14 - Asked user about SSO NSX User. Got response: infra\infrapasbor
-09-09-17 16:43:18 - Asked User about NSX Pass. Got response: <input not logged>
-09-09-17 16:43:18 - Opening connection to NSX Manager
-09-09-17 16:43:21 - HorizonView-Agent_TCP does exist as service in NSX
-09-09-17 16:43:23 - HorizonView-Agent_UDP does exist as service in NSX
-09-09-17 16:43:26 - HorizonView-ComposerService does exist as service in NSX
-09-09-17 16:43:29 - HorizonView-CS_inbound_client does exist as service in NSX
-09-09-17 16:43:32 - HorizonView-CS_inbound_client_tunneled does exist as service in NSX
-09-09-17 16:43:35 - HorizonView_interCS does exist as service in NSX
-09-09-17 16:43:37 - HorizonView_SS_to_CS_tcp does exist as service in NSX
-09-09-17 16:43:39 - HorizonView_SS_to_CS_udp does exist as service in NSX
-09-09-17 16:43:42 - HorizonView_SS_tcp does exist as service in NSX
-09-09-17 16:43:44 - HorizonView_SS_udp does exist as service in NSX
-09-09-17 16:43:46 - HorizonView-ES does exist as service in NSX
-09-09-17 16:43:49 - HorizonView-AVMGR does exist as service in NSX
-09-09-17 16:43:51 - HorizonView-IDM does exist as service in NSX
-09-09-17 16:43:53 - HorizonView-V4H does exist as service in NSX
-09-09-17 16:43:55 - HorizonView-UAG-TCP inbound does exist as service in NSX
-09-09-17 16:43:57 - HorizonView-UAG-UDP inbound does exist as service in NSX
-09-09-17 16:44:00 - vSphere-vCenter-TCP does exist as service in NSX
-09-09-17 16:44:02 - vSphere-vCenter-UDP does exist as service in NSX
-09-09-17 16:44:05 - File Repositories Share does exist as service in NSX
-09-09-17 16:44:07 - Active Directory LDAP does exist as service in NSX
-09-09-17 16:44:09 - Database MSSQL does exist as service in NSX
-09-09-17 16:44:12 - DNS Lookups-UDP does exist as service in NSX
-09-09-17 16:44:14 - DNS Updates Lookups-TCP does exist as service in NSX
-09-09-17 16:44:17 - Time Services NTP does exist as service in NSX
-09-09-17 16:44:20 - Admin Services HTTPS does exist as service in NSX
-09-09-17 16:44:23 - Admin Services SSH does exist as service in NSX
-09-09-17 16:44:25 - Admin Services VAMI does exist as service in NSX
-09-09-17 16:44:28 - Admin Services 84439443 does exist as service in NSX
-09-09-17 16:44:30 - HorizonView-AVAgent does exist as service in NSX
-09-09-17 16:44:32 - Horizon View Composer Services does exist as DFW Service group in NSX
-09-09-17 16:44:34 - Horizon View Connection Services does exist as DFW Service group in NSX
-09-09-17 16:44:36 - Horizon View Desktops does exist as DFW Service group in NSX
-09-09-17 16:44:38 - Horizon View Security Services does exist as DFW Service group in NSX
-09-09-17 16:44:39 - Horizon View Enrollment Services does exist as DFW Service group in NSX
-09-09-17 16:44:41 - HorizonView UAG Services does exist as DFW Service group in NSX
-09-09-17 16:44:43 - vSphere-vCenter Services does exist as DFW Service group in NSX
-09-09-17 16:44:45 - DNS Services does exist as DFW Service group in NSX
-09-09-17 16:44:47 - Active Directory does exist as DFW Service group in NSX
-09-09-17 16:44:49 - MSSQL Database does exist as DFW Service group in NSX
-09-09-17 16:44:51 - DHCP Service does exist as DFW Service group in NSX
-09-09-17 16:44:53 - Time Services does exist as DFW Service group in NSX
-09-09-17 16:44:56 - Admin Services does exist as DFW Service group in NSX
-09-09-17 16:44:57 - V4H Services does exist as DFW Service group in NSX
-09-09-17 16:44:59 - File Services UEM does exist as DFW Service group in NSX
-09-09-17 16:45:01 - App Volumes Agent Services does exist as DFW Service group in NSX
-09-09-17 16:45:03 - vIDM CS Services does exist as DFW Service group in NSX
-09-09-17 16:45:05 - vIDM Inbound Services does exist as DFW Service group in NSX
-09-09-17 16:45:06 - Horizon View Desktops does exist as DFW Security group in NSX
-09-09-17 16:45:07 - Horizon View Connection Server does exist as DFW Security group in NSX
-09-09-17 16:45:08 - Horizon View Security Server does exist as DFW Security group in NSX
-09-09-17 16:45:09 - Horizon View Composer Server does exist as DFW Security group in NSX
-09-09-17 16:45:10 - Horizon Enrollment Server does exist as DFW Security group in NSX
-09-09-17 16:45:11 - Unified Access Gateways Server does exist as DFW Security group in NSX
-09-09-17 16:45:11 - VMware Identity Manager does exist as DFW Security group in NSX
-09-09-17 16:45:12 - App Volumes Manager does exist as DFW Security group in NSX
-09-09-17 16:45:13 - vROPS for Horizon does exist as DFW Security group in NSX
-09-09-17 16:45:14 - Airwatch does exist as DFW Security group in NSX
-09-09-17 16:45:15 - vSphere vCenter - Hosts does exist as DFW Security group in NSX
-09-09-17 16:45:16 - Domain Controllers does exist as DFW Security group in NSX
-09-09-17 16:45:17 - DHCP Servers does exist as DFW Security group in NSX
-09-09-17 16:45:18 - UEM File Repositories does exist as DFW Security group in NSX
-09-09-17 16:45:19 - MSSQL Servers does exist as DFW Security group in NSX
-09-09-17 16:45:20 - Domain Name Servers does exist as DFW Security group in NSX
-09-09-17 16:45:21 - NTP Servers does exist as DFW Security group in NSX
-09-09-17 16:45:22 - Admin Stations does exist as DFW Security group in NSX
-09-09-17 16:45:23 - Testing one two three Security Group does not exist as DFW Security Group in NSX. Need to add
-09-09-17 16:45:24 - End script run
+16-09-17 16:56:33 - Starting engines
+16-09-17 16:56:33 - horizon7_Service.yml found continuing import
+16-09-17 16:56:33 - Reading file contents
+16-09-17 16:56:33 - File yml contains at least one HorizonViewServices section. Continuing to process these.
+16-09-17 16:56:33 - File yml contains at least one DFWServicesgroups section. Continuing to process these.
+16-09-17 16:56:33 - File yml contains at least one Security Groups section. Continuing to process these.
+16-09-17 16:56:33 - File yml contains at least Firewal section and rules. Continuing to process these.
+16-09-17 16:56:38 - Asked user about NSX manager. Got response: 10.1.17.52
+16-09-17 16:56:42 - Asked user about SSO NSX User. Got response: infra\infrapasbor
+16-09-17 16:56:47 - Asked User about NSX Pass. Got response: <input not logged>
+16-09-17 16:56:47 - Opening connection to NSX Manager
+16-09-17 16:56:50 - HorizonView-Agent_TCP does exist as service in NSX
+16-09-17 16:56:53 - HorizonView-Agent_UDP does exist as service in NSX
+16-09-17 16:56:55 - HorizonView-ComposerService does exist as service in NSX
+16-09-17 16:56:57 - HorizonView-CS_inbound_client does exist as service in NSX
+16-09-17 16:56:59 - HorizonView-CS_inbound_client_tunneled does exist as service in NSX
+16-09-17 16:57:02 - HorizonView_interCS does exist as service in NSX
+16-09-17 16:57:04 - HorizonView_SS_to_CS_tcp does exist as service in NSX
+16-09-17 16:57:06 - HorizonView_SS_to_CS_udp does exist as service in NSX
+16-09-17 16:57:08 - HorizonView_SS_tcp does exist as service in NSX
+16-09-17 16:57:10 - HorizonView_SS_udp does exist as service in NSX
+16-09-17 16:57:12 - HorizonView-ES does exist as service in NSX
+16-09-17 16:57:15 - HorizonView-AVMGR does exist as service in NSX
+16-09-17 16:57:17 - HorizonView-IDM does exist as service in NSX
+16-09-17 16:57:19 - HorizonView-V4H does exist as service in NSX
+16-09-17 16:57:21 - HorizonView-UAG-TCP inbound does exist as service in NSX
+16-09-17 16:57:23 - HorizonView-UAG-UDP inbound does exist as service in NSX
+16-09-17 16:57:26 - vSphere-vCenter-TCP does exist as service in NSX
+16-09-17 16:57:27 - vSphere-vCenter-UDP does exist as service in NSX
+16-09-17 16:57:29 - File Repositories Share does exist as service in NSX
+16-09-17 16:57:32 - Active Directory LDAP does exist as service in NSX
+16-09-17 16:57:34 - Database MSSQL does exist as service in NSX
+16-09-17 16:57:36 - DNS Lookups-UDP does exist as service in NSX
+16-09-17 16:57:38 - DNS Updates Lookups-TCP does exist as service in NSX
+16-09-17 16:57:40 - Time Services NTP does exist as service in NSX
+16-09-17 16:57:43 - Admin Services HTTPS does exist as service in NSX
+16-09-17 16:57:45 - Admin Services SSH does exist as service in NSX
+16-09-17 16:57:59 - Admin Services VAMI does exist as service in NSX
+16-09-17 16:58:05 - Admin Services 84439443 does exist as service in NSX
+16-09-17 16:58:07 - HorizonView-AVAgent does exist as service in NSX
+16-09-17 16:58:09 - Horizon View Composer Services does exist as DFW Service group in NSX
+16-09-17 16:58:11 - Horizon View Connection Services does exist as DFW Service group in NSX
+16-09-17 16:58:12 - Horizon View Desktops does exist as DFW Service group in NSX
+16-09-17 16:58:14 - Horizon View Security Services does exist as DFW Service group in NSX
+16-09-17 16:58:16 - Horizon View Enrollment Services does exist as DFW Service group in NSX
+16-09-17 16:58:18 - HorizonView UAG Services does exist as DFW Service group in NSX
+16-09-17 16:58:20 - vSphere-vCenter Services does exist as DFW Service group in NSX
+16-09-17 16:58:21 - DNS Services does exist as DFW Service group in NSX
+16-09-17 16:58:23 - Active Directory does exist as DFW Service group in NSX
+16-09-17 16:58:25 - MSSQL Database does exist as DFW Service group in NSX
+16-09-17 16:58:27 - DHCP Service does exist as DFW Service group in NSX
+16-09-17 16:58:29 - Time Services does exist as DFW Service group in NSX
+16-09-17 16:58:31 - Admin Services does exist as DFW Service group in NSX
+16-09-17 16:58:33 - V4H Services does exist as DFW Service group in NSX
+16-09-17 16:58:35 - File Services UEM does exist as DFW Service group in NSX
+16-09-17 16:58:43 - App Volumes Agent Services does exist as DFW Service group in NSX
+16-09-17 16:58:46 - vIDM CS Services does exist as DFW Service group in NSX
+16-09-17 16:58:48 - vIDM Inbound Services does exist as DFW Service group in NSX
+16-09-17 16:58:49 - Horizon View Desktops does exist as DFW Security group in NSX
+16-09-17 16:58:50 - Horizon View Connection Server does exist as DFW Security group in NSX
+16-09-17 16:58:51 - Horizon View Security Server does exist as DFW Security group in NSX
+16-09-17 16:58:52 - Horizon View Composer Server does exist as DFW Security group in NSX
+16-09-17 16:58:52 - Horizon Enrollment Server does exist as DFW Security group in NSX
+16-09-17 16:58:53 - Horizon Clients Zones does exist as DFW Security group in NSX
+16-09-17 16:58:54 - Horizon External Clients Zones does exist as DFW Security group in NSX
+16-09-17 16:58:54 - Unified Access Gateways Server does exist as DFW Security group in NSX
+16-09-17 16:58:55 - VMware Identity Manager does exist as DFW Security group in NSX
+16-09-17 16:58:56 - App Volumes Manager does exist as DFW Security group in NSX
+16-09-17 16:58:57 - vROPS for Horizon does exist as DFW Security group in NSX
+16-09-17 16:58:57 - Airwatch Console Server does exist as DFW Security group in NSX
+16-09-17 16:58:59 - Airwatch Device Server does exist as DFW Security group in NSX
+16-09-17 16:58:59 - vSphere vCenter - Hosts does exist as DFW Security group in NSX
+16-09-17 16:59:00 - Domain Controllers does exist as DFW Security group in NSX
+16-09-17 16:59:01 - DHCP Servers does exist as DFW Security group in NSX
+16-09-17 16:59:02 - UEM File Repositories does exist as DFW Security group in NSX
+16-09-17 16:59:03 - MSSQL Servers does exist as DFW Security group in NSX
+16-09-17 16:59:03 - Domain Name Servers does exist as DFW Security group in NSX
+16-09-17 16:59:04 - NTP Servers does exist as DFW Security group in NSX
+16-09-17 16:59:05 - Admin Stations does exist as DFW Security group in NSX
+16-09-17 16:59:05 - Horizon Desktop Block Section does not exist as DFW Firewall Section in NSX. Need to add
+16-09-17 16:59:05 - For Horizon Desktop Block Section there are 5 children Desktop FW Rule App Volumes Agent FW Rule UEM File FW Rule Inter Desktop FW Rule DHCP Server Desktop FW Rule
+16-09-17 16:59:06 - Desktop FW Rule does not exist as DFW Firewall Section in NSX. Need to add
+16-09-17 16:59:06 - App Volumes Agent FW Rule does not exist as DFW Firewall Section in NSX. Need to add
+16-09-17 16:59:06 - For App Volumes Agent FW Rule there is source: Horizon View Desktops
+16-09-17 16:59:06 - For App Volumes Agent FW Rule there is destination: App Volumes Manager
+16-09-17 16:59:06 - For App Volumes Agent FW Rule there is action: Allow
+16-09-17 16:59:06 - [DEBUG] Splitted sources in 1 times and items Horizon View Desktops
+16-09-17 16:59:06 - [DEBUG] Getting Source SecurityGroup ID for Horizon View Desktops
+16-09-17 16:59:07 - [DEBUG] Getting Destination SecurityGroup ID for App Volumes Manager
+16-09-17 16:59:08 - [DEBUG] Sources Argument : securitygroup.name
+16-09-17 16:59:08 - [DEBUG] Dest Argument : securitygroup.name
+16-09-17 16:59:09 - [DEBUG] ServiceGrp Argument : System.Xml.XmlElement
+16-09-17 16:59:09 - Adding new rule App Volumes Agent FW Rule to Section Horizon Desktop Block Section
+16-09-17 16:59:11 - UEM File FW Rule does not exist as DFW Firewall Section in NSX. Need to add
+16-09-17 16:59:11 - For UEM File FW Rule there is source: Horizon View Desktops
+16-09-17 16:59:11 - For UEM File FW Rule there is destination: UEM File Repositories
+16-09-17 16:59:11 - For UEM File FW Rule there is action: Allow
+16-09-17 16:59:11 - [DEBUG] Splitted sources in 1 times and items Horizon View Desktops
+16-09-17 16:59:11 - [DEBUG] Getting Source SecurityGroup ID for Horizon View Desktops
+16-09-17 16:59:12 - [DEBUG] Getting Destination SecurityGroup ID for UEM File Repositories
+16-09-17 16:59:13 - [DEBUG] Sources Argument : securitygroup.name
+16-09-17 16:59:13 - [DEBUG] Dest Argument : securitygroup.name
+16-09-17 16:59:15 - [DEBUG] ServiceGrp Argument : System.Xml.XmlElement
+16-09-17 16:59:15 - Adding new rule UEM File FW Rule to Section Horizon Desktop Block Section
+16-09-17 16:59:16 - Inter Desktop FW Rule does not exist as DFW Firewall Section in NSX. Need to add
+16-09-17 16:59:16 - For Inter Desktop FW Rule there is source: Horizon View Desktops
+16-09-17 16:59:16 - For Inter Desktop FW Rule there is destination: Horizon View Desktops
+16-09-17 16:59:16 - For Inter Desktop FW Rule there is action: Reject
+16-09-17 16:59:16 - [WARN] There is a Reject or Block for Inter Desktop FW Rule (=Reject)
+16-09-17 16:59:16 - [DEBUG] Splitted sources in 1 times and items Horizon View Desktops
+16-09-17 16:59:16 - [DEBUG] Getting Source SecurityGroup ID for Horizon View Desktops
+16-09-17 16:59:17 - [DEBUG] Getting Destination SecurityGroup ID for Horizon View Desktops
+16-09-17 16:59:18 - [DEBUG] Sources Argument : securitygroup.name
+16-09-17 16:59:18 - [DEBUG] Dest Argument : securitygroup.name
+16-09-17 16:59:18 - [DEBUG] ServiceGrp Argument : System.Xml.XmlElement
+16-09-17 16:59:18 - Adding new rule Inter Desktop FW Rule to Section Horizon Desktop Block Section
+16-09-17 16:59:19 - DHCP Server Desktop FW Rule does not exist as DFW Firewall Section in NSX. Need to add
+16-09-17 16:59:19 - For DHCP Server Desktop FW Rule there is source: DHCP Servers
+16-09-17 16:59:19 - For DHCP Server Desktop FW Rule there is destination: Horizon View Desktops
+16-09-17 16:59:19 - For DHCP Server Desktop FW Rule there is action: Allow
+16-09-17 16:59:19 - [DEBUG] Splitted sources in 1 times and items DHCP Servers
+16-09-17 16:59:19 - [DEBUG] Getting Source SecurityGroup ID for DHCP Servers
+16-09-17 16:59:20 - [DEBUG] Getting Destination SecurityGroup ID for Horizon View Desktops
+16-09-17 16:59:21 - [DEBUG] Sources Argument : securitygroup.name
+16-09-17 16:59:21 - [DEBUG] Dest Argument : securitygroup.name
+16-09-17 16:59:23 - [DEBUG] ServiceGrp Argument : System.Xml.XmlElement
+16-09-17 16:59:23 - Adding new rule DHCP Server Desktop FW Rule to Section Horizon Desktop Block Section
+16-09-17 16:59:25 - Horizon View Management Block Section does not exist as DFW Firewall Section in NSX. Need to add
+16-09-17 16:59:25 - For Horizon View Management Block Section there are 4 children Connection Server FW Rule Composer Server FW Rule Inter Connection Server FW Rule vSphere-vCenter FW Rule
+16-09-17 16:59:25 - Connection Server FW Rule does not exist as DFW Firewall Section in NSX. Need to add
+16-09-17 16:59:25 - For Connection Server FW Rule there is source: Horizon Clients Zones
+16-09-17 16:59:25 - For Connection Server FW Rule there is destination: Horizon View Connection Server
+16-09-17 16:59:25 - For Connection Server FW Rule there is action: Allow
+16-09-17 16:59:25 - [DEBUG] Splitted sources in 1 times and items Horizon Clients Zones
+16-09-17 16:59:25 - [DEBUG] Getting Source SecurityGroup ID for Horizon Clients Zones
+16-09-17 16:59:26 - [DEBUG] Getting Destination SecurityGroup ID for Horizon View Connection Server
+16-09-17 16:59:27 - [DEBUG] Sources Argument : securitygroup.name
+16-09-17 16:59:27 - [DEBUG] Dest Argument : securitygroup.name
+16-09-17 16:59:28 - [DEBUG] ServiceGrp Argument : System.Xml.XmlElement
+16-09-17 16:59:28 - Adding new rule Connection Server FW Rule to Section Horizon View Management Block Section
+16-09-17 16:59:30 - Composer Server FW Rule does not exist as DFW Firewall Section in NSX. Need to add
+16-09-17 16:59:30 - For Composer Server FW Rule there is source: Horizon View Connection Server
+16-09-17 16:59:30 - For Composer Server FW Rule there is destination: Horizon View Composer Server
+16-09-17 16:59:30 - For Composer Server FW Rule there is action: Allow
+16-09-17 16:59:30 - [DEBUG] Splitted sources in 1 times and items Horizon View Connection Server
+16-09-17 16:59:30 - [DEBUG] Getting Source SecurityGroup ID for Horizon View Connection Server
+16-09-17 16:59:31 - [DEBUG] Getting Destination SecurityGroup ID for Horizon View Composer Server
+16-09-17 16:59:31 - [DEBUG] Sources Argument : securitygroup.name
+16-09-17 16:59:31 - [DEBUG] Dest Argument : securitygroup.name
+16-09-17 16:59:33 - [DEBUG] ServiceGrp Argument : System.Xml.XmlElement
+16-09-17 16:59:33 - Adding new rule Composer Server FW Rule to Section Horizon View Management Block Section
+16-09-17 16:59:35 - Inter Connection Server FW Rule does not exist as DFW Firewall Section in NSX. Need to add
+16-09-17 16:59:35 - For Inter Connection Server FW Rule there is source: Horizon View Connection Server
+16-09-17 16:59:35 - For Inter Connection Server FW Rule there is destination: Horizon View Connection Server
+16-09-17 16:59:35 - For Inter Connection Server FW Rule there is action: Allow
+16-09-17 16:59:35 - [DEBUG] Splitted sources in 1 times and items Horizon View Connection Server
+16-09-17 16:59:35 - [DEBUG] Getting Source SecurityGroup ID for Horizon View Connection Server
+16-09-17 16:59:36 - [DEBUG] Getting Destination SecurityGroup ID for Horizon View Connection Server
+16-09-17 16:59:36 - [DEBUG] Sources Argument : securitygroup.name
+16-09-17 16:59:36 - [DEBUG] Dest Argument : securitygroup.name
+16-09-17 16:59:37 - [DEBUG] ServiceGrp Argument : System.Xml.XmlElement
+16-09-17 16:59:37 - Adding new rule Inter Connection Server FW Rule to Section Horizon View Management Block Section
+16-09-17 16:59:38 - vSphere-vCenter FW Rule does not exist as DFW Firewall Section in NSX. Need to add
+16-09-17 16:59:38 - For vSphere-vCenter FW Rule there is source: App Volumes Manager,Horizon View Composer Server,Horizon View Connection Server
+16-09-17 16:59:38 - For vSphere-vCenter FW Rule there is destination: vSphere vCenter - Hosts
+16-09-17 16:59:38 - For vSphere-vCenter FW Rule there is action: Allow
+16-09-17 16:59:38 - [DEBUG] Splitted sources in 3 times and items App Volumes Manager Horizon View Composer Server Horizon View Connection Server
+16-09-17 16:59:38 - [DEBUG] Getting Source SecurityGroup ID for App Volumes Manager
+16-09-17 16:59:39 - [DEBUG] Getting Source SecurityGroup ID for Horizon View Composer Server
+16-09-17 16:59:40 - [DEBUG] Getting Source SecurityGroup ID for Horizon View Connection Server
+16-09-17 16:59:41 - [DEBUG] Getting Source SecurityGroup ID for App Volumes Manager
+16-09-17 16:59:41 - [DEBUG] Getting Source SecurityGroup ID for Horizon View Composer Server
+16-09-17 16:59:42 - [DEBUG] Getting Source SecurityGroup ID for Horizon View Connection Server
+16-09-17 16:59:43 - [DEBUG] Getting Source SecurityGroup ID for App Volumes Manager
+16-09-17 16:59:44 - [DEBUG] Getting Source SecurityGroup ID for Horizon View Composer Server
+16-09-17 16:59:45 - [DEBUG] Getting Source SecurityGroup ID for Horizon View Connection Server
+16-09-17 16:59:45 - [DEBUG] Getting Destination SecurityGroup ID for vSphere vCenter - Hosts
+16-09-17 16:59:46 - [DEBUG] Sources Argument : securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup.name
+16-09-17 16:59:46 - [DEBUG] Dest Argument : securitygroup.name
+16-09-17 16:59:48 - [DEBUG] ServiceGrp Argument : System.Xml.XmlElement
+16-09-17 16:59:48 - Adding new rule vSphere-vCenter FW Rule to Section Horizon View Management Block Section
+16-09-17 16:59:49 - Horizon View External Connections Section does not exist as DFW Firewall Section in NSX. Need to add
+16-09-17 16:59:49 - For Horizon View External Connections Section there are 2 children UAG FW Rule Security Server FW Rule
+16-09-17 16:59:50 - UAG FW Rule does not exist as DFW Firewall Section in NSX. Need to add
+16-09-17 16:59:50 - For UAG FW Rule there is source: Horizon External Clients Zones
+16-09-17 16:59:50 - For UAG FW Rule there is destination: Unified Access Gateways Server
+16-09-17 16:59:50 - For UAG FW Rule there is action: Allow
+16-09-17 16:59:50 - [DEBUG] Splitted sources in 1 times and items Horizon External Clients Zones
+16-09-17 16:59:50 - [DEBUG] Getting Source SecurityGroup ID for Horizon External Clients Zones
+16-09-17 16:59:51 - [DEBUG] Getting Destination SecurityGroup ID for Unified Access Gateways Server
+16-09-17 16:59:51 - [DEBUG] Sources Argument : securitygroup.name
+16-09-17 16:59:51 - [DEBUG] Dest Argument : securitygroup.name
+16-09-17 16:59:53 - [DEBUG] ServiceGrp Argument : System.Xml.XmlElement
+16-09-17 16:59:53 - Adding new rule UAG FW Rule to Section Horizon View External Connections Section
+16-09-17 16:59:55 - Security Server FW Rule does not exist as DFW Firewall Section in NSX. Need to add
+16-09-17 16:59:55 - For Security Server FW Rule there is source: Horizon External Clients Zones
+16-09-17 16:59:55 - For Security Server FW Rule there is destination: Horizon View Security Server
+16-09-17 16:59:55 - For Security Server FW Rule there is action: Allow
+16-09-17 16:59:55 - [DEBUG] Splitted sources in 1 times and items Horizon External Clients Zones
+16-09-17 16:59:55 - [DEBUG] Getting Source SecurityGroup ID for Horizon External Clients Zones
+16-09-17 16:59:56 - [DEBUG] Getting Destination SecurityGroup ID for Horizon View Security Server
+16-09-17 16:59:56 - [DEBUG] Sources Argument : securitygroup.name
+16-09-17 16:59:56 - [DEBUG] Dest Argument : securitygroup.name
+16-09-17 16:59:58 - [DEBUG] ServiceGrp Argument : System.Xml.XmlElement
+16-09-17 16:59:58 - Adding new rule Security Server FW Rule to Section Horizon View External Connections Section
+16-09-17 16:59:59 - Horizon Operation Management Section does not exist as DFW Firewall Section in NSX. Need to add
+16-09-17 16:59:59 - For Horizon Operation Management Section there are 11 children V4H FW Rule
+16-09-17 17:00:00 - V4H FW Rule does not exist as DFW Firewall Section in NSX. Need to add
+16-09-17 17:00:00 - For V4H FW Rule there is source: Horizon View Desktops,Horizon View Connection Server,Unified Access Gateways Server,App Volumes Manager,vROPS for Horizon,vSphere vCenter - Hosts
+16-09-17 17:00:00 - For V4H FW Rule there is destination: Horizon View Desktops,Horizon View Connection Server,vROPS for Horizon
+16-09-17 17:00:00 - For V4H FW Rule there is action: Allow
+16-09-17 17:00:00 - [DEBUG] Splitted sources in 6 times and items Horizon View Desktops Horizon View Connection Server Unified Access Gateways Server App Volumes Manager vROPS for Horizon vSphere vCenter - Hosts
+16-09-17 17:00:00 - [DEBUG] Getting Source SecurityGroup ID for Horizon View Desktops
+16-09-17 17:00:01 - [DEBUG] Getting Source SecurityGroup ID for Horizon View Connection Server
+16-09-17 17:00:02 - [DEBUG] Getting Source SecurityGroup ID for Unified Access Gateways Server
+16-09-17 17:00:02 - [DEBUG] Getting Source SecurityGroup ID for App Volumes Manager
+16-09-17 17:00:03 - [DEBUG] Getting Source SecurityGroup ID for vROPS for Horizon
+16-09-17 17:00:04 - [DEBUG] Getting Source SecurityGroup ID for vSphere vCenter - Hosts
+16-09-17 17:00:05 - [DEBUG] Getting Source SecurityGroup ID for Horizon View Desktops
+16-09-17 17:00:05 - [DEBUG] Getting Source SecurityGroup ID for Horizon View Connection Server
+16-09-17 17:00:06 - [DEBUG] Getting Source SecurityGroup ID for Unified Access Gateways Server
+16-09-17 17:00:07 - [DEBUG] Getting Source SecurityGroup ID for App Volumes Manager
+16-09-17 17:00:07 - [DEBUG] Getting Source SecurityGroup ID for vROPS for Horizon
+16-09-17 17:00:08 - [DEBUG] Getting Source SecurityGroup ID for vSphere vCenter - Hosts
+16-09-17 17:00:09 - [DEBUG] Getting Source SecurityGroup ID for Horizon View Desktops
+16-09-17 17:00:10 - [DEBUG] Getting Source SecurityGroup ID for Horizon View Connection Server
+16-09-17 17:00:10 - [DEBUG] Getting Source SecurityGroup ID for Unified Access Gateways Server
+16-09-17 17:00:11 - [DEBUG] Getting Source SecurityGroup ID for App Volumes Manager
+16-09-17 17:00:12 - [DEBUG] Getting Source SecurityGroup ID for vROPS for Horizon
+16-09-17 17:00:13 - [DEBUG] Getting Source SecurityGroup ID for vSphere vCenter - Hosts
+16-09-17 17:00:13 - [DEBUG] Getting Source SecurityGroup ID for Horizon View Desktops
+16-09-17 17:00:14 - [DEBUG] Getting Source SecurityGroup ID for Horizon View Connection Server
+16-09-17 17:00:15 - [DEBUG] Getting Source SecurityGroup ID for Unified Access Gateways Server
+16-09-17 17:00:15 - [DEBUG] Getting Source SecurityGroup ID for App Volumes Manager
+16-09-17 17:00:16 - [DEBUG] Getting Source SecurityGroup ID for vROPS for Horizon
+16-09-17 17:00:17 - [DEBUG] Getting Source SecurityGroup ID for vSphere vCenter - Hosts
+16-09-17 17:00:17 - [DEBUG] Getting Source SecurityGroup ID for Horizon View Desktops
+16-09-17 17:00:18 - [DEBUG] Getting Source SecurityGroup ID for Horizon View Connection Server
+16-09-17 17:00:19 - [DEBUG] Getting Source SecurityGroup ID for Unified Access Gateways Server
+16-09-17 17:00:20 - [DEBUG] Getting Source SecurityGroup ID for App Volumes Manager
+16-09-17 17:00:20 - [DEBUG] Getting Source SecurityGroup ID for vROPS for Horizon
+16-09-17 17:00:21 - [DEBUG] Getting Source SecurityGroup ID for vSphere vCenter - Hosts
+16-09-17 17:00:22 - [DEBUG] Getting Source SecurityGroup ID for Horizon View Desktops
+16-09-17 17:00:23 - [DEBUG] Getting Source SecurityGroup ID for Horizon View Connection Server
+16-09-17 17:00:24 - [DEBUG] Getting Source SecurityGroup ID for Unified Access Gateways Server
+16-09-17 17:00:25 - [DEBUG] Getting Source SecurityGroup ID for App Volumes Manager
+16-09-17 17:00:26 - [DEBUG] Getting Source SecurityGroup ID for vROPS for Horizon
+16-09-17 17:00:26 - [DEBUG] Getting Source SecurityGroup ID for vSphere vCenter - Hosts
+16-09-17 17:00:27 - [DEBUG] Getting Destination SecurityGroup ID for Horizon View Desktops
+16-09-17 17:00:28 - [DEBUG] Getting Destination SecurityGroup ID for Horizon View Connection Server
+16-09-17 17:00:29 - [DEBUG] Getting Destination SecurityGroup ID for vROPS for Horizon
+16-09-17 17:00:29 - [DEBUG] Getting Destination SecurityGroup ID for Horizon View Desktops
+16-09-17 17:00:30 - [DEBUG] Getting Destination SecurityGroup ID for Horizon View Connection Server
+16-09-17 17:00:31 - [DEBUG] Getting Destination SecurityGroup ID for vROPS for Horizon
+16-09-17 17:00:31 - [DEBUG] Getting Destination SecurityGroup ID for Horizon View Desktops
+16-09-17 17:00:32 - [DEBUG] Getting Destination SecurityGroup ID for Horizon View Connection Server
+16-09-17 17:00:33 - [DEBUG] Getting Destination SecurityGroup ID for vROPS for Horizon
+16-09-17 17:00:34 - [DEBUG] Sources Argument : securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup.name
+16-09-17 17:00:34 - [DEBUG] Dest Argument : securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup.name
+16-09-17 17:00:35 - [DEBUG] ServiceGrp Argument : System.Xml.XmlElement
+16-09-17 17:00:35 - Adding new rule V4H FW Rule to Section Horizon Operation Management Section
+16-09-17 17:00:38 - Horizon Identity Manager Section does not exist as DFW Firewall Section in NSX. Need to add
+16-09-17 17:00:38 - For Horizon Identity Manager Section there are 2 children vIDM CS FW Rule vIDM Inbound FW Rule
+16-09-17 17:00:39 - vIDM CS FW Rule does not exist as DFW Firewall Section in NSX. Need to add
+16-09-17 17:00:39 - For vIDM CS FW Rule there is source: VMware Identity Manager
+16-09-17 17:00:39 - For vIDM CS FW Rule there is destination: Horizon View Connection Server
+16-09-17 17:00:39 - For vIDM CS FW Rule there is action: Allow
+16-09-17 17:00:39 - [DEBUG] Splitted sources in 1 times and items VMware Identity Manager
+16-09-17 17:00:39 - [DEBUG] Getting Source SecurityGroup ID for VMware Identity Manager
+16-09-17 17:00:40 - [DEBUG] Getting Destination SecurityGroup ID for Horizon View Connection Server
+16-09-17 17:00:41 - [DEBUG] Sources Argument : securitygroup.name
+16-09-17 17:00:41 - [DEBUG] Dest Argument : securitygroup.name
+16-09-17 17:00:43 - [DEBUG] ServiceGrp Argument : System.Xml.XmlElement
+16-09-17 17:00:43 - Adding new rule vIDM CS FW Rule to Section Horizon Identity Manager Section
+16-09-17 17:00:44 - vIDM Inbound FW Rule does not exist as DFW Firewall Section in NSX. Need to add
+16-09-17 17:00:44 - For vIDM Inbound FW Rule there is source: Horizon View Clients Zones,Horizon External Clients Zones
+16-09-17 17:00:44 - For vIDM Inbound FW Rule there is destination: VMware Identity Manager
+16-09-17 17:00:44 - For vIDM Inbound FW Rule there is action: Allow
+16-09-17 17:00:44 - [DEBUG] Splitted sources in 2 times and items Horizon View Clients Zones Horizon External Clients Zones
+16-09-17 17:00:44 - [DEBUG] Getting Source SecurityGroup ID for Horizon View Clients Zones
+16-09-17 17:00:45 - [DEBUG] Getting Source SecurityGroup ID for Horizon External Clients Zones
+16-09-17 17:00:46 - [DEBUG] Getting Source SecurityGroup ID for Horizon View Clients Zones
+16-09-17 17:00:47 - [DEBUG] Getting Source SecurityGroup ID for Horizon External Clients Zones
+16-09-17 17:00:47 - [DEBUG] Getting Destination SecurityGroup ID for VMware Identity Manager
+16-09-17 17:00:48 - [DEBUG] Sources Argument : securitygroup securitygroup.name
+16-09-17 17:00:48 - [DEBUG] Dest Argument : securitygroup.name
+16-09-17 17:00:50 - [DEBUG] ServiceGrp Argument : System.Xml.XmlElement
+16-09-17 17:00:50 - Adding new rule vIDM Inbound FW Rule to Section Horizon Identity Manager Section
+16-09-17 17:00:51 - Infrastructure Services Section does not exist as DFW Firewall Section in NSX. Need to add
+16-09-17 17:00:51 - For Infrastructure Services Section there are 6 children Domain Controllers LDAP FW Rule SQL Server Management FW Rule Desktop DHCP Server IN FW Rule DNS FW Rule NTP FW Rule Administrative Console Access FW Rule
+16-09-17 17:00:52 - Domain Controllers LDAP FW Rule does not exist as DFW Firewall Section in NSX. Need to add
+16-09-17 17:00:52 - For Domain Controllers LDAP FW Rule there is source: App Volumes Manager,VMware Identity Manager,vSphere vCenter - Hosts,vROPS for Horizon
+16-09-17 17:00:52 - For Domain Controllers LDAP FW Rule there is destination: Domain Controllers
+16-09-17 17:00:52 - For Domain Controllers LDAP FW Rule there is action: Allow
+16-09-17 17:00:52 - [DEBUG] Splitted sources in 4 times and items App Volumes Manager VMware Identity Manager vSphere vCenter - Hosts vROPS for Horizon
+16-09-17 17:00:52 - [DEBUG] Getting Source SecurityGroup ID for App Volumes Manager
+16-09-17 17:00:53 - [DEBUG] Getting Source SecurityGroup ID for VMware Identity Manager
+16-09-17 17:00:53 - [DEBUG] Getting Source SecurityGroup ID for vSphere vCenter - Hosts
+16-09-17 17:00:54 - [DEBUG] Getting Source SecurityGroup ID for vROPS for Horizon
+16-09-17 17:00:55 - [DEBUG] Getting Source SecurityGroup ID for App Volumes Manager
+16-09-17 17:00:56 - [DEBUG] Getting Source SecurityGroup ID for VMware Identity Manager
+16-09-17 17:00:56 - [DEBUG] Getting Source SecurityGroup ID for vSphere vCenter - Hosts
+16-09-17 17:00:57 - [DEBUG] Getting Source SecurityGroup ID for vROPS for Horizon
+16-09-17 17:00:58 - [DEBUG] Getting Source SecurityGroup ID for App Volumes Manager
+16-09-17 17:00:58 - [DEBUG] Getting Source SecurityGroup ID for VMware Identity Manager
+16-09-17 17:00:59 - [DEBUG] Getting Source SecurityGroup ID for vSphere vCenter - Hosts
+16-09-17 17:01:00 - [DEBUG] Getting Source SecurityGroup ID for vROPS for Horizon
+16-09-17 17:01:00 - [DEBUG] Getting Source SecurityGroup ID for App Volumes Manager
+16-09-17 17:01:01 - [DEBUG] Getting Source SecurityGroup ID for VMware Identity Manager
+16-09-17 17:01:02 - [DEBUG] Getting Source SecurityGroup ID for vSphere vCenter - Hosts
+16-09-17 17:01:03 - [DEBUG] Getting Source SecurityGroup ID for vROPS for Horizon
+16-09-17 17:01:03 - [DEBUG] Getting Destination SecurityGroup ID for Domain Controllers
+16-09-17 17:01:04 - [DEBUG] Sources Argument : securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup.name
+16-09-17 17:01:04 - [DEBUG] Dest Argument : securitygroup.name
+16-09-17 17:01:06 - [DEBUG] ServiceGrp Argument : System.Xml.XmlElement
+16-09-17 17:01:06 - Adding new rule Domain Controllers LDAP FW Rule to Section Infrastructure Services Section
+16-09-17 17:01:07 - SQL Server Management FW Rule does not exist as DFW Firewall Section in NSX. Need to add
+16-09-17 17:01:07 - For SQL Server Management FW Rule there is source: App Volumes Manager,VMware Identity Manager,Horizon View Connection Server,Horizon View Composer Server,vROPS for Horizon
+16-09-17 17:01:07 - For SQL Server Management FW Rule there is destination: MSSQL Servers
+16-09-17 17:01:07 - For SQL Server Management FW Rule there is action: Allow
+16-09-17 17:01:07 - [DEBUG] Splitted sources in 5 times and items App Volumes Manager VMware Identity Manager Horizon View Connection Server Horizon View Composer Server vROPS for Horizon
+16-09-17 17:01:07 - [DEBUG] Getting Source SecurityGroup ID for App Volumes Manager
+16-09-17 17:01:08 - [DEBUG] Getting Source SecurityGroup ID for VMware Identity Manager
+16-09-17 17:01:09 - [DEBUG] Getting Source SecurityGroup ID for Horizon View Connection Server
+16-09-17 17:01:10 - [DEBUG] Getting Source SecurityGroup ID for Horizon View Composer Server
+16-09-17 17:01:10 - [DEBUG] Getting Source SecurityGroup ID for vROPS for Horizon
+16-09-17 17:01:11 - [DEBUG] Getting Source SecurityGroup ID for App Volumes Manager
+16-09-17 17:01:12 - [DEBUG] Getting Source SecurityGroup ID for VMware Identity Manager
+16-09-17 17:01:12 - [DEBUG] Getting Source SecurityGroup ID for Horizon View Connection Server
+16-09-17 17:01:13 - [DEBUG] Getting Source SecurityGroup ID for Horizon View Composer Server
+16-09-17 17:01:14 - [DEBUG] Getting Source SecurityGroup ID for vROPS for Horizon
+16-09-17 17:01:15 - [DEBUG] Getting Source SecurityGroup ID for App Volumes Manager
+16-09-17 17:01:15 - [DEBUG] Getting Source SecurityGroup ID for VMware Identity Manager
+16-09-17 17:01:16 - [DEBUG] Getting Source SecurityGroup ID for Horizon View Connection Server
+16-09-17 17:01:17 - [DEBUG] Getting Source SecurityGroup ID for Horizon View Composer Server
+16-09-17 17:01:17 - [DEBUG] Getting Source SecurityGroup ID for vROPS for Horizon
+16-09-17 17:01:18 - [DEBUG] Getting Source SecurityGroup ID for App Volumes Manager
+16-09-17 17:01:19 - [DEBUG] Getting Source SecurityGroup ID for VMware Identity Manager
+16-09-17 17:01:19 - [DEBUG] Getting Source SecurityGroup ID for Horizon View Connection Server
+16-09-17 17:01:20 - [DEBUG] Getting Source SecurityGroup ID for Horizon View Composer Server
+16-09-17 17:01:21 - [DEBUG] Getting Source SecurityGroup ID for vROPS for Horizon
+16-09-17 17:01:21 - [DEBUG] Getting Source SecurityGroup ID for App Volumes Manager
+16-09-17 17:01:22 - [DEBUG] Getting Source SecurityGroup ID for VMware Identity Manager
+16-09-17 17:01:23 - [DEBUG] Getting Source SecurityGroup ID for Horizon View Connection Server
+16-09-17 17:01:24 - [DEBUG] Getting Source SecurityGroup ID for Horizon View Composer Server
+16-09-17 17:01:24 - [DEBUG] Getting Source SecurityGroup ID for vROPS for Horizon
+16-09-17 17:01:25 - [DEBUG] Getting Destination SecurityGroup ID for MSSQL Servers
+16-09-17 17:01:26 - [DEBUG] Sources Argument : securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup.name
+16-09-17 17:01:26 - [DEBUG] Dest Argument : securitygroup.name
+16-09-17 17:01:29 - [DEBUG] ServiceGrp Argument : System.Xml.XmlElement
+16-09-17 17:01:29 - Adding new rule SQL Server Management FW Rule to Section Infrastructure Services Section
+16-09-17 17:01:31 - Desktop DHCP Server IN FW Rule does not exist as DFW Firewall Section in NSX. Need to add
+16-09-17 17:01:31 - For Desktop DHCP Server IN FW Rule there is source: Horizon View Desktops
+16-09-17 17:01:31 - For Desktop DHCP Server IN FW Rule there is destination: DHCP Servers
+16-09-17 17:01:31 - For Desktop DHCP Server IN FW Rule there is action: Allow
+16-09-17 17:01:31 - [DEBUG] Splitted sources in 1 times and items Horizon View Desktops
+16-09-17 17:01:31 - [DEBUG] Getting Source SecurityGroup ID for Horizon View Desktops
+16-09-17 17:01:32 - [DEBUG] Getting Destination SecurityGroup ID for DHCP Servers
+16-09-17 17:01:32 - [DEBUG] Sources Argument : securitygroup.name
+16-09-17 17:01:32 - [DEBUG] Dest Argument : securitygroup.name
+16-09-17 17:01:34 - [DEBUG] ServiceGrp Argument : System.Xml.XmlElement
+16-09-17 17:01:34 - Adding new rule Desktop DHCP Server IN FW Rule to Section Infrastructure Services Section
+16-09-17 17:01:35 - DNS FW Rule does not exist as DFW Firewall Section in NSX. Need to add
+16-09-17 17:01:35 - For DNS FW Rule there is source: Horizon View Desktops,Horizon View Connection Server,Horizon View Security Server,Horizon View Composer Server,Horizon Enrollment Server,Unified Access Gateways Server,App Volumes Manager,VMware Identity Manager,vROPS for Horizon,Airwatch,vSphere vCenter - Hosts
+16-09-17 17:01:35 - For DNS FW Rule there is destination: Domain Name Servers
+16-09-17 17:01:35 - For DNS FW Rule there is action: Allow
+16-09-17 17:01:35 - [DEBUG] Splitted sources in 11 times and items Horizon View Desktops Horizon View Connection Server Horizon View Security Server Horizon View Composer Server Horizon Enrollment Server Unified Access Gateways Server App Volumes Manager VMware Identity Manager vROPS for Horizon Airwatch vSphere vCenter - Hosts
+16-09-17 17:01:36 - [DEBUG] Getting Source SecurityGroup ID for Horizon View Desktops
+16-09-17 17:01:36 - [DEBUG] Getting Source SecurityGroup ID for Horizon View Connection Server
+16-09-17 17:01:37 - [DEBUG] Getting Source SecurityGroup ID for Horizon View Security Server
+16-09-17 17:01:38 - [DEBUG] Getting Source SecurityGroup ID for Horizon View Composer Server
+16-09-17 17:01:39 - [DEBUG] Getting Source SecurityGroup ID for Horizon Enrollment Server
+16-09-17 17:01:39 - [DEBUG] Getting Source SecurityGroup ID for Unified Access Gateways Server
+16-09-17 17:01:40 - [DEBUG] Getting Source SecurityGroup ID for App Volumes Manager
+16-09-17 17:01:41 - [DEBUG] Getting Source SecurityGroup ID for VMware Identity Manager
+16-09-17 17:01:41 - [DEBUG] Getting Source SecurityGroup ID for vROPS for Horizon
+16-09-17 17:01:42 - [DEBUG] Getting Source SecurityGroup ID for Airwatch
+16-09-17 17:01:43 - [DEBUG] Getting Source SecurityGroup ID for vSphere vCenter - Hosts
+16-09-17 17:01:44 - [DEBUG] Getting Source SecurityGroup ID for Horizon View Desktops
+16-09-17 17:01:44 - [DEBUG] Getting Source SecurityGroup ID for Horizon View Connection Server
+16-09-17 17:01:45 - [DEBUG] Getting Source SecurityGroup ID for Horizon View Security Server
+16-09-17 17:01:46 - [DEBUG] Getting Source SecurityGroup ID for Horizon View Composer Server
+16-09-17 17:01:47 - [DEBUG] Getting Source SecurityGroup ID for Horizon Enrollment Server
+16-09-17 17:01:47 - [DEBUG] Getting Source SecurityGroup ID for Unified Access Gateways Server
+16-09-17 17:01:48 - [DEBUG] Getting Source SecurityGroup ID for App Volumes Manager
+16-09-17 17:01:49 - [DEBUG] Getting Source SecurityGroup ID for VMware Identity Manager
+16-09-17 17:01:49 - [DEBUG] Getting Source SecurityGroup ID for vROPS for Horizon
+16-09-17 17:01:50 - [DEBUG] Getting Source SecurityGroup ID for Airwatch
+16-09-17 17:01:51 - [DEBUG] Getting Source SecurityGroup ID for vSphere vCenter - Hosts
+16-09-17 17:01:52 - [DEBUG] Getting Source SecurityGroup ID for Horizon View Desktops
+16-09-17 17:01:52 - [DEBUG] Getting Source SecurityGroup ID for Horizon View Connection Server
+16-09-17 17:01:53 - [DEBUG] Getting Source SecurityGroup ID for Horizon View Security Server
+16-09-17 17:01:54 - [DEBUG] Getting Source SecurityGroup ID for Horizon View Composer Server
+16-09-17 17:01:55 - [DEBUG] Getting Source SecurityGroup ID for Horizon Enrollment Server
+16-09-17 17:01:56 - [DEBUG] Getting Source SecurityGroup ID for Unified Access Gateways Server
+16-09-17 17:01:56 - [DEBUG] Getting Source SecurityGroup ID for App Volumes Manager
+16-09-17 17:01:57 - [DEBUG] Getting Source SecurityGroup ID for VMware Identity Manager
+16-09-17 17:01:58 - [DEBUG] Getting Source SecurityGroup ID for vROPS for Horizon
+16-09-17 17:01:58 - [DEBUG] Getting Source SecurityGroup ID for Airwatch
+16-09-17 17:01:59 - [DEBUG] Getting Source SecurityGroup ID for vSphere vCenter - Hosts
+16-09-17 17:02:00 - [DEBUG] Getting Source SecurityGroup ID for Horizon View Desktops
+16-09-17 17:02:01 - [DEBUG] Getting Source SecurityGroup ID for Horizon View Connection Server
+16-09-17 17:02:01 - [DEBUG] Getting Source SecurityGroup ID for Horizon View Security Server
+16-09-17 17:02:02 - [DEBUG] Getting Source SecurityGroup ID for Horizon View Composer Server
+16-09-17 17:02:03 - [DEBUG] Getting Source SecurityGroup ID for Horizon Enrollment Server
+16-09-17 17:02:04 - [DEBUG] Getting Source SecurityGroup ID for Unified Access Gateways Server
+16-09-17 17:02:05 - [DEBUG] Getting Source SecurityGroup ID for App Volumes Manager
+16-09-17 17:02:05 - [DEBUG] Getting Source SecurityGroup ID for VMware Identity Manager
+16-09-17 17:02:06 - [DEBUG] Getting Source SecurityGroup ID for vROPS for Horizon
+16-09-17 17:02:07 - [DEBUG] Getting Source SecurityGroup ID for Airwatch
+16-09-17 17:02:08 - [DEBUG] Getting Source SecurityGroup ID for vSphere vCenter - Hosts
+16-09-17 17:02:08 - [DEBUG] Getting Source SecurityGroup ID for Horizon View Desktops
+16-09-17 17:02:09 - [DEBUG] Getting Source SecurityGroup ID for Horizon View Connection Server
+16-09-17 17:02:10 - [DEBUG] Getting Source SecurityGroup ID for Horizon View Security Server
+16-09-17 17:02:11 - [DEBUG] Getting Source SecurityGroup ID for Horizon View Composer Server
+16-09-17 17:02:11 - [DEBUG] Getting Source SecurityGroup ID for Horizon Enrollment Server
+16-09-17 17:02:12 - [DEBUG] Getting Source SecurityGroup ID for Unified Access Gateways Server
+16-09-17 17:02:13 - [DEBUG] Getting Source SecurityGroup ID for App Volumes Manager
+16-09-17 17:02:15 - [DEBUG] Getting Source SecurityGroup ID for vROPS for Horizon
+16-09-17 17:02:16 - [DEBUG] Getting Source SecurityGroup ID for Airwatch
+16-09-17 17:02:20 - [DEBUG] Getting Source SecurityGroup ID for vSphere vCenter - Hosts
+16-09-17 17:02:21 - [DEBUG] Getting Source SecurityGroup ID for Horizon View Desktops
+16-09-17 17:02:22 - [DEBUG] Getting Source SecurityGroup ID for Horizon View Connection Server
+16-09-17 17:02:23 - [DEBUG] Getting Source SecurityGroup ID for Horizon View Security Server
+16-09-17 17:02:25 - [DEBUG] Getting Source SecurityGroup ID for Horizon View Composer Server
+16-09-17 17:02:26 - [DEBUG] Getting Source SecurityGroup ID for Horizon Enrollment Server
+16-09-17 17:02:26 - [DEBUG] Getting Source SecurityGroup ID for Unified Access Gateways Server
+16-09-17 17:02:27 - [DEBUG] Getting Source SecurityGroup ID for App Volumes Manager
+16-09-17 17:02:28 - [DEBUG] Getting Source SecurityGroup ID for VMware Identity Manager
+16-09-17 17:02:29 - [DEBUG] Getting Source SecurityGroup ID for vROPS for Horizon
+16-09-17 17:02:29 - [DEBUG] Getting Source SecurityGroup ID for Airwatch
+16-09-17 17:02:30 - [DEBUG] Getting Source SecurityGroup ID for vSphere vCenter - Hosts
+16-09-17 17:02:31 - [DEBUG] Getting Source SecurityGroup ID for Horizon View Desktops
+16-09-17 17:02:31 - [DEBUG] Getting Source SecurityGroup ID for Horizon View Connection Server
+16-09-17 17:02:32 - [DEBUG] Getting Source SecurityGroup ID for Horizon View Security Server
+16-09-17 17:02:33 - [DEBUG] Getting Source SecurityGroup ID for Horizon View Composer Server
+16-09-17 17:02:36 - [DEBUG] Getting Source SecurityGroup ID for Horizon Enrollment Server
+16-09-17 17:02:37 - [DEBUG] Getting Source SecurityGroup ID for Unified Access Gateways Server
+16-09-17 17:02:39 - [DEBUG] Getting Source SecurityGroup ID for App Volumes Manager
+16-09-17 17:02:40 - [DEBUG] Getting Source SecurityGroup ID for VMware Identity Manager
+16-09-17 17:02:41 - [DEBUG] Getting Source SecurityGroup ID for vROPS for Horizon
+16-09-17 17:02:42 - [DEBUG] Getting Source SecurityGroup ID for Airwatch
+16-09-17 17:02:42 - [DEBUG] Getting Source SecurityGroup ID for vSphere vCenter - Hosts
+16-09-17 17:02:43 - [DEBUG] Getting Source SecurityGroup ID for Horizon View Desktops
+16-09-17 17:02:44 - [DEBUG] Getting Source SecurityGroup ID for Horizon View Connection Server
+16-09-17 17:02:44 - [DEBUG] Getting Source SecurityGroup ID for Horizon View Security Server
+16-09-17 17:02:45 - [DEBUG] Getting Source SecurityGroup ID for Horizon View Composer Server
+16-09-17 17:02:46 - [DEBUG] Getting Source SecurityGroup ID for Horizon Enrollment Server
+16-09-17 17:02:47 - [DEBUG] Getting Source SecurityGroup ID for Unified Access Gateways Server
+16-09-17 17:02:47 - [DEBUG] Getting Source SecurityGroup ID for App Volumes Manager
+16-09-17 17:02:48 - [DEBUG] Getting Source SecurityGroup ID for VMware Identity Manager
+16-09-17 17:02:49 - [DEBUG] Getting Source SecurityGroup ID for vROPS for Horizon
+16-09-17 17:02:49 - [DEBUG] Getting Source SecurityGroup ID for Airwatch
+16-09-17 17:02:50 - [DEBUG] Getting Source SecurityGroup ID for vSphere vCenter - Hosts
+16-09-17 17:02:51 - [DEBUG] Getting Source SecurityGroup ID for Horizon View Desktops
+16-09-17 17:02:51 - [DEBUG] Getting Source SecurityGroup ID for Horizon View Connection Server
+16-09-17 17:02:52 - [DEBUG] Getting Source SecurityGroup ID for Horizon View Security Server
+16-09-17 17:02:53 - [DEBUG] Getting Source SecurityGroup ID for Horizon View Composer Server
+16-09-17 17:02:54 - [DEBUG] Getting Source SecurityGroup ID for Horizon Enrollment Server
+16-09-17 17:02:54 - [DEBUG] Getting Source SecurityGroup ID for Unified Access Gateways Server
+16-09-17 17:02:55 - [DEBUG] Getting Source SecurityGroup ID for App Volumes Manager
+16-09-17 17:02:56 - [DEBUG] Getting Source SecurityGroup ID for VMware Identity Manager
+16-09-17 17:02:56 - [DEBUG] Getting Source SecurityGroup ID for vROPS for Horizon
+16-09-17 17:02:57 - [DEBUG] Getting Source SecurityGroup ID for Airwatch
+16-09-17 17:02:58 - [DEBUG] Getting Source SecurityGroup ID for vSphere vCenter - Hosts
+16-09-17 17:02:58 - [DEBUG] Getting Source SecurityGroup ID for Horizon View Desktops
+16-09-17 17:02:59 - [DEBUG] Getting Source SecurityGroup ID for Horizon View Connection Server
+16-09-17 17:03:00 - [DEBUG] Getting Source SecurityGroup ID for Horizon View Security Server
+16-09-17 17:03:00 - [DEBUG] Getting Source SecurityGroup ID for Horizon View Composer Server
+16-09-17 17:03:01 - [DEBUG] Getting Source SecurityGroup ID for Horizon Enrollment Server
+16-09-17 17:03:02 - [DEBUG] Getting Source SecurityGroup ID for Unified Access Gateways Server
+16-09-17 17:03:03 - [DEBUG] Getting Source SecurityGroup ID for App Volumes Manager
+16-09-17 17:03:03 - [DEBUG] Getting Source SecurityGroup ID for VMware Identity Manager
+16-09-17 17:03:04 - [DEBUG] Getting Source SecurityGroup ID for vROPS for Horizon
+16-09-17 17:03:05 - [DEBUG] Getting Source SecurityGroup ID for Airwatch
+16-09-17 17:03:05 - [DEBUG] Getting Source SecurityGroup ID for vSphere vCenter - Hosts
+16-09-17 17:03:06 - [DEBUG] Getting Source SecurityGroup ID for Horizon View Desktops
+16-09-17 17:03:07 - [DEBUG] Getting Source SecurityGroup ID for Horizon View Connection Server
+16-09-17 17:03:07 - [DEBUG] Getting Source SecurityGroup ID for Horizon View Security Server
+16-09-17 17:03:08 - [DEBUG] Getting Source SecurityGroup ID for Horizon View Composer Server
+16-09-17 17:03:09 - [DEBUG] Getting Source SecurityGroup ID for Horizon Enrollment Server
+16-09-17 17:03:09 - [DEBUG] Getting Source SecurityGroup ID for Unified Access Gateways Server
+16-09-17 17:03:10 - [DEBUG] Getting Source SecurityGroup ID for App Volumes Manager
+16-09-17 17:03:11 - [DEBUG] Getting Source SecurityGroup ID for VMware Identity Manager
+16-09-17 17:03:12 - [DEBUG] Getting Source SecurityGroup ID for vROPS for Horizon
+16-09-17 17:03:12 - [DEBUG] Getting Source SecurityGroup ID for Airwatch
+16-09-17 17:03:13 - [DEBUG] Getting Source SecurityGroup ID for vSphere vCenter - Hosts
+16-09-17 17:03:14 - [DEBUG] Getting Destination SecurityGroup ID for Domain Name Servers
+16-09-17 17:03:15 - [DEBUG] Sources Argument : securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup.name
+16-09-17 17:03:15 - [DEBUG] Dest Argument : securitygroup.name
+16-09-17 17:03:16 - [DEBUG] ServiceGrp Argument : System.Xml.XmlElement
+16-09-17 17:03:16 - Adding new rule DNS FW Rule to Section Infrastructure Services Section
+16-09-17 17:03:19 - NTP FW Rule does not exist as DFW Firewall Section in NSX. Need to add
+16-09-17 17:03:19 - For NTP FW Rule there is source: Horizon View Desktops,Horizon View Connection Server,Horizon View Security Server,Horizon View Composer Server,Horizon Enrollment Server,Unified Access Gateways Server,App Volumes Manager,VMware Identity Manager,vROPS for Horizon,Airwatch,vSphere vCenter - Hosts
+16-09-17 17:03:19 - For NTP FW Rule there is destination: NTP Servers
+16-09-17 17:03:19 - For NTP FW Rule there is action: Allow
+16-09-17 17:03:19 - [DEBUG] Splitted sources in 11 times and items Horizon View Desktops Horizon View Connection Server Horizon View Security Server Horizon View Composer Server Horizon Enrollment Server Unified Access Gateways Server App Volumes Manager VMware Identity Manager vROPS for Horizon Airwatch vSphere vCenter - Hosts
+16-09-17 17:03:19 - [DEBUG] Getting Source SecurityGroup ID for Horizon View Desktops
+16-09-17 17:03:20 - [DEBUG] Getting Source SecurityGroup ID for Horizon View Connection Server
+16-09-17 17:03:21 - [DEBUG] Getting Source SecurityGroup ID for Horizon View Security Server
+16-09-17 17:03:22 - [DEBUG] Getting Source SecurityGroup ID for Horizon View Composer Server
+16-09-17 17:03:22 - [DEBUG] Getting Source SecurityGroup ID for Horizon Enrollment Server
+16-09-17 17:03:23 - [DEBUG] Getting Source SecurityGroup ID for Unified Access Gateways Server
+16-09-17 17:03:24 - [DEBUG] Getting Source SecurityGroup ID for App Volumes Manager
+16-09-17 17:03:25 - [DEBUG] Getting Source SecurityGroup ID for VMware Identity Manager
+16-09-17 17:03:27 - [DEBUG] Getting Source SecurityGroup ID for vROPS for Horizon
+16-09-17 17:03:29 - [DEBUG] Getting Source SecurityGroup ID for Airwatch
+16-09-17 17:03:30 - [DEBUG] Getting Source SecurityGroup ID for vSphere vCenter - Hosts
+16-09-17 17:03:30 - [DEBUG] Getting Source SecurityGroup ID for Horizon View Desktops
+16-09-17 17:03:31 - [DEBUG] Getting Source SecurityGroup ID for Horizon View Connection Server
+16-09-17 17:03:32 - [DEBUG] Getting Source SecurityGroup ID for Horizon View Security Server
+16-09-17 17:03:32 - [DEBUG] Getting Source SecurityGroup ID for Horizon View Composer Server
+16-09-17 17:03:33 - [DEBUG] Getting Source SecurityGroup ID for Horizon Enrollment Server
+16-09-17 17:03:34 - [DEBUG] Getting Source SecurityGroup ID for Unified Access Gateways Server
+16-09-17 17:03:34 - [DEBUG] Getting Source SecurityGroup ID for App Volumes Manager
+16-09-17 17:03:35 - [DEBUG] Getting Source SecurityGroup ID for VMware Identity Manager
+16-09-17 17:03:36 - [DEBUG] Getting Source SecurityGroup ID for vROPS for Horizon
+16-09-17 17:03:37 - [DEBUG] Getting Source SecurityGroup ID for Airwatch
+16-09-17 17:03:38 - [DEBUG] Getting Source SecurityGroup ID for vSphere vCenter - Hosts
+16-09-17 17:03:38 - [DEBUG] Getting Source SecurityGroup ID for Horizon View Desktops
+16-09-17 17:03:39 - [DEBUG] Getting Source SecurityGroup ID for Horizon View Connection Server
+16-09-17 17:03:41 - [DEBUG] Getting Source SecurityGroup ID for Horizon View Security Server
+16-09-17 17:03:42 - [DEBUG] Getting Source SecurityGroup ID for Horizon View Composer Server
+16-09-17 17:03:43 - [DEBUG] Getting Source SecurityGroup ID for Horizon Enrollment Server
+16-09-17 17:03:43 - [DEBUG] Getting Source SecurityGroup ID for Unified Access Gateways Server
+16-09-17 17:03:44 - [DEBUG] Getting Source SecurityGroup ID for App Volumes Manager
+16-09-17 17:03:45 - [DEBUG] Getting Source SecurityGroup ID for VMware Identity Manager
+16-09-17 17:03:46 - [DEBUG] Getting Source SecurityGroup ID for vROPS for Horizon
+16-09-17 17:03:46 - [DEBUG] Getting Source SecurityGroup ID for Airwatch
+16-09-17 17:03:47 - [DEBUG] Getting Source SecurityGroup ID for vSphere vCenter - Hosts
+16-09-17 17:03:48 - [DEBUG] Getting Source SecurityGroup ID for Horizon View Desktops
+16-09-17 17:03:48 - [DEBUG] Getting Source SecurityGroup ID for Horizon View Connection Server
+16-09-17 17:03:49 - [DEBUG] Getting Source SecurityGroup ID for Horizon View Security Server
+16-09-17 17:03:50 - [DEBUG] Getting Source SecurityGroup ID for Horizon View Composer Server
+16-09-17 17:03:50 - [DEBUG] Getting Source SecurityGroup ID for Horizon Enrollment Server
+16-09-17 17:03:51 - [DEBUG] Getting Source SecurityGroup ID for Unified Access Gateways Server
+16-09-17 17:03:52 - [DEBUG] Getting Source SecurityGroup ID for App Volumes Manager
+16-09-17 17:03:53 - [DEBUG] Getting Source SecurityGroup ID for VMware Identity Manager
+16-09-17 17:03:53 - [DEBUG] Getting Source SecurityGroup ID for vROPS for Horizon
+16-09-17 17:03:54 - [DEBUG] Getting Source SecurityGroup ID for Airwatch
+16-09-17 17:03:55 - [DEBUG] Getting Source SecurityGroup ID for vSphere vCenter - Hosts
+16-09-17 17:03:56 - [DEBUG] Getting Source SecurityGroup ID for Horizon View Desktops
+16-09-17 17:03:56 - [DEBUG] Getting Source SecurityGroup ID for Horizon View Connection Server
+16-09-17 17:03:57 - [DEBUG] Getting Source SecurityGroup ID for Horizon View Security Server
+16-09-17 17:03:58 - [DEBUG] Getting Source SecurityGroup ID for Horizon View Composer Server
+16-09-17 17:03:59 - [DEBUG] Getting Source SecurityGroup ID for Horizon Enrollment Server
+16-09-17 17:04:00 - [DEBUG] Getting Source SecurityGroup ID for Unified Access Gateways Server
+16-09-17 17:04:01 - [DEBUG] Getting Source SecurityGroup ID for App Volumes Manager
+16-09-17 17:04:01 - [DEBUG] Getting Source SecurityGroup ID for VMware Identity Manager
+16-09-17 17:04:02 - [DEBUG] Getting Source SecurityGroup ID for vROPS for Horizon
+16-09-17 17:04:03 - [DEBUG] Getting Source SecurityGroup ID for Airwatch
+16-09-17 17:04:04 - [DEBUG] Getting Source SecurityGroup ID for vSphere vCenter - Hosts
+16-09-17 17:04:04 - [DEBUG] Getting Source SecurityGroup ID for Horizon View Desktops
+16-09-17 17:04:05 - [DEBUG] Getting Source SecurityGroup ID for Horizon View Connection Server
+16-09-17 17:04:06 - [DEBUG] Getting Source SecurityGroup ID for Horizon View Security Server
+16-09-17 17:04:06 - [DEBUG] Getting Source SecurityGroup ID for Horizon View Composer Server
+16-09-17 17:04:07 - [DEBUG] Getting Source SecurityGroup ID for Horizon Enrollment Server
+16-09-17 17:04:08 - [DEBUG] Getting Source SecurityGroup ID for Unified Access Gateways Server
+16-09-17 17:04:09 - [DEBUG] Getting Source SecurityGroup ID for App Volumes Manager
+16-09-17 17:04:09 - [DEBUG] Getting Source SecurityGroup ID for VMware Identity Manager
+16-09-17 17:04:10 - [DEBUG] Getting Source SecurityGroup ID for vROPS for Horizon
+16-09-17 17:04:11 - [DEBUG] Getting Source SecurityGroup ID for Airwatch
+16-09-17 17:04:12 - [DEBUG] Getting Source SecurityGroup ID for vSphere vCenter - Hosts
+16-09-17 17:04:12 - [DEBUG] Getting Source SecurityGroup ID for Horizon View Desktops
+16-09-17 17:04:13 - [DEBUG] Getting Source SecurityGroup ID for Horizon View Connection Server
+16-09-17 17:04:14 - [DEBUG] Getting Source SecurityGroup ID for Horizon View Security Server
+16-09-17 17:04:14 - [DEBUG] Getting Source SecurityGroup ID for Horizon View Composer Server
+16-09-17 17:04:15 - [DEBUG] Getting Source SecurityGroup ID for Horizon Enrollment Server
+16-09-17 17:04:16 - [DEBUG] Getting Source SecurityGroup ID for Unified Access Gateways Server
+16-09-17 17:04:17 - [DEBUG] Getting Source SecurityGroup ID for App Volumes Manager
+16-09-17 17:04:17 - [DEBUG] Getting Source SecurityGroup ID for VMware Identity Manager
+16-09-17 17:04:18 - [DEBUG] Getting Source SecurityGroup ID for vROPS for Horizon
+16-09-17 17:04:19 - [DEBUG] Getting Source SecurityGroup ID for Airwatch
+16-09-17 17:04:19 - [DEBUG] Getting Source SecurityGroup ID for vSphere vCenter - Hosts
+16-09-17 17:04:20 - [DEBUG] Getting Source SecurityGroup ID for Horizon View Desktops
+16-09-17 17:04:21 - [DEBUG] Getting Source SecurityGroup ID for Horizon View Connection Server
+16-09-17 17:04:22 - [DEBUG] Getting Source SecurityGroup ID for Horizon View Security Server
+16-09-17 17:04:22 - [DEBUG] Getting Source SecurityGroup ID for Horizon View Composer Server
+16-09-17 17:04:23 - [DEBUG] Getting Source SecurityGroup ID for Horizon Enrollment Server
+16-09-17 17:04:24 - [DEBUG] Getting Source SecurityGroup ID for Unified Access Gateways Server
+16-09-17 17:04:25 - [DEBUG] Getting Source SecurityGroup ID for App Volumes Manager
+16-09-17 17:04:25 - [DEBUG] Getting Source SecurityGroup ID for VMware Identity Manager
+16-09-17 17:04:26 - [DEBUG] Getting Source SecurityGroup ID for vROPS for Horizon
+16-09-17 17:04:27 - [DEBUG] Getting Source SecurityGroup ID for Airwatch
+16-09-17 17:04:27 - [DEBUG] Getting Source SecurityGroup ID for vSphere vCenter - Hosts
+16-09-17 17:04:28 - [DEBUG] Getting Source SecurityGroup ID for Horizon View Desktops
+16-09-17 17:04:29 - [DEBUG] Getting Source SecurityGroup ID for Horizon View Connection Server
+16-09-17 17:04:30 - [DEBUG] Getting Source SecurityGroup ID for Horizon View Security Server
+16-09-17 17:04:31 - [DEBUG] Getting Source SecurityGroup ID for Horizon View Composer Server
+16-09-17 17:04:31 - [DEBUG] Getting Source SecurityGroup ID for Horizon Enrollment Server
+16-09-17 17:04:32 - [DEBUG] Getting Source SecurityGroup ID for Unified Access Gateways Server
+16-09-17 17:04:33 - [DEBUG] Getting Source SecurityGroup ID for App Volumes Manager
+16-09-17 17:04:34 - [DEBUG] Getting Source SecurityGroup ID for VMware Identity Manager
+16-09-17 17:04:36 - [DEBUG] Getting Source SecurityGroup ID for vROPS for Horizon
+16-09-17 17:04:37 - [DEBUG] Getting Source SecurityGroup ID for Airwatch
+16-09-17 17:04:37 - [DEBUG] Getting Source SecurityGroup ID for vSphere vCenter - Hosts
+16-09-17 17:04:38 - [DEBUG] Getting Source SecurityGroup ID for Horizon View Desktops
+16-09-17 17:04:39 - [DEBUG] Getting Source SecurityGroup ID for Horizon View Connection Server
+16-09-17 17:04:39 - [DEBUG] Getting Source SecurityGroup ID for Horizon View Security Server
+16-09-17 17:04:40 - [DEBUG] Getting Source SecurityGroup ID for Horizon View Composer Server
+16-09-17 17:04:41 - [DEBUG] Getting Source SecurityGroup ID for Horizon Enrollment Server
+16-09-17 17:04:41 - [DEBUG] Getting Source SecurityGroup ID for Unified Access Gateways Server
+16-09-17 17:04:42 - [DEBUG] Getting Source SecurityGroup ID for App Volumes Manager
+16-09-17 17:04:43 - [DEBUG] Getting Source SecurityGroup ID for VMware Identity Manager
+16-09-17 17:04:44 - [DEBUG] Getting Source SecurityGroup ID for vROPS for Horizon
+16-09-17 17:04:44 - [DEBUG] Getting Source SecurityGroup ID for Airwatch
+16-09-17 17:04:45 - [DEBUG] Getting Source SecurityGroup ID for vSphere vCenter - Hosts
+16-09-17 17:04:46 - [DEBUG] Getting Source SecurityGroup ID for Horizon View Desktops
+16-09-17 17:04:46 - [DEBUG] Getting Source SecurityGroup ID for Horizon View Connection Server
+16-09-17 17:04:47 - [DEBUG] Getting Source SecurityGroup ID for Horizon View Security Server
+16-09-17 17:04:48 - [DEBUG] Getting Source SecurityGroup ID for Horizon View Composer Server
+16-09-17 17:04:49 - [DEBUG] Getting Source SecurityGroup ID for Horizon Enrollment Server
+16-09-17 17:04:49 - [DEBUG] Getting Source SecurityGroup ID for Unified Access Gateways Server
+16-09-17 17:04:50 - [DEBUG] Getting Source SecurityGroup ID for App Volumes Manager
+16-09-17 17:04:51 - [DEBUG] Getting Source SecurityGroup ID for VMware Identity Manager
+16-09-17 17:04:51 - [DEBUG] Getting Source SecurityGroup ID for vROPS for Horizon
+16-09-17 17:04:52 - [DEBUG] Getting Source SecurityGroup ID for Airwatch
+16-09-17 17:04:53 - [DEBUG] Getting Source SecurityGroup ID for vSphere vCenter - Hosts
+16-09-17 17:04:54 - [DEBUG] Getting Destination SecurityGroup ID for NTP Servers
+16-09-17 17:04:54 - [DEBUG] Sources Argument : securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup.name
+16-09-17 17:04:54 - [DEBUG] Dest Argument : securitygroup.name
+16-09-17 17:04:56 - [DEBUG] ServiceGrp Argument : System.Xml.XmlElement
+16-09-17 17:04:56 - Adding new rule NTP FW Rule to Section Infrastructure Services Section
+16-09-17 17:05:00 - Administrative Console Access FW Rule does not exist as DFW Firewall Section in NSX. Need to add
+16-09-17 17:05:00 - For Administrative Console Access FW Rule there is source: Admin Stations
+16-09-17 17:05:00 - For Administrative Console Access FW Rule there is destination: Horizon View Desktops,Horizon View Connection Server,Horizon View Security Server,Horizon View Composer Server,Horizon Enrollment Server,Unified Access Gateways Server,App Volumes Manager,VMware Identity Manager,vROPS for Horizon,Airwatch,vSphere vCenter - Hosts
+16-09-17 17:05:00 - For Administrative Console Access FW Rule there is action: Allow
+16-09-17 17:05:00 - [DEBUG] Splitted sources in 1 times and items Admin Stations
+16-09-17 17:05:00 - [DEBUG] Getting Source SecurityGroup ID for Admin Stations
+16-09-17 17:05:00 - [DEBUG] Getting Destination SecurityGroup ID for Horizon View Desktops
+16-09-17 17:05:01 - [DEBUG] Getting Destination SecurityGroup ID for Horizon View Connection Server
+16-09-17 17:05:02 - [DEBUG] Getting Destination SecurityGroup ID for Horizon View Security Server
+16-09-17 17:05:03 - [DEBUG] Getting Destination SecurityGroup ID for Horizon View Composer Server
+16-09-17 17:05:03 - [DEBUG] Getting Destination SecurityGroup ID for Horizon Enrollment Server
+16-09-17 17:05:04 - [DEBUG] Getting Destination SecurityGroup ID for Unified Access Gateways Server
+16-09-17 17:05:05 - [DEBUG] Getting Destination SecurityGroup ID for App Volumes Manager
+16-09-17 17:05:06 - [DEBUG] Getting Destination SecurityGroup ID for VMware Identity Manager
+16-09-17 17:05:06 - [DEBUG] Getting Destination SecurityGroup ID for vROPS for Horizon
+16-09-17 17:05:07 - [DEBUG] Getting Destination SecurityGroup ID for Airwatch
+16-09-17 17:05:08 - [DEBUG] Getting Destination SecurityGroup ID for vSphere vCenter - Hosts
+16-09-17 17:05:08 - [DEBUG] Getting Destination SecurityGroup ID for Horizon View Desktops
+16-09-17 17:05:09 - [DEBUG] Getting Destination SecurityGroup ID for Horizon View Connection Server
+16-09-17 17:05:10 - [DEBUG] Getting Destination SecurityGroup ID for Horizon View Security Server
+16-09-17 17:05:11 - [DEBUG] Getting Destination SecurityGroup ID for Horizon View Composer Server
+16-09-17 17:05:11 - [DEBUG] Getting Destination SecurityGroup ID for Horizon Enrollment Server
+16-09-17 17:05:12 - [DEBUG] Getting Destination SecurityGroup ID for Unified Access Gateways Server
+16-09-17 17:05:13 - [DEBUG] Getting Destination SecurityGroup ID for App Volumes Manager
+16-09-17 17:05:14 - [DEBUG] Getting Destination SecurityGroup ID for VMware Identity Manager
+16-09-17 17:05:14 - [DEBUG] Getting Destination SecurityGroup ID for vROPS for Horizon
+16-09-17 17:05:15 - [DEBUG] Getting Destination SecurityGroup ID for Airwatch
+16-09-17 17:05:16 - [DEBUG] Getting Destination SecurityGroup ID for vSphere vCenter - Hosts
+16-09-17 17:05:16 - [DEBUG] Getting Destination SecurityGroup ID for Horizon View Desktops
+16-09-17 17:05:17 - [DEBUG] Getting Destination SecurityGroup ID for Horizon View Connection Server
+16-09-17 17:05:18 - [DEBUG] Getting Destination SecurityGroup ID for Horizon View Security Server
+16-09-17 17:05:18 - [DEBUG] Getting Destination SecurityGroup ID for Horizon View Composer Server
+16-09-17 17:05:19 - [DEBUG] Getting Destination SecurityGroup ID for Horizon Enrollment Server
+16-09-17 17:05:20 - [DEBUG] Getting Destination SecurityGroup ID for Unified Access Gateways Server
+16-09-17 17:05:20 - [DEBUG] Getting Destination SecurityGroup ID for App Volumes Manager
+16-09-17 17:05:21 - [DEBUG] Getting Destination SecurityGroup ID for VMware Identity Manager
+16-09-17 17:05:22 - [DEBUG] Getting Destination SecurityGroup ID for vROPS for Horizon
+16-09-17 17:05:23 - [DEBUG] Getting Destination SecurityGroup ID for Airwatch
+16-09-17 17:05:23 - [DEBUG] Getting Destination SecurityGroup ID for vSphere vCenter - Hosts
+16-09-17 17:05:24 - [DEBUG] Getting Destination SecurityGroup ID for Horizon View Desktops
+16-09-17 17:05:25 - [DEBUG] Getting Destination SecurityGroup ID for Horizon View Connection Server
+16-09-17 17:05:26 - [DEBUG] Getting Destination SecurityGroup ID for Horizon View Security Server
+16-09-17 17:05:26 - [DEBUG] Getting Destination SecurityGroup ID for Horizon View Composer Server
+16-09-17 17:05:27 - [DEBUG] Getting Destination SecurityGroup ID for Horizon Enrollment Server
+16-09-17 17:05:28 - [DEBUG] Getting Destination SecurityGroup ID for Unified Access Gateways Server
+16-09-17 17:05:28 - [DEBUG] Getting Destination SecurityGroup ID for App Volumes Manager
+16-09-17 17:05:29 - [DEBUG] Getting Destination SecurityGroup ID for VMware Identity Manager
+16-09-17 17:05:30 - [DEBUG] Getting Destination SecurityGroup ID for vROPS for Horizon
+16-09-17 17:05:30 - [DEBUG] Getting Destination SecurityGroup ID for Airwatch
+16-09-17 17:05:31 - [DEBUG] Getting Destination SecurityGroup ID for vSphere vCenter - Hosts
+16-09-17 17:05:32 - [DEBUG] Getting Destination SecurityGroup ID for Horizon View Desktops
+16-09-17 17:05:33 - [DEBUG] Getting Destination SecurityGroup ID for Horizon View Connection Server
+16-09-17 17:05:33 - [DEBUG] Getting Destination SecurityGroup ID for Horizon View Security Server
+16-09-17 17:05:34 - [DEBUG] Getting Destination SecurityGroup ID for Horizon View Composer Server
+16-09-17 17:05:35 - [DEBUG] Getting Destination SecurityGroup ID for Horizon Enrollment Server
+16-09-17 17:05:35 - [DEBUG] Getting Destination SecurityGroup ID for Unified Access Gateways Server
+16-09-17 17:05:36 - [DEBUG] Getting Destination SecurityGroup ID for App Volumes Manager
+16-09-17 17:05:37 - [DEBUG] Getting Destination SecurityGroup ID for VMware Identity Manager
+16-09-17 17:05:38 - [DEBUG] Getting Destination SecurityGroup ID for vROPS for Horizon
+16-09-17 17:05:39 - [DEBUG] Getting Destination SecurityGroup ID for Airwatch
+16-09-17 17:05:39 - [DEBUG] Getting Destination SecurityGroup ID for vSphere vCenter - Hosts
+16-09-17 17:05:40 - [DEBUG] Getting Destination SecurityGroup ID for Horizon View Desktops
+16-09-17 17:05:41 - [DEBUG] Getting Destination SecurityGroup ID for Horizon View Connection Server
+16-09-17 17:05:42 - [DEBUG] Getting Destination SecurityGroup ID for Horizon View Security Server
+16-09-17 17:05:42 - [DEBUG] Getting Destination SecurityGroup ID for Horizon View Composer Server
+16-09-17 17:05:43 - [DEBUG] Getting Destination SecurityGroup ID for Horizon Enrollment Server
+16-09-17 17:05:44 - [DEBUG] Getting Destination SecurityGroup ID for Unified Access Gateways Server
+16-09-17 17:05:45 - [DEBUG] Getting Destination SecurityGroup ID for App Volumes Manager
+16-09-17 17:05:45 - [DEBUG] Getting Destination SecurityGroup ID for VMware Identity Manager
+16-09-17 17:05:46 - [DEBUG] Getting Destination SecurityGroup ID for vROPS for Horizon
+16-09-17 17:05:47 - [DEBUG] Getting Destination SecurityGroup ID for Airwatch
+16-09-17 17:05:47 - [DEBUG] Getting Destination SecurityGroup ID for vSphere vCenter - Hosts
+16-09-17 17:05:48 - [DEBUG] Getting Destination SecurityGroup ID for Horizon View Desktops
+16-09-17 17:05:49 - [DEBUG] Getting Destination SecurityGroup ID for Horizon View Connection Server
+16-09-17 17:05:49 - [DEBUG] Getting Destination SecurityGroup ID for Horizon View Security Server
+16-09-17 17:05:50 - [DEBUG] Getting Destination SecurityGroup ID for Horizon View Composer Server
+16-09-17 17:05:51 - [DEBUG] Getting Destination SecurityGroup ID for Horizon Enrollment Server
+16-09-17 17:05:52 - [DEBUG] Getting Destination SecurityGroup ID for Unified Access Gateways Server
+16-09-17 17:05:52 - [DEBUG] Getting Destination SecurityGroup ID for App Volumes Manager
+16-09-17 17:05:53 - [DEBUG] Getting Destination SecurityGroup ID for VMware Identity Manager
+16-09-17 17:05:54 - [DEBUG] Getting Destination SecurityGroup ID for vROPS for Horizon
+16-09-17 17:05:55 - [DEBUG] Getting Destination SecurityGroup ID for Airwatch
+16-09-17 17:05:55 - [DEBUG] Getting Destination SecurityGroup ID for vSphere vCenter - Hosts
+16-09-17 17:05:56 - [DEBUG] Getting Destination SecurityGroup ID for Horizon View Desktops
+16-09-17 17:05:57 - [DEBUG] Getting Destination SecurityGroup ID for Horizon View Connection Server
+16-09-17 17:05:58 - [DEBUG] Getting Destination SecurityGroup ID for Horizon View Security Server
+16-09-17 17:05:58 - [DEBUG] Getting Destination SecurityGroup ID for Horizon View Composer Server
+16-09-17 17:05:59 - [DEBUG] Getting Destination SecurityGroup ID for Horizon Enrollment Server
+16-09-17 17:06:00 - [DEBUG] Getting Destination SecurityGroup ID for Unified Access Gateways Server
+16-09-17 17:06:00 - [DEBUG] Getting Destination SecurityGroup ID for App Volumes Manager
+16-09-17 17:06:01 - [DEBUG] Getting Destination SecurityGroup ID for VMware Identity Manager
+16-09-17 17:06:02 - [DEBUG] Getting Destination SecurityGroup ID for vROPS for Horizon
+16-09-17 17:06:03 - [DEBUG] Getting Destination SecurityGroup ID for Airwatch
+16-09-17 17:06:03 - [DEBUG] Getting Destination SecurityGroup ID for vSphere vCenter - Hosts
+16-09-17 17:06:04 - [DEBUG] Getting Destination SecurityGroup ID for Horizon View Desktops
+16-09-17 17:06:05 - [DEBUG] Getting Destination SecurityGroup ID for Horizon View Connection Server
+16-09-17 17:06:05 - [DEBUG] Getting Destination SecurityGroup ID for Horizon View Security Server
+16-09-17 17:06:06 - [DEBUG] Getting Destination SecurityGroup ID for Horizon View Composer Server
+16-09-17 17:06:07 - [DEBUG] Getting Destination SecurityGroup ID for Horizon Enrollment Server
+16-09-17 17:06:08 - [DEBUG] Getting Destination SecurityGroup ID for Unified Access Gateways Server
+16-09-17 17:06:09 - [DEBUG] Getting Destination SecurityGroup ID for App Volumes Manager
+16-09-17 17:06:12 - [DEBUG] Getting Destination SecurityGroup ID for VMware Identity Manager
+16-09-17 17:06:12 - [DEBUG] Getting Destination SecurityGroup ID for vROPS for Horizon
+16-09-17 17:06:13 - [DEBUG] Getting Destination SecurityGroup ID for Airwatch
+16-09-17 17:06:14 - [DEBUG] Getting Destination SecurityGroup ID for vSphere vCenter - Hosts
+16-09-17 17:06:14 - [DEBUG] Getting Destination SecurityGroup ID for Horizon View Desktops
+16-09-17 17:06:15 - [DEBUG] Getting Destination SecurityGroup ID for Horizon View Connection Server
+16-09-17 17:06:16 - [DEBUG] Getting Destination SecurityGroup ID for Horizon View Security Server
+16-09-17 17:06:17 - [DEBUG] Getting Destination SecurityGroup ID for Horizon View Composer Server
+16-09-17 17:06:18 - [DEBUG] Getting Destination SecurityGroup ID for Horizon Enrollment Server
+16-09-17 17:06:18 - [DEBUG] Getting Destination SecurityGroup ID for Unified Access Gateways Server
+16-09-17 17:06:19 - [DEBUG] Getting Destination SecurityGroup ID for App Volumes Manager
+16-09-17 17:06:20 - [DEBUG] Getting Destination SecurityGroup ID for VMware Identity Manager
+16-09-17 17:06:21 - [DEBUG] Getting Destination SecurityGroup ID for vROPS for Horizon
+16-09-17 17:06:21 - [DEBUG] Getting Destination SecurityGroup ID for Airwatch
+16-09-17 17:06:22 - [DEBUG] Getting Destination SecurityGroup ID for vSphere vCenter - Hosts
+16-09-17 17:06:23 - [DEBUG] Getting Destination SecurityGroup ID for Horizon View Desktops
+16-09-17 17:06:24 - [DEBUG] Getting Destination SecurityGroup ID for Horizon View Connection Server
+16-09-17 17:06:24 - [DEBUG] Getting Destination SecurityGroup ID for Horizon View Security Server
+16-09-17 17:06:25 - [DEBUG] Getting Destination SecurityGroup ID for Horizon View Composer Server
+16-09-17 17:06:26 - [DEBUG] Getting Destination SecurityGroup ID for Horizon Enrollment Server
+16-09-17 17:06:26 - [DEBUG] Getting Destination SecurityGroup ID for Unified Access Gateways Server
+16-09-17 17:06:27 - [DEBUG] Getting Destination SecurityGroup ID for App Volumes Manager
+16-09-17 17:06:28 - [DEBUG] Getting Destination SecurityGroup ID for VMware Identity Manager
+16-09-17 17:06:28 - [DEBUG] Getting Destination SecurityGroup ID for vROPS for Horizon
+16-09-17 17:06:29 - [DEBUG] Getting Destination SecurityGroup ID for Airwatch
+16-09-17 17:06:30 - [DEBUG] Getting Destination SecurityGroup ID for vSphere vCenter - Hosts
+16-09-17 17:06:31 - [DEBUG] Sources Argument : securitygroup.name
+16-09-17 17:06:31 - [DEBUG] Dest Argument : securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup securitygroup.name
+16-09-17 17:06:32 - [DEBUG] ServiceGrp Argument : System.Xml.XmlElement
+16-09-17 17:06:32 - Adding new rule Administrative Console Access FW Rule to Section Infrastructure Services Section
+16-09-17 17:06:35 - End script run
+16-09-17 17:10:23 - Starting engines
+16-09-17 17:10:23 - horizon7_Service.yml found continuing import
+16-09-17 17:10:23 - Reading file contents
+16-09-17 17:10:23 - File yml contains at least one HorizonViewServices section. Continuing to process these.
+16-09-17 17:10:23 - File yml contains at least one DFWServicesgroups section. Continuing to process these.
+16-09-17 17:10:23 - File yml contains at least one Security Groups section. Continuing to process these.
+16-09-17 17:10:23 - File yml contains at least Firewal section and rules. Continuing to process these.
+16-09-17 17:10:36 - Asked user about NSX manager. Got response: 10.1.17.52
+16-09-17 17:10:41 - Asked user about SSO NSX User. Got response: infra\infrapasbor
+16-09-17 17:10:45 - Asked User about NSX Pass. Got response: <input not logged>
+16-09-17 17:10:45 - Opening connection to NSX Manager
+16-09-17 17:10:49 - HorizonView-Agent_TCP does exist as service in NSX
+16-09-17 17:10:52 - HorizonView-Agent_UDP does exist as service in NSX
+16-09-17 17:10:54 - HorizonView-ComposerService does exist as service in NSX
+16-09-17 17:10:56 - HorizonView-CS_inbound_client does exist as service in NSX
+16-09-17 17:10:58 - HorizonView-CS_inbound_client_tunneled does exist as service in NSX
+16-09-17 17:11:00 - HorizonView_interCS does exist as service in NSX
+16-09-17 17:11:02 - HorizonView_SS_to_CS_tcp does exist as service in NSX
+16-09-17 17:11:04 - HorizonView_SS_to_CS_udp does exist as service in NSX
+16-09-17 17:11:06 - HorizonView_SS_tcp does exist as service in NSX
+16-09-17 17:11:08 - HorizonView_SS_udp does exist as service in NSX
+16-09-17 17:11:10 - HorizonView-ES does exist as service in NSX
+16-09-17 17:11:13 - HorizonView-AVMGR does exist as service in NSX
+16-09-17 17:11:15 - HorizonView-IDM does exist as service in NSX
+16-09-17 17:11:17 - HorizonView-V4H does exist as service in NSX
+16-09-17 17:11:20 - HorizonView-UAG-TCP inbound does exist as service in NSX
+16-09-17 17:11:23 - HorizonView-UAG-UDP inbound does exist as service in NSX
+16-09-17 17:11:24 - vSphere-vCenter-TCP does exist as service in NSX
+16-09-17 17:11:26 - vSphere-vCenter-UDP does exist as service in NSX
+16-09-17 17:11:29 - File Repositories Share does exist as service in NSX
+16-09-17 17:11:31 - Active Directory LDAP does exist as service in NSX
+16-09-17 17:11:33 - Database MSSQL does exist as service in NSX
+16-09-17 17:11:35 - DNS Lookups-UDP does exist as service in NSX
+16-09-17 17:11:38 - DNS Updates Lookups-TCP does exist as service in NSX
+16-09-17 17:11:40 - Time Services NTP does exist as service in NSX
+16-09-17 17:11:42 - Admin Services HTTPS does exist as service in NSX
+16-09-17 17:11:44 - Admin Services SSH does exist as service in NSX
+16-09-17 17:11:46 - Admin Services VAMI does exist as service in NSX
+16-09-17 17:11:54 - Admin Services 84439443 does exist as service in NSX
+16-09-17 17:11:57 - HorizonView-AVAgent does exist as service in NSX
+16-09-17 17:11:58 - Horizon View Composer Services does exist as DFW Service group in NSX
+16-09-17 17:12:01 - Horizon View Connection Services does exist as DFW Service group in NSX
+16-09-17 17:12:03 - Horizon View Desktops does exist as DFW Service group in NSX
+16-09-17 17:12:04 - Horizon View Security Services does exist as DFW Service group in NSX
+16-09-17 17:12:06 - Horizon View Enrollment Services does exist as DFW Service group in NSX
+16-09-17 17:12:08 - HorizonView UAG Services does exist as DFW Service group in NSX
+16-09-17 17:12:09 - vSphere-vCenter Services does exist as DFW Service group in NSX
+16-09-17 17:12:11 - DNS Services does exist as DFW Service group in NSX
+16-09-17 17:12:13 - Active Directory does exist as DFW Service group in NSX
+16-09-17 17:12:14 - MSSQL Database does exist as DFW Service group in NSX
+16-09-17 17:12:16 - DHCP Service does exist as DFW Service group in NSX
+16-09-17 17:12:18 - Time Services does exist as DFW Service group in NSX
+16-09-17 17:12:19 - Admin Services does exist as DFW Service group in NSX
+16-09-17 17:12:21 - V4H Services does exist as DFW Service group in NSX
+16-09-17 17:12:23 - File Services UEM does exist as DFW Service group in NSX
+16-09-17 17:12:25 - App Volumes Agent Services does exist as DFW Service group in NSX
+16-09-17 17:12:27 - vIDM CS Services does exist as DFW Service group in NSX
+16-09-17 17:12:28 - vIDM Inbound Services does exist as DFW Service group in NSX
+16-09-17 17:12:29 - Horizon View Desktops does exist as DFW Security group in NSX
+16-09-17 17:12:30 - Horizon View Connection Server does exist as DFW Security group in NSX
+16-09-17 17:12:31 - Horizon View Security Server does exist as DFW Security group in NSX
+16-09-17 17:12:32 - Horizon View Composer Server does exist as DFW Security group in NSX
+16-09-17 17:12:33 - Horizon Enrollment Server does exist as DFW Security group in NSX
+16-09-17 17:12:33 - Horizon Clients Zones does exist as DFW Security group in NSX
+16-09-17 17:12:34 - Horizon External Clients Zones does exist as DFW Security group in NSX
+16-09-17 17:12:35 - Unified Access Gateways Server does exist as DFW Security group in NSX
+16-09-17 17:12:36 - VMware Identity Manager does exist as DFW Security group in NSX
+16-09-17 17:12:36 - App Volumes Manager does exist as DFW Security group in NSX
+16-09-17 17:12:38 - vROPS for Horizon does exist as DFW Security group in NSX
+16-09-17 17:12:38 - Airwatch Console Server does exist as DFW Security group in NSX
+16-09-17 17:12:39 - Airwatch Device Server does exist as DFW Security group in NSX
+16-09-17 17:12:40 - vSphere vCenter - Hosts does exist as DFW Security group in NSX
+16-09-17 17:12:40 - Domain Controllers does exist as DFW Security group in NSX
+16-09-17 17:12:41 - DHCP Servers does exist as DFW Security group in NSX
+16-09-17 17:12:42 - UEM File Repositories does exist as DFW Security group in NSX
+16-09-17 17:12:43 - MSSQL Servers does exist as DFW Security group in NSX
+16-09-17 17:12:43 - Domain Name Servers does exist as DFW Security group in NSX
+16-09-17 17:12:44 - NTP Servers does exist as DFW Security group in NSX
+16-09-17 17:12:45 - Admin Stations does exist as DFW Security group in NSX
+16-09-17 17:12:45 - Horizon Desktop Block Section does exist as DFW Firewall Section in NSX
+16-09-17 17:12:45 - Horizon View Management Block Section does exist as DFW Firewall Section in NSX
+16-09-17 17:12:46 - Horizon View External Connections Section does exist as DFW Firewall Section in NSX
+16-09-17 17:12:46 - Horizon Operation Management Section does exist as DFW Firewall Section in NSX
+16-09-17 17:12:47 - Horizon Identity Manager Section does exist as DFW Firewall Section in NSX
+16-09-17 17:12:47 - Infrastructure Services Section does exist as DFW Firewall Section in NSX
+16-09-17 17:12:47 - AirWatch Section does not exist as DFW Firewall Section in NSX. Need to add
+16-09-17 17:12:47 - [ERROR] There are no rules for System.Collections.Specialized.OrderedDictionary (=)
+16-09-17 17:24:25 - Starting engines
+16-09-17 17:24:25 - horizon7_Service.yml found continuing import
+16-09-17 17:24:25 - Reading file contents
+16-09-17 17:24:25 - File yml contains at least one HorizonViewServices section. Continuing to process these.
+16-09-17 17:24:25 - File yml contains at least one DFWServicesgroups section. Continuing to process these.
+16-09-17 17:24:25 - File yml contains at least one Security Groups section. Continuing to process these.
+16-09-17 17:24:25 - File yml contains at least Firewal section and rules. Continuing to process these.
+16-09-17 17:24:29 - Asked user about NSX manager. Got response: 10.1.17.52
+16-09-17 17:24:36 - Asked user about SSO NSX User. Got response: infra\infrapasbor
+16-09-17 17:24:40 - Asked User about NSX Pass. Got response: <input not logged>
+16-09-17 17:24:40 - Opening connection to NSX Manager
+16-09-17 17:24:43 - HorizonView-Agent_TCP does exist as service in NSX
+16-09-17 17:24:45 - HorizonView-Agent_UDP does exist as service in NSX
+16-09-17 17:24:47 - HorizonView-ComposerService does exist as service in NSX
+16-09-17 17:24:49 - HorizonView-CS_inbound_client does exist as service in NSX
+16-09-17 17:24:51 - HorizonView-CS_inbound_client_tunneled does exist as service in NSX
+16-09-17 17:24:53 - HorizonView_interCS does exist as service in NSX
+16-09-17 17:24:55 - HorizonView_SS_to_CS_tcp does exist as service in NSX
+16-09-17 17:24:57 - HorizonView_SS_to_CS_udp does exist as service in NSX
+16-09-17 17:24:59 - HorizonView_SS_tcp does exist as service in NSX
+16-09-17 17:25:01 - HorizonView_SS_udp does exist as service in NSX
+16-09-17 17:25:03 - HorizonView-ES does exist as service in NSX
+16-09-17 17:25:06 - HorizonView-AVMGR does exist as service in NSX
+16-09-17 17:25:08 - HorizonView-IDM does exist as service in NSX
+16-09-17 17:25:10 - HorizonView-V4H does exist as service in NSX
+16-09-17 17:25:12 - HorizonView-UAG-TCP inbound does exist as service in NSX
+16-09-17 17:25:15 - HorizonView-UAG-UDP inbound does exist as service in NSX
+16-09-17 17:25:17 - vSphere-vCenter-TCP does exist as service in NSX
+16-09-17 17:25:19 - vSphere-vCenter-UDP does exist as service in NSX
+16-09-17 17:25:21 - File Repositories Share does exist as service in NSX
+16-09-17 17:25:23 - Active Directory LDAP does exist as service in NSX
+16-09-17 17:25:26 - Database MSSQL does exist as service in NSX
+16-09-17 17:25:28 - DNS Lookups-UDP does exist as service in NSX
+16-09-17 17:25:30 - DNS Updates Lookups-TCP does exist as service in NSX
+16-09-17 17:25:32 - Time Services NTP does exist as service in NSX
+16-09-17 17:25:35 - Admin Services HTTPS does exist as service in NSX
+16-09-17 17:25:37 - Admin Services SSH does exist as service in NSX
+16-09-17 17:25:39 - Admin Services VAMI does exist as service in NSX
+16-09-17 17:25:41 - Admin Services 84439443 does exist as service in NSX
+16-09-17 17:25:43 - HorizonView-AVAgent does exist as service in NSX
+16-09-17 17:25:45 - Horizon View Composer Services does exist as DFW Service group in NSX
+16-09-17 17:25:46 - Horizon View Connection Services does exist as DFW Service group in NSX
+16-09-17 17:25:48 - Horizon View Desktops does exist as DFW Service group in NSX
+16-09-17 17:25:50 - Horizon View Security Services does exist as DFW Service group in NSX
+16-09-17 17:25:51 - Horizon View Enrollment Services does exist as DFW Service group in NSX
+16-09-17 17:25:53 - HorizonView UAG Services does exist as DFW Service group in NSX
+16-09-17 17:25:55 - vSphere-vCenter Services does exist as DFW Service group in NSX
+16-09-17 17:25:57 - DNS Services does exist as DFW Service group in NSX
+16-09-17 17:25:59 - Active Directory does exist as DFW Service group in NSX
+16-09-17 17:26:01 - MSSQL Database does exist as DFW Service group in NSX
+16-09-17 17:26:02 - DHCP Service does exist as DFW Service group in NSX
+16-09-17 17:26:04 - Time Services does exist as DFW Service group in NSX
+16-09-17 17:26:06 - Admin Services does exist as DFW Service group in NSX
+16-09-17 17:26:07 - V4H Services does exist as DFW Service group in NSX
+16-09-17 17:26:09 - File Services UEM does exist as DFW Service group in NSX
+16-09-17 17:26:11 - App Volumes Agent Services does exist as DFW Service group in NSX
+16-09-17 17:26:12 - vIDM CS Services does exist as DFW Service group in NSX
+16-09-17 17:26:14 - vIDM Inbound Services does exist as DFW Service group in NSX
+16-09-17 17:26:14 - Horizon View Desktops does exist as DFW Security group in NSX
+16-09-17 17:26:15 - Horizon View Connection Server does exist as DFW Security group in NSX
+16-09-17 17:26:16 - Horizon View Security Server does exist as DFW Security group in NSX
+16-09-17 17:26:16 - Horizon View Composer Server does exist as DFW Security group in NSX
+16-09-17 17:26:17 - Horizon Enrollment Server does exist as DFW Security group in NSX
+16-09-17 17:26:18 - Horizon Clients Zones does exist as DFW Security group in NSX
+16-09-17 17:26:19 - Horizon External Clients Zones does exist as DFW Security group in NSX
+16-09-17 17:26:19 - Unified Access Gateways Server does exist as DFW Security group in NSX
+16-09-17 17:26:20 - VMware Identity Manager does exist as DFW Security group in NSX
+16-09-17 17:26:21 - App Volumes Manager does exist as DFW Security group in NSX
+16-09-17 17:26:21 - vROPS for Horizon does exist as DFW Security group in NSX
+16-09-17 17:26:22 - Airwatch Console Server does exist as DFW Security group in NSX
+16-09-17 17:26:23 - Airwatch Device Server does exist as DFW Security group in NSX
+16-09-17 17:26:24 - vSphere vCenter - Hosts does exist as DFW Security group in NSX
+16-09-17 17:26:24 - Domain Controllers does exist as DFW Security group in NSX
+16-09-17 17:26:25 - DHCP Servers does exist as DFW Security group in NSX
+16-09-17 17:26:26 - UEM File Repositories does exist as DFW Security group in NSX
+16-09-17 17:26:26 - MSSQL Servers does exist as DFW Security group in NSX
+16-09-17 17:26:27 - Domain Name Servers does exist as DFW Security group in NSX
+16-09-17 17:26:28 - NTP Servers does exist as DFW Security group in NSX
+16-09-17 17:26:28 - Admin Stations does exist as DFW Security group in NSX
+16-09-17 17:26:29 - Horizon Desktop Block Section does exist as DFW Firewall Section in NSX
+16-09-17 17:26:29 - Horizon View Management Block Section does exist as DFW Firewall Section in NSX
+16-09-17 17:26:30 - Horizon View External Connections Section does exist as DFW Firewall Section in NSX
+16-09-17 17:26:30 - Horizon Operation Management Section does exist as DFW Firewall Section in NSX
+16-09-17 17:26:31 - Horizon Identity Manager Section does exist as DFW Firewall Section in NSX
+16-09-17 17:26:31 - Infrastructure Services Section does exist as DFW Firewall Section in NSX
+16-09-17 17:26:32 - AirWatch Section does not exist as DFW Firewall Section in NSX. Need to add
+16-09-17 17:26:32 - For AirWatch Section there are 2 children AirWatch Console MSSQL FW Rule AirWatch Inter FW Rule
+16-09-17 17:26:32 - AirWatch Console MSSQL FW Rule does not exist as DFW Firewall Section in NSX. Need to add
+16-09-17 17:26:32 - For AirWatch Console MSSQL FW Rule there is source: AirWatch Console Server
+16-09-17 17:26:32 - For AirWatch Console MSSQL FW Rule there is destination: MSSQL Server
+16-09-17 17:26:32 - For AirWatch Console MSSQL FW Rule there is action: Allow
+16-09-17 17:26:32 - [DEBUG] Splitted sources in 1 times and items AirWatch Console Server
+16-09-17 17:26:32 - [DEBUG] Getting Source SecurityGroup ID for AirWatch Console Server
+16-09-17 17:26:33 - [DEBUG] Getting Destination SecurityGroup ID for MSSQL Server
+16-09-17 17:26:34 - [DEBUG] Sources Argument : securitygroup.name
+16-09-17 17:26:34 - [DEBUG] Dest Argument : .name
+16-09-17 17:26:35 - [DEBUG] ServiceGrp Argument : 
+16-09-17 17:26:35 - Adding new rule AirWatch Console MSSQL FW Rule to Section AirWatch Section
+16-09-17 17:26:36 - AirWatch Inter FW Rule does not exist as DFW Firewall Section in NSX. Need to add
+16-09-17 17:26:36 - For AirWatch Inter FW Rule there is source: AirWatch Device Server
+16-09-17 17:26:36 - For AirWatch Inter FW Rule there is destination: AirWatch Console Server
+16-09-17 17:26:36 - For AirWatch Inter FW Rule there is action: Allow
+16-09-17 17:26:36 - [DEBUG] Splitted sources in 1 times and items AirWatch Device Server
+16-09-17 17:26:36 - [DEBUG] Getting Source SecurityGroup ID for AirWatch Device Server
+16-09-17 17:26:36 - [DEBUG] Getting Destination SecurityGroup ID for AirWatch Console Server
+16-09-17 17:26:37 - [DEBUG] Sources Argument : securitygroup.name
+16-09-17 17:26:37 - [DEBUG] Dest Argument : securitygroup.name
+16-09-17 17:26:39 - [DEBUG] ServiceGrp Argument : 
+16-09-17 17:26:39 - Adding new rule AirWatch Inter FW Rule to Section AirWatch Section
+16-09-17 17:26:39 - End script run
+16-09-17 17:29:13 - Starting engines
+16-09-17 17:29:13 - horizon7_Service.yml found continuing import
+16-09-17 17:29:13 - Reading file contents
+16-09-17 17:29:13 - File yml contains at least one HorizonViewServices section. Continuing to process these.
+16-09-17 17:29:13 - File yml contains at least one DFWServicesgroups section. Continuing to process these.
+16-09-17 17:29:13 - File yml contains at least one Security Groups section. Continuing to process these.
+16-09-17 17:29:13 - File yml contains at least Firewal section and rules. Continuing to process these.
+16-09-17 17:29:17 - Asked user about NSX manager. Got response: 10.1.17.52
+16-09-17 17:29:23 - Asked user about SSO NSX User. Got response: infra\infrapasbor
+16-09-17 17:29:27 - Asked User about NSX Pass. Got response: <input not logged>
+16-09-17 17:29:27 - Opening connection to NSX Manager
+16-09-17 17:29:30 - HorizonView-Agent_TCP does exist as service in NSX
+16-09-17 17:29:32 - HorizonView-Agent_UDP does exist as service in NSX
+16-09-17 17:29:34 - HorizonView-ComposerService does exist as service in NSX
+16-09-17 17:29:37 - HorizonView-CS_inbound_client does exist as service in NSX
+16-09-17 17:29:39 - HorizonView-CS_inbound_client_tunneled does exist as service in NSX
+16-09-17 17:29:41 - HorizonView_interCS does exist as service in NSX
+16-09-17 17:29:43 - HorizonView_SS_to_CS_tcp does exist as service in NSX
+16-09-17 17:29:45 - HorizonView_SS_to_CS_udp does exist as service in NSX
+16-09-17 17:29:47 - HorizonView_SS_tcp does exist as service in NSX
+16-09-17 17:29:52 - HorizonView_SS_udp does exist as service in NSX
+16-09-17 17:29:54 - HorizonView-ES does exist as service in NSX
+16-09-17 17:29:56 - HorizonView-AVMGR does exist as service in NSX
+16-09-17 17:29:58 - HorizonView-IDM does exist as service in NSX
+16-09-17 17:30:00 - HorizonView-V4H does exist as service in NSX
+16-09-17 17:30:02 - HorizonView-UAG-TCP inbound does exist as service in NSX
+16-09-17 17:30:04 - HorizonView-UAG-UDP inbound does exist as service in NSX
+16-09-17 17:30:07 - vSphere-vCenter-TCP does exist as service in NSX
+16-09-17 17:30:09 - vSphere-vCenter-UDP does exist as service in NSX
+16-09-17 17:30:11 - File Repositories Share does exist as service in NSX
+16-09-17 17:30:13 - Active Directory LDAP does exist as service in NSX
+16-09-17 17:30:15 - Database MSSQL does exist as service in NSX
+16-09-17 17:30:17 - DNS Lookups-UDP does exist as service in NSX
+16-09-17 17:30:19 - DNS Updates Lookups-TCP does exist as service in NSX
+16-09-17 17:30:21 - Time Services NTP does exist as service in NSX
+16-09-17 17:30:23 - Admin Services HTTPS does exist as service in NSX
+16-09-17 17:30:25 - Admin Services SSH does exist as service in NSX
+16-09-17 17:30:27 - Admin Services VAMI does exist as service in NSX
+16-09-17 17:30:29 - Admin Services 84439443 does exist as service in NSX
+16-09-17 17:30:31 - HorizonView-AVAgent does exist as service in NSX
+16-09-17 17:30:33 - Horizon View Composer Services does exist as DFW Service group in NSX
+16-09-17 17:30:34 - Horizon View Connection Services does exist as DFW Service group in NSX
+16-09-17 17:30:36 - Horizon View Desktops does exist as DFW Service group in NSX
+16-09-17 17:30:38 - Horizon View Security Services does exist as DFW Service group in NSX
+16-09-17 17:30:39 - Horizon View Enrollment Services does exist as DFW Service group in NSX
+16-09-17 17:30:41 - HorizonView UAG Services does exist as DFW Service group in NSX
+16-09-17 17:30:43 - vSphere-vCenter Services does exist as DFW Service group in NSX
+16-09-17 17:30:44 - DNS Services does exist as DFW Service group in NSX
+16-09-17 17:30:46 - Active Directory does exist as DFW Service group in NSX
+16-09-17 17:30:48 - MSSQL Database does exist as DFW Service group in NSX
+16-09-17 17:30:50 - DHCP Service does exist as DFW Service group in NSX
+16-09-17 17:30:51 - Time Services does exist as DFW Service group in NSX
+16-09-17 17:30:53 - Admin Services does exist as DFW Service group in NSX
+16-09-17 17:30:55 - V4H Services does exist as DFW Service group in NSX
+16-09-17 17:30:56 - File Services UEM does exist as DFW Service group in NSX
+16-09-17 17:30:58 - App Volumes Agent Services does exist as DFW Service group in NSX
+16-09-17 17:31:00 - vIDM CS Services does exist as DFW Service group in NSX
+16-09-17 17:31:01 - vIDM Inbound Services does exist as DFW Service group in NSX
+16-09-17 17:31:03 - AirWatch Services does not exist as DFW Service Group in NSX. Need to add
+16-09-17 17:31:03 - For AirWatch Services there are 2 children Admin Services HTTPS Database MSSQL
+16-09-17 17:31:03 - AirWatch Services Adding DFW Service Group here
+16-09-17 17:31:04 - Adding children here
+16-09-17 17:31:04 - Admin Services HTTPS added here
+16-09-17 17:31:08 - Database MSSQL added here
+16-09-17 17:31:13 - Horizon View Desktops does exist as DFW Security group in NSX
+16-09-17 17:31:14 - Horizon View Connection Server does exist as DFW Security group in NSX
+16-09-17 17:31:14 - Horizon View Security Server does exist as DFW Security group in NSX
+16-09-17 17:31:15 - Horizon View Composer Server does exist as DFW Security group in NSX
+16-09-17 17:31:16 - Horizon Enrollment Server does exist as DFW Security group in NSX
+16-09-17 17:31:16 - Horizon Clients Zones does exist as DFW Security group in NSX
+16-09-17 17:31:17 - Horizon External Clients Zones does exist as DFW Security group in NSX
+16-09-17 17:31:18 - Unified Access Gateways Server does exist as DFW Security group in NSX
+16-09-17 17:31:19 - VMware Identity Manager does exist as DFW Security group in NSX
+16-09-17 17:31:19 - App Volumes Manager does exist as DFW Security group in NSX
+16-09-17 17:31:20 - vROPS for Horizon does exist as DFW Security group in NSX
+16-09-17 17:31:21 - Airwatch Console Server does exist as DFW Security group in NSX
+16-09-17 17:31:22 - Airwatch Device Server does exist as DFW Security group in NSX
+16-09-17 17:31:22 - vSphere vCenter - Hosts does exist as DFW Security group in NSX
+16-09-17 17:31:23 - Domain Controllers does exist as DFW Security group in NSX
+16-09-17 17:31:24 - DHCP Servers does exist as DFW Security group in NSX
+16-09-17 17:31:24 - UEM File Repositories does exist as DFW Security group in NSX
+16-09-17 17:31:25 - MSSQL Servers does exist as DFW Security group in NSX
+16-09-17 17:31:26 - Domain Name Servers does exist as DFW Security group in NSX
+16-09-17 17:31:27 - NTP Servers does exist as DFW Security group in NSX
+16-09-17 17:31:27 - Admin Stations does exist as DFW Security group in NSX
+16-09-17 17:31:28 - Horizon Desktop Block Section does exist as DFW Firewall Section in NSX
+16-09-17 17:31:28 - Horizon View Management Block Section does exist as DFW Firewall Section in NSX
+16-09-17 17:31:28 - Horizon View External Connections Section does exist as DFW Firewall Section in NSX
+16-09-17 17:31:29 - Horizon Operation Management Section does exist as DFW Firewall Section in NSX
+16-09-17 17:31:29 - Horizon Identity Manager Section does exist as DFW Firewall Section in NSX
+16-09-17 17:31:30 - Infrastructure Services Section does exist as DFW Firewall Section in NSX
+16-09-17 17:31:30 - AirWatch Section does not exist as DFW Firewall Section in NSX. Need to add
+16-09-17 17:31:30 - For AirWatch Section there are 2 children AirWatch Console MSSQL FW Rule AirWatch Inter FW Rule
+16-09-17 17:31:31 - AirWatch Console MSSQL FW Rule does not exist as DFW Firewall Section in NSX. Need to add
+16-09-17 17:31:31 - For AirWatch Console MSSQL FW Rule there is source: AirWatch Console Server
+16-09-17 17:31:31 - For AirWatch Console MSSQL FW Rule there is destination: MSSQL Server
+16-09-17 17:31:31 - For AirWatch Console MSSQL FW Rule there is action: Allow
+16-09-17 17:31:31 - [DEBUG] Splitted sources in 1 times and items AirWatch Console Server
+16-09-17 17:31:31 - [DEBUG] Getting Source SecurityGroup ID for AirWatch Console Server
+16-09-17 17:31:31 - [DEBUG] Getting Destination SecurityGroup ID for MSSQL Server
+16-09-17 17:31:32 - [DEBUG] Sources Argument : securitygroup.name
+16-09-17 17:31:32 - [DEBUG] Dest Argument : .name
+16-09-17 17:31:34 - [DEBUG] ServiceGrp Argument : System.Xml.XmlElement
+16-09-17 17:31:34 - Adding new rule AirWatch Console MSSQL FW Rule to Section AirWatch Section
+16-09-17 17:31:36 - AirWatch Inter FW Rule does not exist as DFW Firewall Section in NSX. Need to add
+16-09-17 17:31:36 - For AirWatch Inter FW Rule there is source: AirWatch Device Server
+16-09-17 17:31:36 - For AirWatch Inter FW Rule there is destination: AirWatch Console Server
+16-09-17 17:31:36 - For AirWatch Inter FW Rule there is action: Allow
+16-09-17 17:31:36 - [DEBUG] Splitted sources in 1 times and items AirWatch Device Server
+16-09-17 17:31:36 - [DEBUG] Getting Source SecurityGroup ID for AirWatch Device Server
+16-09-17 17:31:36 - [DEBUG] Getting Destination SecurityGroup ID for AirWatch Console Server
+16-09-17 17:31:37 - [DEBUG] Sources Argument : securitygroup.name
+16-09-17 17:31:37 - [DEBUG] Dest Argument : securitygroup.name
+16-09-17 17:31:39 - [DEBUG] ServiceGrp Argument : System.Xml.XmlElement
+16-09-17 17:31:39 - Adding new rule AirWatch Inter FW Rule to Section AirWatch Section
+16-09-17 17:31:40 - End script run
+16-09-17 18:43:24 - Starting engines
+16-09-17 18:43:24 - horizon7_Service.yml found continuing import
+16-09-17 18:43:24 - Reading file contents
+16-09-17 18:43:25 - File yml contains at least one HorizonViewServices section. Continuing to process these.
+16-09-17 18:43:25 - File yml contains at least one DFWServicesgroups section. Continuing to process these.
+16-09-17 18:43:25 - File yml contains at least one Security Groups section. Continuing to process these.
+16-09-17 18:43:25 - File yml contains at least Firewal section and rules. Continuing to process these.
+16-09-17 18:43:30 - Asked user about NSX manager. Got response: 10.1.17.52
+16-09-17 18:43:36 - Asked user about SSO NSX User. Got response: infra\infrapasbor
+16-09-17 18:43:40 - Asked User about NSX Pass. Got response: <input not logged>
+16-09-17 18:43:40 - Opening connection to NSX Manager
+16-09-17 18:43:44 - HorizonView-Agent_TCP does exist as service in NSX
+16-09-17 18:43:46 - HorizonView-Agent_UDP does exist as service in NSX
+16-09-17 18:43:48 - HorizonView-ComposerService does exist as service in NSX
+16-09-17 18:43:50 - HorizonView-CS_inbound_client does exist as service in NSX
+16-09-17 18:43:52 - HorizonView-CS_inbound_client_tunneled does exist as service in NSX
+16-09-17 18:43:54 - HorizonView_interCS does exist as service in NSX
+16-09-17 18:43:56 - HorizonView_SS_to_CS_tcp does exist as service in NSX
+16-09-17 18:43:58 - HorizonView_SS_to_CS_udp does exist as service in NSX
+16-09-17 18:44:00 - HorizonView_SS_tcp does exist as service in NSX
+16-09-17 18:44:02 - HorizonView_SS_udp does exist as service in NSX
+16-09-17 18:44:05 - HorizonView-ES does exist as service in NSX
+16-09-17 18:44:06 - HorizonView-AVMGR does exist as service in NSX
+16-09-17 18:44:08 - HorizonView-IDM does exist as service in NSX
+16-09-17 18:44:10 - HorizonView-V4H does exist as service in NSX
+16-09-17 18:44:12 - HorizonView-UAG-TCP inbound does exist as service in NSX
+16-09-17 18:44:14 - HorizonView-UAG-UDP inbound does exist as service in NSX
+16-09-17 18:44:16 - vSphere-vCenter-TCP does exist as service in NSX
+16-09-17 18:44:19 - vSphere-vCenter-UDP does exist as service in NSX
+16-09-17 18:44:21 - File Repositories Share does exist as service in NSX
+16-09-17 18:44:23 - Active Directory LDAP does exist as service in NSX
+16-09-17 18:44:25 - Database MSSQL does exist as service in NSX
+16-09-17 18:44:27 - DNS Lookups-UDP does exist as service in NSX
+16-09-17 18:44:29 - DNS Updates Lookups-TCP does exist as service in NSX
+16-09-17 18:44:31 - Time Services NTP does exist as service in NSX
+16-09-17 18:44:33 - Admin Services HTTPS does exist as service in NSX
+16-09-17 18:44:35 - Admin Services SSH does exist as service in NSX
+16-09-17 18:44:37 - Admin Services VAMI does exist as service in NSX
+16-09-17 18:44:40 - Admin Services 84439443 does exist as service in NSX
+16-09-17 18:44:42 - HorizonView-AVAgent does exist as service in NSX
+16-09-17 18:44:44 - Horizon View Composer Services does exist as DFW Service group in NSX
+16-09-17 18:44:45 - Horizon View Connection Services does exist as DFW Service group in NSX
+16-09-17 18:44:47 - Horizon View Desktops does exist as DFW Service group in NSX
+16-09-17 18:44:49 - Horizon View Security Services does exist as DFW Service group in NSX
+16-09-17 18:44:50 - Horizon View Enrollment Services does exist as DFW Service group in NSX
+16-09-17 18:44:52 - HorizonView UAG Services does exist as DFW Service group in NSX
+16-09-17 18:44:54 - vSphere-vCenter Services does exist as DFW Service group in NSX
+16-09-17 18:44:55 - DNS Services does exist as DFW Service group in NSX
+16-09-17 18:44:57 - Active Directory does exist as DFW Service group in NSX
+16-09-17 18:44:59 - MSSQL Database does exist as DFW Service group in NSX
+16-09-17 18:45:01 - DHCP Service does exist as DFW Service group in NSX
+16-09-17 18:45:03 - Time Services does exist as DFW Service group in NSX
+16-09-17 18:45:04 - Admin Services does exist as DFW Service group in NSX
+16-09-17 18:45:06 - V4H Services does exist as DFW Service group in NSX
+16-09-17 18:45:08 - File Services UEM does exist as DFW Service group in NSX
+16-09-17 18:45:09 - App Volumes Agent Services does exist as DFW Service group in NSX
+16-09-17 18:45:11 - vIDM CS Services does exist as DFW Service group in NSX
+16-09-17 18:45:13 - vIDM Inbound Services does exist as DFW Service group in NSX
+16-09-17 18:45:14 - AirWatch Services does exist as DFW Service group in NSX
+16-09-17 18:45:15 - Horizon View Desktops does exist as DFW Security group in NSX
+16-09-17 18:45:16 - Horizon View Connection Server does exist as DFW Security group in NSX
+16-09-17 18:45:17 - Horizon View Security Server does exist as DFW Security group in NSX
+16-09-17 18:45:17 - Horizon View Composer Server does exist as DFW Security group in NSX
+16-09-17 18:45:18 - Horizon Enrollment Server does exist as DFW Security group in NSX
+16-09-17 18:45:19 - Horizon Clients Zones does exist as DFW Security group in NSX
+16-09-17 18:45:19 - Horizon External Clients Zones does exist as DFW Security group in NSX
+16-09-17 18:45:20 - Unified Access Gateways Server does exist as DFW Security group in NSX
+16-09-17 18:45:21 - VMware Identity Manager does exist as DFW Security group in NSX
+16-09-17 18:45:22 - App Volumes Manager does exist as DFW Security group in NSX
+16-09-17 18:45:22 - vROPS for Horizon does exist as DFW Security group in NSX
+16-09-17 18:45:23 - Airwatch Console Server does exist as DFW Security group in NSX
+16-09-17 18:45:24 - Airwatch Device Server does exist as DFW Security group in NSX
+16-09-17 18:45:25 - vSphere vCenter - Hosts does exist as DFW Security group in NSX
+16-09-17 18:45:25 - Domain Controllers does exist as DFW Security group in NSX
+16-09-17 18:45:26 - DHCP Servers does exist as DFW Security group in NSX
+16-09-17 18:45:27 - UEM File Repositories does exist as DFW Security group in NSX
+16-09-17 18:45:28 - MSSQL Servers does exist as DFW Security group in NSX
+16-09-17 18:45:29 - Domain Name Servers does exist as DFW Security group in NSX
+16-09-17 18:45:29 - NTP Servers does exist as DFW Security group in NSX
+16-09-17 18:45:30 - Admin Stations does exist as DFW Security group in NSX
+16-09-17 18:45:30 - Horizon Desktop Block Section does exist as DFW Firewall Section in NSX
+16-09-17 18:45:31 - Horizon View Management Block Section does exist as DFW Firewall Section in NSX
+16-09-17 18:45:31 - Horizon View External Connections Section does exist as DFW Firewall Section in NSX
+16-09-17 18:45:32 - Horizon Operation Management Section does exist as DFW Firewall Section in NSX
+16-09-17 18:45:32 - Horizon Identity Manager Section does exist as DFW Firewall Section in NSX
+16-09-17 18:45:32 - Infrastructure Services Section does exist as DFW Firewall Section in NSX
+16-09-17 18:45:33 - AirWatch Section does not exist as DFW Firewall Section in NSX. Need to add
+16-09-17 18:45:33 - For AirWatch Section there are 2 children AirWatch Console MSSQL FW Rule AirWatch Inter FW Rule
+16-09-17 18:45:34 - AirWatch Console MSSQL FW Rule does not exist as DFW Firewall Section in NSX. Need to add
+16-09-17 18:45:34 - For AirWatch Console MSSQL FW Rule there is source: AirWatch Console Server
+16-09-17 18:45:34 - For AirWatch Console MSSQL FW Rule there is destination: MSSQL Servers
+16-09-17 18:45:34 - For AirWatch Console MSSQL FW Rule there is action: Allow
+16-09-17 18:45:34 - [DEBUG] Splitted sources in 1 times and items AirWatch Console Server
+16-09-17 18:45:34 - [DEBUG] Getting Source SecurityGroup ID for AirWatch Console Server
+16-09-17 18:45:34 - [DEBUG] Getting Destination SecurityGroup ID for MSSQL Servers
+16-09-17 18:45:35 - [DEBUG] Sources Argument : securitygroup.name
+16-09-17 18:45:35 - [DEBUG] Dest Argument : securitygroup.name
+16-09-17 18:45:37 - [DEBUG] ServiceGrp Argument : System.Xml.XmlElement
+16-09-17 18:45:37 - Adding new rule AirWatch Console MSSQL FW Rule to Section AirWatch Section
+16-09-17 18:45:38 - AirWatch Inter FW Rule does not exist as DFW Firewall Section in NSX. Need to add
+16-09-17 18:45:38 - For AirWatch Inter FW Rule there is source: AirWatch Device Server
+16-09-17 18:45:38 - For AirWatch Inter FW Rule there is destination: AirWatch Console Server
+16-09-17 18:45:38 - For AirWatch Inter FW Rule there is action: Allow
+16-09-17 18:45:38 - [DEBUG] Splitted sources in 1 times and items AirWatch Device Server
+16-09-17 18:45:38 - [DEBUG] Getting Source SecurityGroup ID for AirWatch Device Server
+16-09-17 18:45:39 - [DEBUG] Getting Destination SecurityGroup ID for AirWatch Console Server
+16-09-17 18:45:40 - [DEBUG] Sources Argument : securitygroup.name
+16-09-17 18:45:40 - [DEBUG] Dest Argument : securitygroup.name
+16-09-17 18:45:41 - [DEBUG] ServiceGrp Argument : System.Xml.XmlElement
+16-09-17 18:45:41 - Adding new rule AirWatch Inter FW Rule to Section AirWatch Section
+16-09-17 18:45:42 - End script run
