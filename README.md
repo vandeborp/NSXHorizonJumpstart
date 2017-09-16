@@ -9,7 +9,8 @@ This project will include a scripting mechanisme to implement these rules in NSX
 
 For now the .yml file is maintained to be used by above VMware Fling.
 
-I have created a PowerShell/PowerNSX script that starts the process of importing, but is not nearly ready. 
+I have created a PowerShell/PowerNSX script that starts the process of importing, but is quite nearly ready. 
+
 Currently there is a test version in the master branch.
 Script currently does:
   - Check for yml file
@@ -28,6 +29,10 @@ Script currently does:
   - Empty FirewallSection in the yml configuration will throw error
   - Loop through FirewallSections and check if they exist and have rules (Get-NsxFirewallSection)
   - Add FirewallSection in NSX when not existing (New-NsxFirewallSection)
+  
+PowerNSX is essential, therefore please ensure you have the latest version of PowerNSX installed, which can be updated in an administrative PowerShell terminal with the following command (or use -User for installing in the user context):
+
+Update-PowerNsx master
 
 Details will be posted on my blog https://pascalswereld.nl. 
 Introduction blog post is released as https://pascalswereld.nl/2017/08/24/nsx-for-desktop-jumpstart-microsegmentation-with-horizon-service-installer-fling/.
