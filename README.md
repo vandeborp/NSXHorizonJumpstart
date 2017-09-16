@@ -29,10 +29,11 @@ Script currently does:
   - Empty FirewallSection in the yml configuration will throw error
   - Loop through FirewallSections and check if they exist and have rules (Get-NsxFirewallSection)
   - Add FirewallSection in NSX when not existing (New-NsxFirewallSection)
+  - Checks with that section for FireWall rules and adds these (Get-NsxFirewallSection | New-NsxFireWallRule)  
   
 PowerNSX is essential, therefore please ensure you have the latest version of PowerNSX installed, which can be updated in an administrative PowerShell terminal with the following command (or use -User for installing in the user context):
 
-Update-PowerNsx master
+Update-PowerNsx master (tested with master branch of 09/16/2017)  
 
 Details will be posted on my blog https://pascalswereld.nl. 
 Introduction blog post is released as https://pascalswereld.nl/2017/08/24/nsx-for-desktop-jumpstart-microsegmentation-with-horizon-service-installer-fling/.
