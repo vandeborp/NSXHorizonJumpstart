@@ -36,11 +36,12 @@ depending on functions will add to different modules
 
 # Settings
 $ymlFile = "horizon7_Service.yml" # Input yml file
-$logon = "Yes" # Do we want log Yes or No
+$logon = "Yes" # Do we want the script to log Yes or No
 $logFile = "NSXHorizonJumpstart.log" # Log File location
 $overwrite = "Yes" # Overwrite existing values, Yes or No
 $defaultDeny = "Yes" # Set default Firewall Rule to Deny ## To be used later
 $ReportOpt = "Yes" # Set the report option to Ye or No ## To be used later
+$DFWLogon = "Yes" # Set the NSXFirewallRule to EnableLogging ## To be used later
 # End of Settings
 
 # Import Modules
@@ -217,7 +218,7 @@ If ($logon -eq "Yes") { Write-Log "Asked User about NSX Pass. Got response: <inp
 # Open Connection
 # Use as -connection $NSXConnection is the remainder of commands
 If ($logon -eq "Yes") { Write-Log "Opening connection to NSX Manager" }
-$NSXConnection = Connect-NsxServer -vCenterServer $nsxManager -username $nsxUser -Password $nsxPass -DefaultConnection:$false
+$NSXConnection = Connect-NsxServer -vCenterServer $nsxManager -username $nsxUser -Password $nsxPass #-DefaultConnection:$false
 
 # Check input file with current NSX configuration
 # Show changes
@@ -332,11 +333,10 @@ ForEach ($itemSecGr in $fileBody.SecurityGroups){
 }
 
 # DFW Firewall Rules and Sections work together we need one for the other
-# First check and add the sections
-# Then check an add rules
 # Add rules to sections
 # Then add to NSX when not existing
-# Sections
+
+# Sections and rules
 ForEach ($itemFWSec in $fileBody.FirewallSections){
 	 # Make human readable
 	 $itemFWSecName = $itemFWSec.name
@@ -354,10 +354,105 @@ ForEach ($itemFWSec in $fileBody.FirewallSections){
 			throw "There are no rules for $itemFWSec (=$itemFWSecRules)"
 		}
 		If ($logon -eq "Yes") { Write-Log "For $itemFWSecName there are $itemFWSecRulesCnt children $itemFWSecRules" }
-		# For now just adding the section
-		New-NsxFirewallSection -name $itemFWSecName -connection $NSXConnection
-		
+		# First add the section
+		New-NsxFirewallSection -name $itemFWSecName -connection $NSXConnection	
 		# Something will be added in the firewallRules section
+		# Check if Rules exist or need to be added 
+		# Rules
+		ForEach ($itemFWRule in $itemFWSecRules){
+			# Make human readable
+			$itemFWRuleName = $itemFWRule
+			$itemFWRulefromNSX = Get-NSXFirewallRule -name $itemFWRuleName -connection $NSXConnection 
+			If (!$itemFWRulefromNSX) { 
+				# Does not exist
+				If ($logon -eq "Yes") { Write-Log "$itemFWRuleName does not exist as DFW Firewall Section in NSX. Need to add" }
+				# Get the other values for the rules from the file
+				# Counter
+				$countRules = 0 
+				ForEach ($itemFWRuleFile in $fileBody.FirewallRules){
+					# Make human readable
+					$itemFWRuleFileName = $itemFWRuleFile.name
+					If($itemFWRuleFileName -eq $itemFWRuleName){
+						# This one we want
+						$itemFWRuleSource = $itemFWRuleFile.source
+						$itemFWRuleDest = $itemFWRuleFile.destination
+						$itemFWRuleAction = $itemFWRuleFile.Action
+						$itemFWRuleserviceGroup = $itemFWRuleFile.serviceGroup
+						
+						If(!($itemFWRuleSource)){
+							If ($logon -eq "Yes") { Write-Log "[ERROR] There is no source for $itemFWRuleName (=$itemFWRuleSource)" }
+							throw "There is no source for $itemFWRuleName (=$itemFWRuleSource)"
+						}
+						If ($logon -eq "Yes") { Write-Log "For $itemFWRuleName there is source: $itemFWRuleSource" }
+						If(!($itemFWRuleDest)){
+							If ($logon -eq "Yes") { Write-Log "[ERROR] There is no destination for $itemFWRuleName (=$itemFWRuleDest)" }
+							throw "There is no destination for $itemFWRuleName (=$itemFWRuleDest)"
+						}
+						If ($logon -eq "Yes") { Write-Log "For $itemFWRuleName there is destination: $itemFWRuleDest" }		
+						If(!($itemFWRuleAction)){
+							If ($logon -eq "Yes") { Write-Log "[ERROR] There is no action for $itemFWRuleName (=$itemFWRuleAction)" }
+							throw "There is no action for $itemFWRuleName (=$itemFWRuleAction)"
+						}
+						If ($logon -eq "Yes") { Write-Log "For $itemFWRuleName there is action: $itemFWRuleAction" }
+						# Check Allow or Reject and warn if not Allow combined with zero trust Default Deny rule
+						If($itemFWRuleAction -ne "Allow"){
+							If ($logon -eq "Yes") { Write-Log "[WARN] There is a Reject or Block for $itemFWRuleName (=$itemFWRuleAction)" }
+						}		
+
+						# Get the SecurityGroup ID's for source and destination
+			
+						# Split om de id's op te halen
+						$itemFWRuleSourceSplit = ($itemFWRuleSource -split ",")
+						$RuleSplitCount = $itemFWRuleSourceSplit.count
+						If ($logon -eq "Yes") { Write-Log "[DEBUG] Splitted sources in $RuleSplitCount times and items $itemFWRuleSourceSplit" }
+						$itemFWRuleDestSplit = ($itemFWRuleDest -split ",")
+						$DestSplitCount = $itemFWRuleDestSplit.count
+						$itemFWRuleSrcID = @()
+						For ($i = 0; $i -lt $RuleSplitCount; $i++){
+							ForEach($itemRuleSourceSplit in $itemFWRuleSourceSplit){
+								If ($logon -eq "Yes") { Write-Log "[DEBUG] Getting Source SecurityGroup ID for $itemRuleSourceSplit" }
+								$SourceArgumentStr = $itemRuleSourceSplit
+								$itemFWRuleSrcID += Get-NsxSecurityGroup -Name $SourceArgumentStr -connection $NSXConnection
+							}
+						}
+						$itemFWRuleDestID = @()
+						For ($z = 0; $z -lt $DestSplitCount; $z++){
+						    ForEach($itemRuleDestSplit in $itemFWRuleDestSplit){
+								If ($logon -eq "Yes") { Write-Log "[DEBUG] Getting Destination SecurityGroup ID for $itemRuleDestSplit" }
+								$DestArgumentStr = $itemRuleDestSplit							
+								$itemFWRuleDestID += Get-NsxSecurityGroup -Name $DestArgumentStr -connection $NSXConnection
+							}
+						}	
+						$SrcArgument = $itemFWRuleSrcID
+						$DestArgument = $itemFWRuleDestID
+						If ($logon -eq "Yes") { Write-Log "[DEBUG] Sources Argument : $SrcArgument.name" }
+						If ($logon -eq "Yes") { Write-Log "[DEBUG] Dest Argument : $DestArgument.name" }
+						# Get Servicegroup ID's for service
+						# PowerNSX checks on XML object if -service is a serviceGroup
+						$SvcGrpArgument = Get-NsxServiceGroup -Name $itemFWRuleserviceGroup -connection $NSXConnection
+						
+						If ($logon -eq "Yes") { Write-Log "[DEBUG] ServiceGrp Argument : $SvcGrpArgument" }
+						
+						# Add new rule to Previously created section
+						If ($logon -eq "Yes") { Write-Log "Adding new rule $itemFWRuleName to Section $itemFWSecName" }
+						Get-NsxFirewallSection -name $itemFWSecName -connection $NSXConnection | New-NsxFirewallRule -name $itemFWRuleName -Source $SrcArgument -Destination $DestArgument -Action $itemFWRuleAction -Service $SvcGrpArgument -Connection $NSXConnection
+					}
+					$countRules=$countRules+1
+				}
+					
+			}else{
+				# Does exist check for overwrite
+				# Later version will check on diffs in script
+				# It is possible that rules exist in multiple sections but for now keep in one section to be clear.
+				If ($logon -eq "Yes") { Write-Log "[WARN] $itemFWRuleName does exist as DFW Firewall Rule in NSX."}
+				If ($logon -eq "Yes") { Write-Log "[WARN] $itemFWRuleName not advisable to add multiple same rules. Skipping"}
+				# Check for settings to overwrite
+				If ($overwrite -eq "Yes") {
+					# Will add overwrite in a later version
+					# NeedsAdding
+				}
+			}
+		}		
 	 }else{
 		# Does exist check for overwrite
 		# Later version will check on diffs in script
@@ -366,7 +461,11 @@ ForEach ($itemFWSec in $fileBody.FirewallSections){
 		If ($overwrite -eq "Yes") {
 			# Will add overwrite in a later version
 			# NeedsAdding
+			# Is there a new rule to be added to an existing section?
+			# Check for the rule and if not exist add to the section we are in
+			
 		}
+		
 	 }
 }
 
