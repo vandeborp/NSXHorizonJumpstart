@@ -38,7 +38,8 @@ Update-PowerNsx master (tested with master branch of 09/16/2017)
 Details will be posted on my blog https://pascalswereld.nl.  
 Introduction blog post is released as https://pascalswereld.nl/2017/08/24/nsx-for-desktop-jumpstart-microsegmentation-with-horizon-service-installer-fling/.  
 In between status and explaination of script when able to parse yml and add some services is release as  https://pascalswereld.nl/2017/09/04/powercli-collection-powernsx-desktop-jumpstart-and-process-yaml-yml-config-file/.  
+And a running version is release, and described in this blog post: https://pascalswereld.nl/2017/09/17/powercli-collection-powernsx-horizon-jumpstart-script-ready-to-rumble/.  
 
-For questions, suggestions and or remarks please do contact me.
+For questions, suggestions and or remarks please do contact me. Either via here, twitter @Pheldoorn or https://pascalswereld.nl/about
 
 Please use common sense and test before implementing in your environment. Don't go near production untested.
