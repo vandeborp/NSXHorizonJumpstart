@@ -170,6 +170,16 @@ HorizonViewServices :
      dest_ports : 88
      source : any
      description : Active Directory User Computer Authentication Forest trust
+   - name : Active Directory Group Policy TCP
+     protocol : TCP
+     dest_ports : 445
+     source : any
+     description : Active Directory Group Policy
+   - name : Active Directory Group Policy UDP
+     protocol : UDP
+     dest_ports : 445
+     source : any
+     description : Active Directory Group Policy
    - name : Syslog
      protocol : UDP
      dest_ports : 514
@@ -217,6 +227,8 @@ DFWServiceGroups :
         - Active Directory GC
         - Active Directory User Comp Authentication Forest TCP
         - Active Directory User Comp Authentication Forest UDP
+        - Active Directory Group Policy TCP
+        - Active Directory Group Policy UDP
    - name : MSSQL Database
      children : 
         - Database MSSQL
@@ -324,7 +336,7 @@ FirewallRules :
      action : Allow
      serviceGroup : vSphere-vCenter Services
    - name : Domain Controllers LDAP FW Rule
-     source : "App Volumes Manager,VMware Identity Manager,vSphere vCenter - Hosts,vROPS for Horizon,Horizon View Connection Server,Horizon View Composer Server" 
+     source : "App Volumes Manager,VMware Identity Manager,vSphere vCenter - Hosts,vROPS for Horizon,Horizon View Connection Server,Horizon View Composer Server,Horizon View Desktops" 
      destination : Domain Controllers
      action : Allow
      serviceGroup : Active Directory
