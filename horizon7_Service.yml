@@ -7,9 +7,9 @@ HorizonViewServices :
      description : PCoIP,RDP,CDR/MMR,USB redirection,Blast Extreme,JMS
    - name : HorizonView-Agent_UDP
      protocol : UDP
-     dest_ports : 22443,443,8443
+     dest_ports : 22443,4172,443,8443
      source : any 
-     description : Blast Extreme
+     description : Blast Extreme PcoIP
    - name : HorizonView-ComposerService
      protocol : TCP
      dest_ports : 80,443,18443
@@ -140,6 +140,11 @@ HorizonViewServices :
      dest_ports : 5480
      source : any 
      description : Admin Services VAMI
+   - name : Admin Service RDP
+     protocol : TCP
+     dest_ports : 3389
+     source : any 
+     description : Admin Service RDP
    - name : Admin Services 84439443
      protocol : TCP
      dest_ports : 8443,9443
@@ -231,6 +236,7 @@ DFWServiceGroups :
         - Admin Services SSH
         - Admin Services VAMI
         - Admin Services 84439443
+        - Admin Service RDP
    - name : V4H Services
      children :
         - HorizonView-V4H
@@ -260,7 +266,8 @@ SecurityGroups :
    - Horizon Clients Zones
    - Horizon External Clients Zones
    - Load Balancers Connection Servers
-   - Unified Access Gateways Server 
+   - Unified Access Gateways Server
+   - VMware Identity Manager Proxy
    - VMware Identity Manager
    - App Volumes Manager
    - vROPS for Horizon 
@@ -292,7 +299,7 @@ FirewallRules :
      action : Allow
      serviceGroup : Horizon View Desktops
    - name : Connection Server FW Rule
-     source : "Horizon Clients Zones,Load Balancers Connection Servers,VMware Identity Manager"
+     source : "Horizon Clients Zones,Load Balancers Connection Servers,VMware Identity Manager,Horizon View Desktops"
      destination : Horizon View Connection Server
      action : Allow
      serviceGroup : Horizon View Connection Services
@@ -382,10 +389,15 @@ FirewallRules :
      action : Allow
      serviceGroup : vIDM CS Services
    - name : vIDM Inbound FW Rule
-     source : "Horizon View Clients Zones,Horizon External Clients Zones"
+     source : "Horizon Clients Zones,Horizon External Clients Zones,Horizon View Connection Server"
      destination : VMware Identity Manager
      action : Allow
      serviceGroup : vIDM Inbound Services
+   - name : vIDM Proxy FW Rule
+     source : "VMware Identity Manager Proxy, VMware Identity Manager"
+     destination : "VMware Identity Manager Proxy, VMware Identity Manager"
+     action : Allow
+     serviceGroup : vIDM Inbound Services  
    - name : AirWatch Console MSSQL FW Rule
      source : "AirWatch Console Server"
      destination : "MSSQL Servers"
@@ -400,7 +412,7 @@ FirewallRules :
 FirewallSections :
    - name : Horizon Desktop Block Section
      firewallRules :
-       - Desktop FW Rule
+       - Desktop Client FW Rule
        - App Volumes Agent FW Rule
        - UEM File FW Rule
        - Inter Desktop FW Rule
@@ -416,6 +428,7 @@ FirewallSections :
      firewallRules :
        - UAG FW Rule
        - Security Server FW Rule
+       - vIDM Proxy FW Rule
    - name : Horizon Operation Management Section
      firewallRules :
        - V4H FW Rule
