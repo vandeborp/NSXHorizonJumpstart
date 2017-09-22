@@ -172,7 +172,7 @@ HorizonViewServices :
      description : Active Directory User Computer Authentication Forest trust
    - name : Active Directory Group Policy TCP
      protocol : TCP
-     dest_ports : 445
+     dest_ports : 445,135
      source : any
      description : Active Directory Group Policy
    - name : Active Directory Group Policy UDP
@@ -184,7 +184,12 @@ HorizonViewServices :
      protocol : UDP
      dest_ports : 514
      source : any
-     description : Syslog used throughout the infrastructure     
+     description : Syslog used throughout the infrastructure
+   - name : System Center Service
+     protocol : TCP
+     dest_ports : 80,5723
+     source : any
+     description : SCOM (5723) and SCCM (80)      
 #DFW Service Groups
 DFWServiceGroups :
    - name : Horizon View Composer Services
@@ -268,6 +273,9 @@ DFWServiceGroups :
      children :
         - Admin Services HTTPS
         - Database MSSQL
+   - name : Windows System Management Services
+     children : 
+        - System Center Service
 #Security Groups
 SecurityGroups : 
    - Horizon View Desktops
@@ -294,6 +302,7 @@ SecurityGroups :
    - NTP Servers
    - Syslog Servers
    - Admin Stations
+   - Windows System Management Servers
 #Firewall Rules
 FirewallRules : 
    - name : Inter Desktop FW Rule
@@ -356,23 +365,23 @@ FirewallRules :
      action : Allow
      serviceGroup : DHCP Service 
    - name : DNS FW Rule
-     source : "Horizon View Desktops,Horizon View Connection Server,Horizon View Security Server,Horizon View Composer Server,Horizon Enrollment Server,Unified Access Gateways Server,App Volumes Manager,VMware Identity Manager,vROPS for Horizon,Airwatch,vSphere vCenter - Hosts"
+     source : "Horizon View Desktops,Horizon View Connection Server,Horizon View Security Server,Horizon View Composer Server,Horizon Enrollment Server,Unified Access Gateways Server,App Volumes Manager,VMware Identity Manager,vROPS for Horizon,Airwatch Console Server,Airwatch Device Server,vSphere vCenter - Hosts"
      destination : "Domain Name Servers"
      action : Allow
      serviceGroup : DNS Services
    - name : NTP FW Rule
-     source : "Horizon View Desktops,Horizon View Connection Server,Horizon View Security Server,Horizon View Composer Server,Horizon Enrollment Server,Unified Access Gateways Server,App Volumes Manager,VMware Identity Manager,vROPS for Horizon,Airwatch,vSphere vCenter - Hosts"
+     source : "Horizon View Desktops,Horizon View Connection Server,Horizon View Security Server,Horizon View Composer Server,Horizon Enrollment Server,Unified Access Gateways Server,App Volumes Manager,VMware Identity Manager,vROPS for Horizon,Airwatch Console Server,Airwatch Device Server,vSphere vCenter - Hosts"
      destination : "NTP Servers"
      action : Allow
      serviceGroup : Time Services
    - name : Syslog FW Rule
-     source : "Horizon View Desktops,Horizon View Connection Server,Horizon View Security Server,Horizon View Composer Server,Horizon Enrollment Server,Unified Access Gateways Server,App Volumes Manager,VMware Identity Manager,vROPS for Horizon,Airwatch,vSphere vCenter - Hosts"
+     source : "Horizon View Desktops,Horizon View Connection Server,Horizon View Security Server,Horizon View Composer Server,Horizon Enrollment Server,Unified Access Gateways Server,App Volumes Manager,VMware Identity Manager,vROPS for Horizon,Airwatch Console Server,Airwatch Device Server,vSphere vCenter - Hosts"
      destination : "Syslog Servers"
      action : Allow
      serviceGroup : Time Services
    - name : Administrative Console Access FW Rule
      source : Admin Stations
-     destination : "Horizon View Desktops,Horizon View Connection Server,Horizon View Security Server,Horizon View Composer Server,Horizon Enrollment Server,Unified Access Gateways Server,App Volumes Manager,VMware Identity Manager,vROPS for Horizon,Airwatch,vSphere vCenter - Hosts"
+     destination : "Horizon View Desktops,Horizon View Connection Server,Horizon View Security Server,Horizon View Composer Server,Horizon Enrollment Server,Unified Access Gateways Server,App Volumes Manager,VMware Identity Manager,vROPS for Horizon,Airwatch Console Server,Airwatch Device Server,vSphere vCenter - Hosts"
      action : Allow
      serviceGroup : Admin Services
    - name : V4H FW Rule
@@ -420,6 +429,11 @@ FirewallRules :
      destination : "AirWatch Console Server"
      action : Allow
      serviceGroup : AirWatch Services
+   - name : Windows System Management FW Rule
+     source : "Horizon View Connection Server,Horizon View Security Server,Horizon View Composer Server,Horizon Enrollment Server,App Volumes Manager,Airwatch Console Server,Airwatch Device Server"
+     destination : "Windows System Management Servers"
+     action : Allow
+     serviceGroup : Windows System Management Services
 #DFW Firewall Sections
 FirewallSections :
    - name : Horizon Desktop Block Section
@@ -457,6 +471,7 @@ FirewallSections :
        - NTP FW Rule
        - Syslog FW Rule
        - Administrative Console Access FW Rule
+       - Windows System Management FW Rule
    - name : AirWatch Section
      firewallRules :
        - AirWatch Console MSSQL FW Rule
