@@ -78,7 +78,7 @@ $NSXConnection = Connect-NsxServer -vCenterServer $nsxManager -username $nsxUser
 $uplink = New-NsxEdgeInterfaceSpec -Name UplinkVDI -Type Uplink -ConnectedTo (Get-vDPortgroup -Name $uplinkpg) -PrimaryAddress $uplinkaddress -SubnetPrefixLength 24 -Index 0
 
 # Then Build the internal specifications
-$internal1 = New-NsxEdgeInterfaceSpec -Name haint -Type Internal -ConnectedTo (Get-vDPortgroup -Name $uplinkpg) -Index 0
+$internal1 = New-NsxEdgeInterfaceSpec -Name haint -Type Internal -ConnectedTo (Get-vDPortgroup -Name $uplinkpg) -Index 1
 
 # New Large
-New-NsxEdge -Name #edgename -Datastore $edgedatastore -cluster $cluster -Username admin -Password VMware1!VMware1! -FormFactor Large -AutoGenerateRules -FwEnabled -Interface $uplink,$internal1 -Connection $NSXConnection
+New-NsxEdge -Name $edgename -Datastore (Get-Datastore -Name $edgedatastore) -cluster (Get-Cluster -Name $cluster) -Username admin -Password VMware1!VMware1! -FormFactor Large -AutoGenerateRules -FwEnabled -Interface $uplink,$internal1 -Connection $NSXConnection
