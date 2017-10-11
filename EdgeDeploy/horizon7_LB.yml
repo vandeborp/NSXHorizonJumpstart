@@ -1,0 +1,19 @@
+#Horizon LB Services
+#Horizon Load Balancing
+
+# PSC Load Balancers
+PSC : 
+   - name : PSCLoadBalancers
+     edgename : pscedge01
+     primary-uplinkIP : 10.1.1.1
+     secondary-uplinkIP : 10.1.1.2
+     uplinkPortgroup : dvPortgroup
+     defaultsubnet : 24
+     EdgeFW : Off
+     HA : On
+     HAIP1 : 10.1.23.2\30
+     HAIP2 : 10.1.23.3\30
+
+     
+ 
+       
