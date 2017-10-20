@@ -28,15 +28,19 @@ This script works two fold, it first deploys the edge than configures the LB
 # Deploy Edge as the first part
 
 # Settings
-$edgename = "" #Name of the Edge
-$edgedatastore = "" # DS Location of the Edge
-$cluster = "" # Cluster Resource
+$edgename = “name” #Name of the Edge
+$edgedatastore = “datastore” # DS Location of the Edge
+$cluster = "vdi-mgmt_cluster" # Cluster Resource
 # Uplink is connected to the frontend network
-$uplinkpg = "" # Uplink is connected to Portgroup
-$uplinkaddress = "" #Uplink address
+$uplinkpg = "ManagementVDI" # Uplink is connected to Portgroup
+$uplinkaddress = "10.1.1.1” #Uplink address
+$secondaryaddress = "10.1.1.2” #Secondary address (VIP)
 # Internal is used for HA that address will be added later
-$internalpg = "" # Internal is connected to Portgroup
+$internalpg = "VDIEDGEHA" # Internal is connected to Portgroup
 $logon = "No" # No logging yet implemented
+$enableHA = "1" # Enable HA on nic id
+$syslogsvr = "vdisyslog.vTest.lab” # Syslog server to use for edge
+$Password = ''
 
 # Connection Stuff
 # Get input from user about
@@ -72,13 +76,12 @@ If ($logon -eq "Yes") { Write-Log "Asked User about NSX Pass. Got response: <inp
 If ($logon -eq "Yes") { Write-Log "Opening connection to NSX Manager" }
 $NSXConnection = Connect-NsxServer -vCenterServer $nsxManager -username $nsxUser -Password $nsxPass #-DefaultConnection:$false
 
-
 ### NSX Edge
 # Build the uplink specifications
-$uplink = New-NsxEdgeInterfaceSpec -Name UplinkVDI -Type Uplink -ConnectedTo (Get-vDPortgroup -Name $uplinkpg) -PrimaryAddress $uplinkaddress -SubnetPrefixLength 24 -Index 0
+$uplink = New-NsxEdgeInterfaceSpec -Name UplinkVDI -Type Uplink -ConnectedTo (Get-vDPortgroup -Name $uplinkpg) -PrimaryAddress $uplinkaddress -SecondaryAddresses $secondaryaddress -SubnetPrefixLength 24 -Index 0
 
 # Then Build the internal specifications
-$internal1 = New-NsxEdgeInterfaceSpec -Name haint -Type Internal -ConnectedTo (Get-vDPortgroup -Name $uplinkpg) -Index 1
+$internal1 = New-NsxEdgeInterfaceSpec -Name haint -Type Internal -ConnectedTo (Get-vDPortgroup -Name $internalpg) -Index 1
 
 # New Large
-New-NsxEdge -Name $edgename -Datastore (Get-Datastore -Name $edgedatastore) -cluster (Get-Cluster -Name $cluster) -Username admin -Password VMware1!VMware1! -FormFactor Large -AutoGenerateRules -FwEnabled -Interface $uplink,$internal1 -Connection $NSXConnection
+New-NsxEdge -Name $edgename -Datastore (Get-Datastore -Name $edgedatastore) -cluster (Get-Cluster -Name $cluster) -Username admin -Password $Password -FormFactor Large -AutoGenerateRules -FwEnabled -FwDefaultPolicyAllow -EnableSyslog -SyslogServer $syslogsvr -SyslogProtocol tcp -Interface $uplink,$internal1 -EnableHA -HaVnic 1 -Connection $NSXConnection
