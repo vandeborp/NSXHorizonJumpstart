@@ -100,7 +100,7 @@ HorizonViewServices :
      dest_ports : 389,636
      source : any
      description : Active Directory LDAP or LDAPS
-    - name : Active Directory LDAP UDP
+   - name : Active Directory LDAP UDP
      protocol : UDP
      dest_ports : 389,636
      source : any
